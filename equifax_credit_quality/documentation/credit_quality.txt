@@ -1,0 +1,23 @@
+Credit quality. % with credit score below 660. 
+
+Equifax data documentation:
+
+********************************************************************************
+Query used to get state, county code, total number of observations in the sample, and num of people with a credit score below 660:
+
+SELECT a.qtr, a.state, a.county_code, a.num_total, b.num_below660
+FROM (SELECT qtr, state, county_code, COUNT(cid) AS num_total
+	FROM concredit.view_join_static_dynamic_eqf
+	GROUP BY qtr, state, county_code) AS a LEFT JOIN 
+	(SELECT qtr, state, county_code, COUNT(cid) AS num_below660
+	FROM concredit.view_join_static_dynamic_eqf
+	WHERE riskscore <= 660
+	GROUP BY qtr, state, county_code) AS b
+ON a.qtr = b.qtr AND a.state = b.state AND a.county_code = b.county_code
+ORDER BY a.qtr, a.state, a.county_code 
+********************************************************************************
+Critical question-- how many counties have a small sample (i.e. only <=20 -- need to double check with equifax that this is the number), because we won't
+be able to report the percent of households with bad credit for privacy reasons. 
+
+
+
