@@ -52,74 +52,72 @@ for l in range(1990,long_year-1):
         c.perform()
         c.close()
 
-def __main__():
-    names=['date','fips_state','fips_county','region_code','division_code','county_name','1_unit_bldgs','1_unit_units',
-           '1_unit_value','2_unit_bldgs','2_unit_units','2_unit_value','34_unit_bldgs','34_unit_units','34_unit_value',
-           '5_unit_bldgs','5_unit_units','5_unit_value','1_unit_bldgs_rep','1_unit_units_rep','1_unit_value_rep',
-           '2_unit_bldgs_rep','2_unit_units_rep','2_unit_value_rep','34_unit_bldgs_rep','34_unit_units_rep',
-           '34_unit_value_rep','5_unit_bldgs_rep','5_unit_units_rep','5_unit_value_rep']
+# def __main__():
+names=['date','fips_state','fips_county','region_code','division_code','county_name','1_unit_bldgs','1_unit_units',
+       '1_unit_value','2_unit_bldgs','2_unit_units','2_unit_value','34_unit_bldgs','34_unit_units','34_unit_value',
+       '5_unit_bldgs','5_unit_units','5_unit_value','1_unit_bldgs_rep','1_unit_units_rep','1_unit_value_rep',
+       '2_unit_bldgs_rep','2_unit_units_rep','2_unit_value_rep','34_unit_bldgs_rep','34_unit_units_rep',
+       '34_unit_value_rep','5_unit_bldgs_rep','5_unit_units_rep','5_unit_value_rep']
 
-    # states = pd.read_table('..\\state_fips.txt',dtype=str)
-    states = pd.read_table('..\\state_fips.txt',dtype=str)
+# states = pd.read_table('..\\state_fips.txt',dtype=str)
+states = pd.read_table('..\\state_fips.txt',dtype=str)
 
-    df = pd.DataFrame(columns=names)
+df = pd.DataFrame(columns=names)
 
-    for f in os.listdir(os.getcwd()+'\\data\\'):
-        if bool(re.search('co\d+a', f)):
-            # permits = pd.read_table(os.getcwd() + '\\data\\'+f,sep='\,',engine='python',header=None,skiprows=[0,1],names=names)
-            permits = pd.read_table(os.getcwd() + '\\data\\' + f, sep=',', converters={'fips_county':str,'fips_state':str}, header=None, skiprows=[0, 1],
-                                    names=names)
-            # for i, d in enumerate(permits['date']):
-            #     if bool(re.search(ptn, permits['date'][i])):
-            #         permits['date'][i] = re.sub(ptn, '19' + re.search(ptn, permits['date'][i]).group()[0:2], permits['date'][i])
-            df = df.append(permits)
-    #
-    # df.fips_county= df.fips_county.astype(int).astype(str)
-    # df.fips_state = df.fips_state.astype(int).astype(str)
-    df.fips_state = df.fips_state.str.strip()
-    df.fips_county = df.fips_county.str.strip()
+for f in os.listdir(os.getcwd()+'\\data\\'):
+    if bool(re.search('co\d+a', f)):
+        # permits = pd.read_table(os.getcwd() + '\\data\\'+f,sep='\,',engine='python',header=None,skiprows=[0,1],names=names)
+        permits = pd.read_table(os.getcwd() + '\\data\\' + f, sep=',', converters={'fips_county':str,'fips_state':str}, header=None, skiprows=[0, 1],
+                                names=names)
+        # for i, d in enumerate(permits['date']):
+        #     if bool(re.search(ptn, permits['date'][i])):
+        #         permits['date'][i] = re.sub(ptn, '19' + re.search(ptn, permits['date'][i]).group()[0:2], permits['date'][i])
+        df = df.append(permits)
+#
+# df.fips_county= df.fips_county.astype(int).astype(str)
+# df.fips_state = df.fips_state.astype(int).astype(str)
+df.fips_state = df.fips_state.str.strip()
+df.fips_county = df.fips_county.str.strip()
 
-    df = pd.merge(df, states, left_on='fips_state', right_on='fips')
-    df['county_name'] = df['county_name'].str.strip()
-    df['county_name'] = df['county_name'] + ', ' + df['state']
-    df.date = df.date.astype(int).astype(str)
-    df['fips'] = df['fips_state'] + df['fips_county']
-    df.drop(['region_code', 'division_code','state','fips_county','fips_state'], axis=1, inplace=True)
-    df.drop(df.filter(regex=('value|rep|units')),axis=1,inplace=True)
-    # df = df.sort_values(['fips','date'])
+df = pd.merge(df, states, left_on='fips_state', right_on='fips')
+df['county_name'] = df['county_name'].str.strip()
+df['county_name'] = df['county_name'] + ', ' + df['state']
+df.date = df.date.astype(int).astype(str)
+df['fips'] = df['fips_state'] + df['fips_county']
+df.drop(['region_code', 'division_code','state','fips_county','fips_state'], axis=1, inplace=True)
+df.drop(df.filter(regex=('value|rep|units')),axis=1,inplace=True)
+# df = df.sort_values(['fips','date'])
 
-    levels = df['fips'].unique()
+levels = df['fips'].unique()
 
-    # dates = ['2009','2010','2011','2012','2013','2014']
-    ptn = '9\d99'
+# dates = ['2009','2010','2011','2012','2013','2014']
+ptn = '9\d99'
 
-    for series in levels:
-        fips = '0'+series
+for series in levels:
+    fips = '0'+series
 
-        frame = df[df['fips'] == series]
-        frame.reset_index(inplace=True)
-        # frame = frame.sort_values(['date'])
-        frame.drop(['index'], axis=1, inplace=True)
-        # frame.reset_index(inplace=True)
-        for i, d in enumerate(frame['date']):
-            if bool(re.search(ptn, d)):
-                frame['date'][i] = re.sub(ptn, '19' + re.search(ptn, d).group()[0:2], d)
-        frame = frame.sort_values(['date'])
-        frame['total_bldgs'] = frame.sum(axis=1)
-        frame = frame[['date', 'total_bldgs']]
-        # frame['date'] = dates
-        frame.set_index('date', inplace=True)
-        series_id = 'BPPRIV' + fips
-        frame.columns = [series_id]
-        frame.to_csv('output\\' + series_id, sep='\t')
-
-
-        # print(frame)
-	# frame = frame[['date','rate']]
-	# frame['date'] = dates
-	# frame.set_index('date',inplace=True)
-	# frame.columns = [series_id]
-	# frame.to_csv('output\\'+series_id,sep='\t')
+    frame = df[df['fips'] == series]
+    frame.reset_index(inplace=True)
+    # frame = frame.sort_values(['date'])
+    frame.drop(['index'], axis=1, inplace=True)
+    # frame.reset_index(inplace=True)
+    for i, d in enumerate(frame['date']):
+        if bool(re.search(ptn, d)):
+            frame['date'][i] = re.sub(ptn, '19' + re.search(ptn, d).group()[0:2], d)
+    frame = frame.sort_values(['date'])
+    frame['total_bldgs'] = frame.sum(axis=1)
+    frame = frame[['date', 'total_bldgs']]
+    # frame['date'] = dates
+    frame.set_index('date', inplace=True)
+    series_id = 'BPPRIV' + fips
+    frame.columns = [series_id]
+    frame.to_csv('output\\' + series_id, sep='\t')
 
 
-frame.to_csv('df.csv',index=False)
+    # print(frame)
+# frame = frame[['date','rate']]
+# frame['date'] = dates
+# frame.set_index('date',inplace=True)
+# frame.columns = [series_id]
+# frame.to_csv('output\\'+series_id,sep='\t')
+
