@@ -1,0 +1,10 @@
+series_id	cat_id
+hownrateacs002020	27406
+hownrateacs002110	27412
+hownrateacs002220	27422
+hownrateacs002230	33516
+hownrateacs002275	33518
+hownrateacs006075	27559
+hownrateacs008014	32077
+hownrateacs015003	27889
+hownrateacs042101	29664
