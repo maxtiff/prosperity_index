@@ -3,6 +3,9 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 # def __main__():
 
+states = pd.read_table('..\\state_fips.txt',dtype=str)
+counties = pd.read_table('..\\national_county.txt',dtype=str,sep=';')
+
 # Import data
 data_dir = os.getcwd() + '\\data\\'
 
@@ -10,7 +13,6 @@ df = pd.read_csv(data_dir + 'equifax.csv',parse_dates=['qtr'],low_memory=False,m
 df.fillna(0,axis=1,inplace=True)
 
 # Get states fips codes and merge with df
-states = pd.read_table('..\\state_fips.txt',dtype=str)
 
 df = pd.merge(df, states, on='state')
 df = df.sort_values(['fips','county_code','qtr'])
@@ -39,7 +41,6 @@ df.fips = df.fips.astype(str)
 df.fips = df.fips + df.county_code
 
 # Remove unnecessary, non-county series
-counties = pd.read_table('..\\national_county.txt',dtype=str,sep=';')
 df = pd.merge(df, counties, on='fips')
 
 for l in pd.unique(df.fips.ravel()):
