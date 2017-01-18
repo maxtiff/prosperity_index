@@ -82,7 +82,8 @@ test = pd.merge(test,state_frame,left_on='State',right_on='name')
 test['County'].replace(to_replace='County Police Department|County Unified Police Department|Public Safety|Police Department|\d$', value='',inplace=True,regex=True)
 test['locale'] = test['County'] + ', ' + test['state']
 test.drop(['State', 'County','state','name'], axis=1, inplace=True)
-counties['test'] = counties['county'].apply(lambda x: difflib.get_close_matches(x, test['locale'])[:1] or [None])[0]
+counties['county'] = counties['county'].apply(lambda x: (dl.get_close_matches(x, test['locale'])[:1] or [None])[0])
+
 
 test1 = pd.read_excel(data_dir + 'crime_14.xls',skiprows={0,1},header=2,skip_footer=8)
 
