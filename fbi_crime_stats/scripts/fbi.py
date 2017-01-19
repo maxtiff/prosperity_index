@@ -124,7 +124,7 @@ crime_2013['locale'] = crime_2013['locale'].apply(lambda x: (dl.get_close_matche
 crime_2013=pd.merge(crime_2013,counties,left_on='locale',right_on='county')
 crime_2013['crime'] = crime_2013.sum(axis=1)
 crime_2013=crime_2013.filter(regex=('Violent|Property|date|fips_y|crime|locale'),axis=1)
-crime_2013columns=[names]
+crime_2013.columns=[names]
 
 crime_2012= pd.read_excel(data_dir + 'crime_12.xls',skiprows={0,1},header=2,skip_footer=7)
 crime_2012['State'].replace(to_replace='\s\-\s\w+\sCounties|\d$', value='',inplace=True,regex=True)
@@ -262,3 +262,26 @@ def multi_ordered_merge(lst_dfs):
     return ft.reduce(reduce_func, lst_dfs)
 
 df = multi_ordered_merge(dfs)
+df = df.sort_values(['fips','date'])
+
+levels = df['fips'].unique()
+
+for series in levels:
+    fips = series
+    frame = df[df['fips'] == series]
+    frame.reset_index(inplace=True)
+    # frame = frame.sort_values(['date'])
+    frame.drop(['index'], axis=1, inplace=True)
+    for c in ['violent', 'property', 'crime']:
+        output = frame[['date', c]]
+        # frame['date'] = dates
+        output.set_index('date', inplace=True)
+        series_id = 'FBI'
+        if c is 'violent':
+            series_id = series_id + 'VC' + fips
+        elif c is 'property':
+            series_id = series_id + 'PC' + fips
+        elif c is 'crime':
+            series_id = series_id + 'TC' + fips
+        output.columns = [series_id]
+        output.to_csv('output\\' + series_id, sep='\t')
