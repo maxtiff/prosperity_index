@@ -1,0 +1,18 @@
+Income Inequality
+____________________________________________________________________________________________________________________________
+1. fip_id.xlsx
+
+the "Base" sheet of this dataset contains the names of the 3,143 census counties (from 2010) along with their respective ID. I use this file at the end to
+complete the final merge of the higher educational attainment rate across the various years (and files) into one final dataset. 
+
+Link: http://www2.census.gov/geo/docs/reference/codes/files/national_county.txt
+____________________________________________________________________________________________________________________________
+2. income_inequality_yy.csv
+
+Mean Household Income of Quintiles
+
+2010-2014 5-year ACS estimates, found in table B19081. 
+
+http://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_B19081&prodType=table
+(2014 table) 
+___________________________________________________a_________________________________________________________________________
