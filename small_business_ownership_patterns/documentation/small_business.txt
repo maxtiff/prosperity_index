@@ -1,0 +1,23 @@
+Small Business Ownership Rate 
+____________________________________________________________________________________________________________________________
+1. fip_id.xlsx
+
+the "Base" sheet of this dataset contains the names of the 3,143 census counties (from 2010) along with their respective ID. I use this file at the end to
+complete the final merge of the small business ownership rate across the various years (and files) into one final dataset. 
+
+Link: http://www2.census.gov/geo/docs/reference/codes/files/national_county.txt
+___________________________________________________________________________________________________________________________
+2. cbpyyco.txt
+
+This is the county business patterns data from the census. We are only using years 2009-2014 because that is the data that is available for the labor force participation
+from the ACS 5 year estimates. 
+
+Link: http://www.census.gov/programs-surveys/cbp/data/datasets.html
+____________________________________________________________________________________________________________________________
+3. laborforce_yy.csv
+
+This data is from the ACS 5 year estimates (2009-2014) and contains the labor force particiation rate + total population, by counties. Table s2301
+
+Link: http://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_S2301&prodType=table 
+(2014 table)
+____________________________________________________________________________________________________________________________
