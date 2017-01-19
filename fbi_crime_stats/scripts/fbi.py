@@ -83,7 +83,7 @@ crime_2015 = pd.read_excel(data_dir + 'crime_15.xls',skiprows={0,1},header=2,ski
 crime_2015['State'].replace(to_replace='\s\-\s\w+\sCounties|\d$', value='',inplace=True,regex=True)
 crime_2015 = crime_2015.fillna(method='ffill')
 crime_2015['date']='2015'
-crime_2015=crime_2015.filter(keep,axis=1)
+crime_2015=crime_2015.filter(regex=keep,axis=1)
 crime_2015=pd.merge(crime_2015,state_frame,left_on='State',right_on='name')
 crime_2015['County'].replace(to_replace='County Police Department|County Unified Police Department|Public Safety|Police Department|\d$', value='',inplace=True,regex=True)
 crime_2015['locale'] = crime_2015['County'] + ', ' + crime_2015['state']
