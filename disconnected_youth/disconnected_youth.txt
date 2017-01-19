@@ -1,0 +1,17 @@
+Disconnected Youth- % of youth between the ages of 16 and 19 that are not enrolled in school & are unemployed/not in the labor force
+
+Table: B14005 "Sex by School Enrollment by Educational Attainment by Employed STatus for the Population 16 to 19 years", ACS 5 year estimates
+URL: http://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_B14005&prodType=table
+
+
+HD01_VD01	Estimate; Total:
+HD01_VD10	Estimate; Male: - Not enrolled in school: - High school graduate: - Unemployed
+HD01_VD11	Estimate; Male: - Not enrolled in school: - High school graduate: - Not in labor force
+HD01_VD14	Estimate; Male: - Not enrolled in school: - Not high school graduate: - Unemployed
+HD01_VD15	Estimate; Male: - Not enrolled in school: - Not high school graduate: - Not in labor force
+HD01_VD24	Estimate; Female: - Not enrolled in school: - High school graduate: - Unemployed
+HD01_VD25	Estimate; Female: - Not enrolled in school: - High school graduate: - Not in labor force
+HD01_VD28	Estimate; Female: - Not enrolled in school: - Not high school graduate: - Unemployed
+HD01_VD29	Estimate; Female: - Not enrolled in school: - Not high school graduate: - Not in labor force
+
+% Disconnected Youth = (HD01_VD10 + HD01_VD11 + HD01_VD14 + HD01_VD15 + HD01_VD24 + HD01_VD25 + HD01_VD28 + HD01_VD29)/HD01_VD01	
