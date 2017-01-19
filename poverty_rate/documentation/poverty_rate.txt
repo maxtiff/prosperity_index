@@ -1,0 +1,18 @@
+Poverty Rate
+____________________________________________________________________________________________________________________________
+1. fip_id.xlsx
+
+the "Base" sheet of this dataset contains the names of the 3,143 census counties (from 2010) along with their respective ID. I use this file at the end to
+complete the final merge of the higher educational attainment rate across the various years (and files) into one final dataset. 
+
+Link: http://www2.census.gov/geo/docs/reference/codes/files/national_county.txt
+____________________________________________________________________________________________________________________________
+2. povertyrate_yy.csv
+
+Poverty Status in the past 12 months. Percent of population below poverty level is a variable in the table. 
+
+2010-2012, 5-year ACS estimates, found in table S1701
+
+http://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_S1701&prodType=table
+(2014 table) 
+___________________________________________________a_________________________________________________________________________
