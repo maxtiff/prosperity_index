@@ -1,0 +1,15 @@
+Preventable Hospital Admissions
+
+Source: The Dartmouth Atlas of Health Care
+URL: http://www.dartmouthatlas.org/tools/downloads.aspx?tab=35%23primary#primary
+
+Notes:
+Under "Selected measures of primary care access and quality", County Level
+
+http://www.dartmouthatlas.org/downloads/reports/Primary_care_report_090910.pdf
+
+---- this document provides notes about the methodology. To calculate "preventable hospital admissions", we will use the 
+"Discharges for ambulatory care sensitive conditions per 1,000 medicare enrollees" (as indiciated in methodology notes). 
+----This variable is in column BQ of 2009-2014 data. 
+
+Questions: don't know when this is updated & also why there are some negative statistics. 
