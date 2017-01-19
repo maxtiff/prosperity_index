@@ -178,7 +178,7 @@ crime_2009= pd.read_excel(data_dir + 'crime_09.xls',skiprows={0,1},header=2,skip
 crime_2009['State'].replace(to_replace='\s\-\s\w+\sCounties|\d$', value='',inplace=True,regex=True)
 crime_2009= crime_2009.fillna(method='ffill')
 crime_2009['date']='2009'
-crime_2009=crime_2009.filter(keep_alt_2,axis=1)
+crime_2009=crime_2009.filter(regex=keep,axis=1)
 crime_2009=pd.merge(crime_2009,state_frame,left_on='State',right_on='name')
 crime_2009['County'].replace(to_replace='County Police Department|County Unified Police Department|Public Safety|Police Department|\d$', value='',inplace=True,regex=True)
 crime_2009['locale'] = crime_2009['County'] + ', ' + crime_2009['state']
@@ -194,7 +194,7 @@ crime_2008= pd.read_excel(data_dir + 'crime_08.xls',skiprows={0,1},header=2,skip
 crime_2008['State'].replace(to_replace='\-\w+\sCounties|[^\x00-\x7F]\w+\sCounties|\d|\s$',value='',inplace=True,regex=True)
 crime_2008= crime_2008.fillna(method='ffill')
 crime_2008['date']='2008'
-crime_2008=crime_2008.filter(keep_alt_3,axis=1)
+crime_2008=crime_2008.filter(regex=keep,axis=1)
 crime_2008=pd.merge(crime_2008,state_frame,left_on='State',right_on='name')
 crime_2008['County'].replace(to_replace='County Police Department|County Unified Police Department|Public Safety|Police Department|\d$', value='',inplace=True,regex=True)
 crime_2008['locale'] = crime_2008['County'] + ', ' + crime_2008['state']
@@ -210,7 +210,7 @@ crime_2007= pd.read_excel(data_dir + 'crime_07.xls',skiprows={0,1},header=2,skip
 crime_2007['State'].replace(to_replace='\-\w+\sCounties|[^\x00-\x7F]\w+\sCounties|\d|\s$',value='',inplace=True,regex=True)
 crime_2007= crime_2007.fillna(method='ffill')
 crime_2007['date']='2007'
-crime_2007=crime_2007.filter(keep_alt_3,axis=1)
+crime_2007=crime_2007.filter(regex=keep,axis=1)
 crime_2007=pd.merge(crime_2007,state_frame,left_on='State',right_on='name')
 crime_2007['County'].replace(to_replace='County Police Department|County Unified Police Department|Public Safety|Police Department|\d$', value='',inplace=True,regex=True)
 crime_2007['locale'] = crime_2007['County'] + ', ' + crime_2007['state']
@@ -226,7 +226,7 @@ crime_2006= pd.read_excel(data_dir + 'crime_06.xls',skiprows={0,1},header=2,skip
 crime_2006['State'].replace(to_replace='\-\w+\sCounties|[^\x00-\x7F]\w+\sCounties|\d|\s$',value='',inplace=True,regex=True)
 crime_2006= crime_2006.fillna(method='ffill')
 crime_2006['date']='2006'
-crime_2006=crime_2006.filter(keep_alt_3,axis=1)
+crime_2006=crime_2006.filter(regex=keep,axis=1)
 crime_2006=pd.merge(crime_2006,state_frame,left_on='State',right_on='name')
 crime_2006['County'].replace(to_replace='County Police Department|County Unified Police Department|Public Safety|Police Department|\d$', value='',inplace=True,regex=True)
 crime_2006['locale'] = crime_2006['County'] + ', ' + crime_2006['state']
@@ -242,7 +242,7 @@ crime_2005= pd.read_excel(data_dir + 'crime_05.xls',skiprows={0,1},header=2,skip
 crime_2005['State'].replace(to_replace='\-\w+\sCounties|[^\x00-\x7F]\w+\sCounties|\d|\s$',value='',inplace=True,regex=True)
 crime_2005= crime_2005.fillna(method='ffill')
 crime_2005['date']='2005'
-crime_2005=crime_2005.filter(keep_alt_3,axis=1)
+crime_2005=crime_2005.filter(regex=keep,axis=1)
 crime_2005=pd.merge(crime_2005,state_frame,left_on='State',right_on='name')
 crime_2005['County'].replace(to_replace='County Police Department|County Unified Police Department|Public Safety|Police Department|\d$', value='',inplace=True,regex=True)
 crime_2005['locale'] = crime_2005['County'] + ', ' + crime_2005['state']
