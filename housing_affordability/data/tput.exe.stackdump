@@ -1,0 +1,8 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=5DA765B1
+eax=5DA78240 ebx=80028D58 ecx=00000000 edx=00000000 esi=00000000 edi=0028C80C
+ebp=0028C7AC esp=0028C710 program=C:\Users\tmay\AppData\Local\Programs\minghc-7.10.1-x86_64\git-2.4.0.1\usr\bin\tput.exe, pid 10868, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0028C7AC  5DA765B1 (0028CC90, 80028B2D, 5DA6E647, 80028B2D)
+End of stack trace
