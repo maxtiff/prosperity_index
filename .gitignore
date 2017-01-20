@@ -3,4 +3,4 @@
 output/
 .idea/
 equifax.csv
-net_migration/downloads/*.txt
+net_migration/downloads/
