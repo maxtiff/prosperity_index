@@ -13,7 +13,7 @@ df_net_13['2013'].fillna(value=0,inplace=True)
 df_net_13 = df_net_13.groupby(by=['fips'])['2013'].sum().to_frame().reset_index()
 
 ##2008-2012
-fnam`e = 'net_gross_us_12.txt'
+fname = 'net_gross_us_12.txt'
 
 # df_net_12=pd.read_fwf(fname,colspecs=[(0,6),(180,190)],header=None,names=['fips','net_migration'],nrows=433949,converters={'fips':str})
 df_net_12=pd.read_fwf(fname,colspecs=[(0,6),(180,190)],header=None,names=['fips','2012'],converters={'fips':str})
