@@ -116,7 +116,7 @@ df['avg_commute']=df['commute_time']/df['commuters']
 for l in pd.unique(df.fips.ravel()):
     series = l
     frame = df[df['fips'] == series]
-    series_id = 'MEANCOMMUTE' + series
+    series_id = 'B080ACS' + series
     frame.reset_index(inplace=True)
     # frame = frame.sort_values(['date'])
     # frame.drop(['index'], axis=1, inplace=True)
