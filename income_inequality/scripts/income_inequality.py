@@ -45,6 +45,7 @@ def multi_ordered_merge(lst_dfs):
 dfs = [gini_10,gini_11,gini_12,gini_13,gini_14]
 
 df = multi_ordered_merge(dfs)
+df = df.sort_values(['fips','date'])
 
 df['20_20'] = (df['high_20']/df['low_20'])
 
