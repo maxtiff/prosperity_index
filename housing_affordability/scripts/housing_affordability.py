@@ -5,13 +5,19 @@ pd.options.mode.chained_assignment = None  # default='warn'
 Housing Burden is defined as a household spending more than 30% of their monthly income on a rent or mortgage.
 '''
 
+def multi_ordered_merge(lst_dfs):
+    reduce_func = lambda left,right: pd.ordered_merge(left, right)
+
+    return ft.reduce(reduce_func, lst_dfs)
+
 keep_old = ['GEO.id2','GEO.display-label','HC01_VC155','HC01_VC164','HC01_VC191','HC01_VC159','HC01_VC160',\
             'HC01_VC170','HC01_VC171','HC01_VC196','HC01_VC197']
 
 keep_new = ['GEO.id2','GEO.display-label','HC01_VC157','HC01_VC167','HC01_VC196','HC01_VC161','HC01_VC162',\
             'HC01_VC173','HC01_VC174','HC01_VC201','HC01_VC202']
 
-names = ['fips','county','mortgages','non_mortgages','rent','mort_30_34','mort_35','no_mort_30_34','no_mort_35','rent_30_34','rent_35']
+names = ['fips','county','mortgages','non_mortgages','rent','mort_30_34','mort_35','no_mort_30_34','no_mort_35',\
+         'rent_30_34','rent_35']
 
 data_dir = os.getcwd()+'\\data\\'
 
@@ -45,19 +51,22 @@ house_14['GEO.id2']=house_14['GEO.id2'].apply(lambda x:"%06d" % (x,))
 house_14.columns=[names]
 house_14['date'] = '2014'
 
-# df = pd.ordered_merge(test_result,test6)
-df['HD01_VD01'] = pd.to_numeric(df['HD01_VD01'])
-df['HD01_VD02'] = pd.to_numeric(df['HD01_VD02'])
-df['rate'] = df['HD01_VD02']/df['HD01_VD01']
+dfs = [house_10,house_11,house_12,house_13,house_14]
 
-def multiple_merge(lst_dfs, on):
-    reduce_func = lambda left,right: pd.merge(left, right, on=on)
+df = multi_ordered_merge(dfs,'fips')
+df = df.sort_values(['fips','date'])
 
-    return ft.reduce(reduce_func, lst_dfs)
+df['burdened'] = (df['mort_30_34'] + df['mort_35'] + df['no_mort_30_34'] + df['no_mort_35'] + df['rent_30_34'] \
+                  + df['rent_35'])/(df['mortgages'] + df['non_mortgages'] + df['rent'])*100
 
-dfs = [df_flow_09,df_flow_10,df_net_11,df_net_12,df_net_13]
-
-test = multiple_merge(dfs,'fips')
-test = pd.melt(test, id_vars='fips',var_name='Date').sort_values(['fips','Date'])
-
-levels = test['fips'].unique()
+for l in pd.unique(df['fips'].ravel()):
+    series = l
+    frame = df[df['fips'] == series]
+    series_id = 'BURDENED' + series
+    frame.reset_index(inplace=True)
+    # frame = frame.sort_values(['date'])
+    # frame.drop(['index'], axis=1, inplace=True)
+    frame = frame[['date','burdened']]
+    frame.set_index('date', inplace=True)
+    frame.columns = [series_id]
+    frame.to_csv('output\\' + series_id, sep='\t')
