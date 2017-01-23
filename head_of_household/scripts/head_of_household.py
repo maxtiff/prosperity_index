@@ -1,7 +1,7 @@
 import pandas as pd, os, sys, functools as ft, pycurl as pyc, datetime as dt, re, numpy as np
 pd.options.mode.chained_assignment = None  # default='warn'
 
-keep = ['GEO.id2','GEO.display-label','HC01_EST_VC02','HC03_EST_VC02','HC04_EST_VC02']
+keep = ['GEO.id2','GEO.display-label','HC01_EST_VC08','HC03_EST_VC08','HC04_EST_VC08']
 
 data_dir = os.getcwd() + '\\data\\'
 
@@ -45,12 +45,12 @@ dfs = [single_09,single_10,single_11,single_12,single_13,single_14]
 df = multi_ordered_merge(dfs)
 
 df = df.sort_values(['GEO.id2','date'])
-df['singles'] = ((df['HC03_EST_VC02'] + df['HC04_EST_VC02'])/df['HC01_EST_VC02'])*100
+df['singles'] = ((df['HC03_EST_VC08'] + df['HC04_EST_VC08'])/df['HC01_EST_VC08'])*100
 
 for l in pd.unique(df['GEO.id2'].ravel()):
     series = l
     frame = df[df['GEO.id2'] == series]
-    series_id = 'SOLOHOUSE' + series
+    series_id = 'HOUSEHOLDVC08' + series
     frame.reset_index(inplace=True)
     # frame = frame.sort_values(['date'])
     # frame.drop(['index'], axis=1, inplace=True)
