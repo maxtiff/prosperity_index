@@ -9,6 +9,7 @@ def diss_index(county_file,tract_file,date):
     # keep_diss = ['blk_diss','asn_diss','esp_diss','nwt_diss']
     keep_diss = ['nwt_diss']
 
+    # Process census tracts
     df_tract = pd.read_csv(tract_file,encoding='windows-1252',skiprows={1})
     df_tract = df_tract.filter(keep_tract,axis=1)
     df_tract.columns = [tract_names]
@@ -16,35 +17,40 @@ def diss_index(county_file,tract_file,date):
     df_tract['tract']=df_tract.fips.str.extract('(?P<tract>\d{5}$)')
     df_tract['fips']=df_tract['fips'].str[:-6].astype(np.int64)
     df_tract['fips']=df_tract['fips'].apply(lambda x:"%06d" % (x,))
-    # tract_09=tract_09.groupby(tract_09.fips).sum()
-    # tract_09.reset_index(level=0,inplace=True)
 
+    # Process counties
     df_county= pd.read_csv(county_file,encoding='windows-1252',skiprows={1})
     df_county= df_county.filter(keep_tract,axis=1)
     df_county.columns = [county_names]
     df_county['fips']=df_county['fips'].apply(lambda x:"%06d" % (x,))
 
+    # Many-to-one merge tracts into counties
     df= pd.merge(df_tract,df_county,on='fips')
+
     df['pct_white'] = df['white']/df['white_total']
+    df['pct_nonwhite'] = (df['black'] + df['asian'] + df['hispanic'])/(df['black_total']+df['asian_total']+df['hispanic_total'])
+    df['nonwhite_white'] = abs(df['pct_nonwhite']-df['pct_white'])
+
     # df['pct_black'] = df['black']/df['black_total']
     # df['pct_asian'] = df['asian']/df['asian_total']
     # df['pct_hispanic'] = df['hispanic']/df['hispanic_total']
-    df['pct_nonwhite'] = (df['black'] + df['asian'] + df['hispanic'])/(df['black_total']+df['asian_total']+df['hispanic_total'])
 
     # df['black_white'] = abs(df['pct_black']-df['pct_white'])
     # df['asian_white'] = abs(df['pct_asian']-df['pct_white'])
     # df['hispanic_white'] = abs(df['pct_hispanic']-df['pct_white'])
-    df['nonwhite_white'] = abs(df['pct_nonwhite']-df['pct_white'])
 
+    # Combine by FIPS
     df=df.groupby(df.fips).sum()
 
+    # Calculate racial disparity
+    df['nwt_diss'] = .5*df['nonwhite_white']
     # df['blk_diss'] = .5*df['black_white']
     # df['asn_diss'] = .5*df['asian_white']
     # df['esp_diss'] = .5*df['hispanic_white']
-    df['nwt_diss'] = .5*df['nonwhite_white']
+
+    # Clean up data frame
     df.fillna(0,axis=1,inplace=True)
     df = df.filter(keep_diss, axis=1)
-
     df['date']=date
     df.reset_index(level=0, inplace=True)
 
@@ -67,12 +73,12 @@ df_14 = diss_index(data_dir + 'race_county_14.csv',data_dir + 'race_tract_14.csv
 dfs = [df_09,df_10,df_11,df_12,df_13,df_14]
 
 df = multi_ordered_merge(dfs)
-df=df.sort_values(['fips','date'])
+df = df.sort_values(['fips','date'])
 
 for l in pd.unique(df['fips'].ravel()):
     series = l
     frame = df[df['fips'] == series]
-    series_id = 'B03002ACS' + series
+    series_id = 'RACEDISPARITY' + series
     frame.reset_index(inplace=True)
     # frame = frame.sort_values(['date'])
     # frame.drop(['index'], axis=1, inplace=True)
