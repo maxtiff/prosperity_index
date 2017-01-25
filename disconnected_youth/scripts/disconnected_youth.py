@@ -25,29 +25,36 @@ def multi_ordered_merge(lst_dfs):
 
         return ft.reduce(reduce_func, lst_dfs)
 
-data_dir = os.getcwd() + '\\data\\'
+def main():
+    data_dir = os.getcwd() + '\\data\\'
 
-youth_09 = dc_youth(data_dir+'disconnected_youth_09.csv','2009')
-youth_10 = dc_youth(data_dir+'disconnected_youth_10.csv','2010')
-youth_11 = dc_youth(data_dir+'disconnected_youth_11.csv','2011')
-youth_12 = dc_youth(data_dir+'disconnected_youth_12.csv','2012')
-youth_13 = dc_youth(data_dir+'disconnected_youth_13.csv','2013')
-youth_14 = dc_youth(data_dir+'disconnected_youth_14.csv','2014')
+    youth_09 = dc_youth(data_dir+'disconnected_youth_09.csv','2009')
+    youth_10 = dc_youth(data_dir+'disconnected_youth_10.csv','2010')
+    youth_11 = dc_youth(data_dir+'disconnected_youth_11.csv','2011')
+    youth_12 = dc_youth(data_dir+'disconnected_youth_12.csv','2012')
+    youth_13 = dc_youth(data_dir+'disconnected_youth_13.csv','2013')
+    youth_14 = dc_youth(data_dir+'disconnected_youth_14.csv','2014')
 
-dfs = [youth_09,youth_10,youth_11,youth_12,youth_13,youth_14]
+    dfs = [youth_09,youth_10,youth_11,youth_12,youth_13,youth_14]
 
-df = multi_ordered_merge(dfs)
+    df = multi_ordered_merge(dfs)
 
-df = df.sort_values(['GEO.id2','date'])
+    df = df.sort_values(['GEO.id2','date'])
 
-for l in pd.unique(df['GEO.id2'].ravel()):
-    series = l
-    frame = df[df['GEO.id2'] == series]
-    series_id = 'HD01YOUTHACS' + series
-    frame.reset_index(inplace=True)
-    # frame = frame.sort_values(['date'])
-    # frame.drop(['index'], axis=1, inplace=True)
-    frame = frame[['date','disconnected_youth']]
-    frame.set_index('date', inplace=True)
-    frame.columns = [series_id]
+    geo_md = pd.DataFrame(columns=)
+    fred_md = pd.DataFrame(columns=)
+
+    for l in pd.unique(df['GEO.id2'].ravel()):
+        series = l
+        frame = df[df['GEO.id2'] == series]
+        series_id = 'HD01YOUTHACS' + series
+        frame.reset_index(inplace=True)
+        # frame = frame.sort_values(['date'])
+        # frame.drop(['index'], axis=1, inplace=True)
+        frame = frame[['date','disconnected_youth']]
+        frame.set_index('date', inplace=True)
+        frame.columns = [series_id]
     frame.to_csv('output\\' + series_id, sep='\t')
+
+if __name__='__main__':
+    main()
