@@ -1,24 +1,31 @@
 import pandas as pd, os, sys, functools as ft, pycurl as pyc, datetime as dt, re, numpy as np
 pd.options.mode.chained_assignment = None  # default='warn'
 
-data_dir = os.getcwd() + '\\data\\'
-
 def dc_youth(dy_data,date):
 
-    keep = ['GEO.id2','GEO.display-label','HD01_VD01','HD01_VD10','HD01_VD11','HD01_VD14','HD01_VD15','HD01_VD24',\
+    keep = ['GEO.id2','GEO.display-label','HD01_VD01','HD01_VD10','HD01_VD11','HD01_VD14','HD01_VD15','HD01_VD24', \
             'HD01_VD25','HD01_VD28','HD01_VD29']
+    regex = ('GEO.id2|GEO.display-label|disconnected_youth|date')
 
+    #import data
     df = pd.read_csv(dy_data,encoding='windows-1252',skiprows={1})
     df = df.filter(keep,axis=1)
     df['GEO.id2']=df['GEO.id2'].apply(lambda x:"%06d" % (x,))
     df['date'] = date
 
-    return df
+    # Calculate disconnected youth
+    df['disconnected_youth']=((df['HD01_VD10'] +df['HD01_VD11'] + df['HD01_VD14'] \
+                               +df['HD01_VD15'] + df['HD01_VD24'] + df['HD01_VD25'] \
+                               +df['HD01_VD28'] + df['HD01_VD29'])/df['HD01_VD01'])*100
+
+    return df.filter(regex=regex, axis=1)
 
 def multi_ordered_merge(lst_dfs):
-    reduce_func = lambda left,right: pd.ordered_merge(left, right)
+        reduce_func = lambda left,right: pd.ordered_merge(left, right)
 
-    return ft.reduce(reduce_func, lst_dfs)
+        return ft.reduce(reduce_func, lst_dfs)
+
+data_dir = os.getcwd() + '\\data\\'
 
 youth_09 = dc_youth(data_dir+'disconnected_youth_09.csv','2009')
 youth_10 = dc_youth(data_dir+'disconnected_youth_10.csv','2010')
@@ -31,12 +38,6 @@ dfs = [youth_09,youth_10,youth_11,youth_12,youth_13,youth_14]
 
 df = multi_ordered_merge(dfs)
 
-regex = ('GEO.id2|GEO.display-label|disconnected_youth|date')
-
-df['disconnected_youth']=((df['HD01_VD10'] +df['HD01_VD11'] + df['HD01_VD14'] \
-                                +df['HD01_VD15'] + df['HD01_VD24'] + df['HD01_VD25'] \
-                                +df['HD01_VD28'] + df['HD01_VD29'])/df['HD01_VD01'])*100
-df = df.filter(regex=regex, axis=1)
 df = df.sort_values(['GEO.id2','date'])
 
 for l in pd.unique(df['GEO.id2'].ravel()):
