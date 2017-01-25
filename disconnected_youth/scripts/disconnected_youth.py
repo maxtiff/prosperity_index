@@ -3,8 +3,8 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 def dc_youth(dy_data,date):
 
-    keep = ['GEO.id2','GEO.display-label','HD01_VD01','HD01_VD10','HD01_VD11','HD01_VD14','HD01_VD15','HD01_VD24', \
-            'HD01_VD25','HD01_VD28','HD01_VD29']
+    keep = ['GEO.id2','GEO.display-label','HD01_VD01','HD01_VD10','HD01_VD11',\
+            'HD01_VD14','HD01_VD15','HD01_VD24','HD01_VD25','HD01_VD28','HD01_VD29']
     regex = ('GEO.id2|GEO.display-label|disconnected_youth|date')
 
     #import data
