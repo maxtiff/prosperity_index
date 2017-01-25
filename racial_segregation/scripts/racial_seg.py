@@ -49,7 +49,7 @@ def diss_index(county_file,tract_file,date):
     # df['esp_diss'] = .5*df['hispanic_white']
 
     # Clean up data frame
-    df.fillna(0,axis=1,inplace=True)
+    # df.fillna(0,axis=1,inplace=True)
     df = df.filter(keep_diss, axis=1)
     df['date']=date
     df.reset_index(level=0, inplace=True)
@@ -74,6 +74,7 @@ dfs = [df_09,df_10,df_11,df_12,df_13,df_14]
 
 df = multi_ordered_merge(dfs)
 df = df.sort_values(['fips','date'])
+df.fillna('.',axis=1,inplace=True)
 
 for l in pd.unique(df['fips'].ravel()):
     series = l
