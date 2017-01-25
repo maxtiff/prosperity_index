@@ -1,7 +1,7 @@
 import pandas as pd, os, sys, functools as ft, pycurl as pyc, datetime as dt, re, numpy as np
 pd.options.mode.chained_assignment = None  # default='warn'
 
-def __main__():
+def main():
 
     states = pd.read_table('..\\state_fips.txt',dtype=str)
     counties = pd.read_table('..\\national_county.txt',dtype=str,sep=';')
@@ -54,7 +54,7 @@ def __main__():
         output.columns = [series_id]
         output.to_csv('output\\' + series_id, sep='\t')
 
-if name == '__main__':
+if __name__ == '__main__':
     __main__()
 
 
