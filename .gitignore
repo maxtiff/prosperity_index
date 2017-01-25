@@ -6,3 +6,4 @@ equifax.csv
 net_migration/downloads/
 small_business_ownership_patterns/data/*.txt
 *.stackdump
+*.do
