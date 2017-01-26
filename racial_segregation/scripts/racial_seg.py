@@ -10,7 +10,8 @@ def diss_index(county_file,tract_file,date):
     keep_diss = ['nwt_diss']
 
     # Process census tracts
-    df_tract = pd.read_csv(tract_file,encoding='windows-1252',skiprows={1})
+    df_tract = pd.read_csv(tract_file,encoding='windows-1252',skiprows={1},\
+                           low_memory=False)
     df_tract = df_tract.filter(keep_tract,axis=1)
     df_tract.columns = [tract_names]
     df_tract['fips']=df_tract['fips'].astype(str)
@@ -19,7 +20,8 @@ def diss_index(county_file,tract_file,date):
     df_tract['fips']=df_tract['fips'].apply(lambda x:"%06d" % (x,))
 
     # Process counties
-    df_county= pd.read_csv(county_file,encoding='windows-1252',skiprows={1})
+    df_county= pd.read_csv(county_file,encoding='windows-1252',skiprows={1},\
+                           low_memory=False)
     df_county= df_county.filter(keep_tract,axis=1)
     df_county.columns = [county_names]
     df_county['fips']=df_county['fips'].apply(lambda x:"%06d" % (x,))
@@ -61,7 +63,7 @@ def multi_ordered_merge(lst_dfs):
 
     return ft.reduce(reduce_func, lst_dfs)
 
-def racial_segregation():
+def main():
     data_dir = os.getcwd() + '\\data\\'
 
     df_09 = diss_index(data_dir + 'race_county_09.csv',data_dir + 'race_tract_09.csv','2009')
@@ -83,8 +85,6 @@ def racial_segregation():
         frame = df[df['fips'] == series]
         series_id = 'RACEDISPARITY' + series
         frame.reset_index(inplace=True)
-        # frame = frame.sort_values(['date'])
-        # frame.drop(['index'], axis=1, inplace=True)
         frame = frame[['date','nwt_diss']]
         frame.set_index('date', inplace=True)
         frame.columns = [series_id]
