@@ -70,7 +70,7 @@ def racial_segregation():
     df_12 = diss_index(data_dir + 'race_county_12.csv',data_dir + 'race_tract_12.csv','2012')
     df_13 = diss_index(data_dir + 'race_county_13.csv',data_dir + 'race_tract_13.csv','2013')
     df_14 = diss_index(data_dir + 'race_county_14.csv',data_dir + 'race_tract_14.csv','2014')
-    df_15 = diss_index(data_dir + 'race_county_15.csv',data_dir + 'race_tract_15.csv', '2015')
+    df_15 = diss_index(data_dir + 'race_county_15.csv',data_dir + 'race_tract_15.csv','2015')
 
     dfs = [df_09,df_10,df_11,df_12,df_13,df_14,df_15]
 
