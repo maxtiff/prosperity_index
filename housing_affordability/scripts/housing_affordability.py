@@ -41,6 +41,10 @@ def main():
                 'HC01_VC196','HC01_VC161','HC01_VC162','HC01_VC173',\
                 'HC01_VC174','HC01_VC201','HC01_VC202']
 
+    keep_15 = ['GEO.id2','GEO.display-label','HC01_VC159','HC01_VC169', \
+               'HC01_VC198','HC01_VC163','HC01_VC164','HC01_VC175',
+               'HC01_VC176','HC01_VC203','HC01_VC204']
+
     names = ['fips','county','mortgages','non_mortgages','rent','mort_30_34',\
              'mort_35','no_mort_30_34','no_mort_35','rent_30_34','rent_35']
 
@@ -56,8 +60,10 @@ def main():
                        names, '2013')
     burden_14 = burden(data_dir+'housing_affordability_14.csv',keep_13_14,\
                        names,'2014')
+    burden_15 = burden(data_dir+'housing_affordability_15.csv',keep_15,\
+                       names, '2015')
 
-    dfs = [burden_10, burden_11,burden_12,burden_13,burden_14]
+    dfs = [burden_10, burden_11,burden_12,burden_13,burden_14,burden_15]
 
     df = multi_ordered_merge(dfs)
     df = df.sort_values(['fips', 'date'])
