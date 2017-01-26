@@ -61,29 +61,33 @@ def multi_ordered_merge(lst_dfs):
 
     return ft.reduce(reduce_func, lst_dfs)
 
-data_dir = os.getcwd() + '\\data\\'
+def racial_segregation():
+    data_dir = os.getcwd() + '\\data\\'
 
-df_09 = diss_index(data_dir + 'race_county_09.csv',data_dir + 'race_tract_09.csv','2009')
-df_10 = diss_index(data_dir + 'race_county_10.csv',data_dir + 'race_tract_10.csv','2010')
-df_11 = diss_index(data_dir + 'race_county_11.csv',data_dir + 'race_tract_11.csv','2011')
-df_12 = diss_index(data_dir + 'race_county_12.csv',data_dir + 'race_tract_12.csv','2012')
-df_13 = diss_index(data_dir + 'race_county_13.csv',data_dir + 'race_tract_13.csv','2013')
-df_14 = diss_index(data_dir + 'race_county_14.csv',data_dir + 'race_tract_14.csv','2014')
+    df_09 = diss_index(data_dir + 'race_county_09.csv',data_dir + 'race_tract_09.csv','2009')
+    df_10 = diss_index(data_dir + 'race_county_10.csv',data_dir + 'race_tract_10.csv','2010')
+    df_11 = diss_index(data_dir + 'race_county_11.csv',data_dir + 'race_tract_11.csv','2011')
+    df_12 = diss_index(data_dir + 'race_county_12.csv',data_dir + 'race_tract_12.csv','2012')
+    df_13 = diss_index(data_dir + 'race_county_13.csv',data_dir + 'race_tract_13.csv','2013')
+    df_14 = diss_index(data_dir + 'race_county_14.csv',data_dir + 'race_tract_14.csv','2014')
 
-dfs = [df_09,df_10,df_11,df_12,df_13,df_14]
+    dfs = [df_09,df_10,df_11,df_12,df_13,df_14]
 
-df = multi_ordered_merge(dfs)
-df = df.sort_values(['fips','date'])
-df.fillna('.',axis=1,inplace=True)
+    df = multi_ordered_merge(dfs)
+    df = df.sort_values(['fips','date'])
+    df.fillna('.',axis=1,inplace=True)
 
-for l in pd.unique(df['fips'].ravel()):
-    series = l
-    frame = df[df['fips'] == series]
-    series_id = 'RACEDISPARITY' + series
-    frame.reset_index(inplace=True)
-    # frame = frame.sort_values(['date'])
-    # frame.drop(['index'], axis=1, inplace=True)
-    frame = frame[['date','nwt_diss']]
-    frame.set_index('date', inplace=True)
-    frame.columns = [series_id]
-    frame.to_csv('output\\' + series_id, sep='\t')
+    for l in pd.unique(df['fips'].ravel()):
+        series = l
+        frame = df[df['fips'] == series]
+        series_id = 'RACEDISPARITY' + series
+        frame.reset_index(inplace=True)
+        # frame = frame.sort_values(['date'])
+        # frame.drop(['index'], axis=1, inplace=True)
+        frame = frame[['date','nwt_diss']]
+        frame.set_index('date', inplace=True)
+        frame.columns = [series_id]
+        frame.to_csv('output\\' + series_id, sep='\t')
+
+if __name__=='__main__':
+    main()
