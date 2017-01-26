@@ -5,68 +5,113 @@ pd.options.mode.chained_assignment = None  # default='warn'
 Housing Burden is defined as a household spending more than 30% of their monthly income on a rent or mortgage.
 '''
 
+def burden(file,filter,names,date):
+    # read
+    df = pd.read_csv(file,encoding='windows-1252', skiprows={1},\
+                     low_memory=False)
+
+    # clean
+    df = df.filter(filter, axis=1)
+    df.columns = [names]
+    df['fips'] = df['fips'].apply(lambda x: "%06d" % (x,))
+
+    # calculate
+    df['burdened'] = (df['mort_30_34']+df['mort_35']+df['no_mort_30_34']+\
+                      df['no_mort_35']+df['rent_30_34']+df['rent_35'])/\
+                     (df['mortgages']+df['non_mortgages']+df['rent'])*100
+
+    # throw in the date
+    df['date'] = date
+
+    # return the frame
+    return df.filter(['fips','burdened','date','county'],axis=1)
+
 def multi_ordered_merge(lst_dfs):
     reduce_func = lambda left,right: pd.ordered_merge(left, right)
 
     return ft.reduce(reduce_func, lst_dfs)
 
-keep_old = ['GEO.id2','GEO.display-label','HC01_VC155','HC01_VC164','HC01_VC191','HC01_VC159','HC01_VC160',\
-            'HC01_VC170','HC01_VC171','HC01_VC196','HC01_VC197']
+def main():
 
-keep_new = ['GEO.id2','GEO.display-label','HC01_VC157','HC01_VC167','HC01_VC196','HC01_VC161','HC01_VC162',\
-            'HC01_VC173','HC01_VC174','HC01_VC201','HC01_VC202']
+    keep_10_12 = ['GEO.id2','GEO.display-label','HC01_VC155','HC01_VC164',\
+                'HC01_VC191','HC01_VC159','HC01_VC160','HC01_VC170',\
+                'HC01_VC171','HC01_VC196','HC01_VC197']
 
-names = ['fips','county','mortgages','non_mortgages','rent','mort_30_34','mort_35','no_mort_30_34','no_mort_35',\
-         'rent_30_34','rent_35']
+    keep_13_14 = ['GEO.id2','GEO.display-label','HC01_VC157','HC01_VC167',\
+                'HC01_VC196','HC01_VC161','HC01_VC162','HC01_VC173',\
+                'HC01_VC174','HC01_VC201','HC01_VC202']
 
-data_dir = os.getcwd()+'\\data\\'
+    names = ['fips','county','mortgages','non_mortgages','rent','mort_30_34',\
+             'mort_35','no_mort_30_34','no_mort_35','rent_30_34','rent_35']
 
-house_10 = pd.read_csv(data_dir + 'housing_affordability_10.csv',encoding='windows-1252',skiprows={1})
-house_10 = house_10.filter(keep_old,axis=1)
-house_10['GEO.id2']=house_10['GEO.id2'].apply(lambda x:"%06d" % (x,))
-house_10.columns=[names]
-house_10['date'] = '2010'
+    data_dir = os.getcwd()+'\\data\\'
 
-house_11 = pd.read_csv(data_dir + 'housing_affordability_11.csv',encoding='windows-1252',skiprows={1})
-house_11 = house_11.filter(keep_old,axis=1)
-house_11['GEO.id2']=house_11['GEO.id2'].apply(lambda x:"%06d" % (x,))
-house_11.columns=[names]
-house_11['date'] = '2011'
+    burden_10 = burden(data_dir+'housing_affordability_10.csv',keep_10_12,\
+                       names,'2010')
+    burden_11 = burden(data_dir+'housing_affordability_11.csv',keep_10_12,\
+                       names, '2011')
+    burden_12 = burden(data_dir+'housing_affordability_12.csv',keep_10_12,\
+                       names,'2012')
+    burden_13 = burden(data_dir+'housing_affordability_13.csv',keep_13_14,\
+                       names, '2013')
+    burden_14 = burden(data_dir+'housing_affordability_14.csv',keep_13_14,\
+                       names,'2014')
 
-house_12 = pd.read_csv(data_dir + 'housing_affordability_12.csv',encoding='windows-1252',skiprows={1})
-house_12 = house_12.filter(keep_old,axis=1)
-house_12['GEO.id2']=house_12['GEO.id2'].apply(lambda x:"%06d" % (x,))
-house_12.columns=[names]
-house_12['date'] = '2012'
+    dfs = [burden_10, burden_11,burden_12,burden_13,burden_14]
 
-house_13 = pd.read_csv(data_dir + 'housing_affordability_13.csv',encoding='windows-1252',skiprows={1})
-house_13 = house_13.filter(keep_new,axis=1)
-house_13['GEO.id2']=house_13['GEO.id2'].apply(lambda x:"%06d" % (x,))
-house_13.columns=[names]
-house_13['date'] = '2013'
+    df = multi_ordered_merge(dfs)
+    df = df.sort_values(['fips', 'date'])
 
-house_14 = pd.read_csv(data_dir + 'housing_affordability_14.csv',encoding='windows-1252',skiprows={1})
-house_14 = house_14.filter(keep_new,axis=1)
-house_14['GEO.id2']=house_14['GEO.id2'].apply(lambda x:"%06d" % (x,))
-house_14.columns=[names]
-house_14['date'] = '2014'
+    for l in pd.unique(df['fips'].ravel()):
+        series = l
+        frame = df[df['fips'] == series]
+        series_id = 'DP04ACS' + series
+        frame.reset_index(inplace=True)
+        # frame = frame.sort_values(['date'])
+        # frame.drop(['index'], axis=1, inplace=True)
+        frame = frame[['date','burdened']]
+        frame.set_index('date', inplace=True)
+        frame.columns = [series_id]
+        frame.to_csv('output\\' + series_id, sep='\t')
 
-dfs = [house_10,house_11,house_12,house_13,house_14]
+# run the code
+if __name__ == '__main__':
+    main()
 
-df = multi_ordered_merge(dfs,'fips')
-df = df.sort_values(['fips','date'])
-
-df['burdened'] = (df['mort_30_34'] + df['mort_35'] + df['no_mort_30_34'] + df['no_mort_35'] + df['rent_30_34'] \
-                  + df['rent_35'])/(df['mortgages'] + df['non_mortgages'] + df['rent'])*100
-
-for l in pd.unique(df['fips'].ravel()):
-    series = l
-    frame = df[df['fips'] == series]
-    series_id = 'BURDENED' + series
-    frame.reset_index(inplace=True)
-    # frame = frame.sort_values(['date'])
-    # frame.drop(['index'], axis=1, inplace=True)
-    frame = frame[['date','burdened']]
-    frame.set_index('date', inplace=True)
-    frame.columns = [series_id]
-    frame.to_csv('output\\' + series_id, sep='\t')
+# house_10 = pd.read_csv(data_dir + 'housing_affordability_10.csv',encoding='windows-1252',skiprows={1})
+# house_10 = house_10.filter(keep_old,axis=1)
+# house_10['GEO.id2']=house_10['GEO.id2'].apply(lambda x:"%06d" % (x,))
+# house_10.columns=[names]
+# house_10['date'] = '2010'
+#
+# house_11 = pd.read_csv(data_dir + 'housing_affordability_11.csv',encoding='windows-1252',skiprows={1})
+# house_11 = house_11.filter(keep_old,axis=1)
+# house_11['GEO.id2']=house_11['GEO.id2'].apply(lambda x:"%06d" % (x,))
+# house_11.columns=[names]
+# house_11['date'] = '2011'
+#
+# house_12 = pd.read_csv(data_dir + 'housing_affordability_12.csv',encoding='windows-1252',skiprows={1})
+# house_12 = house_12.filter(keep_old,axis=1)
+# house_12['GEO.id2']=house_12['GEO.id2'].apply(lambda x:"%06d" % (x,))
+# house_12.columns=[names]
+# house_12['date'] = '2012'
+#
+# house_13 = pd.read_csv(data_dir + 'housing_affordability_13.csv',encoding='windows-1252',skiprows={1})
+# house_13 = house_13.filter(keep_new,axis=1)
+# house_13['GEO.id2']=house_13['GEO.id2'].apply(lambda x:"%06d" % (x,))
+# house_13.columns=[names]
+# house_13['date'] = '2013'
+#
+# house_14 = pd.read_csv(data_dir + 'housing_affordability_14.csv',encoding='windows-1252',skiprows={1})
+# house_14 = house_14.filter(keep_new,axis=1)
+# house_14['GEO.id2']=house_14['GEO.id2'].apply(lambda x:"%06d" % (x,))
+# house_14.columns=[names]
+# house_14['date'] = '2014'
+#
+# dfs = [house_10,house_11,house_12,house_13,house_14]
+#
+# df = multi_ordered_merge(dfs,'fips')
+# df = df.sort_values(['fips','date'])
+#
+# df['burdened'] = (df['mort_30_34'] + df['mort_35'] + df['no_mort_30_34'] + df['no_mort_35'] + df['rent_30_34'] \
+#                   + df['rent_35'])/(df['mortgages'] + df['non_mortgages'] + df['rent'])*100
