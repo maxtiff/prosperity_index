@@ -54,35 +54,3 @@ def main():
 
 if __name__ == '__main__':
 	main()
-
-
-# data_dir = os.getcwd()+'\\data\\'
-#
-#
-# test1 = pd.read_csv(dir+'housingtenure_09.csv',encoding='windows-1252',\
-# 													 skiprows={1})
-# test1['date'] = '2009'
-#
-# test2 = pd.read_csv(dir+'housingtenure_10.csv',encoding='windows-1252',\
-# 													 skiprows={1})
-# test2['date'] = '2010'
-#
-# test3 = pd.read_csv(dir+'housingtenure_11.csv',encoding='windows-1252',skiprows={1})
-# test3['date'] = '2011'
-#
-# test4 = pd.read_csv(dir+'housingtenure_12.csv',encoding='windows-1252',skiprows={1})
-# test4['date'] = '2012'
-#
-# test5 = pd.read_csv(dir+'housingtenure_13.csv',encoding='windows-1252',skiprows={1})
-# test5['date'] = '2013'
-#
-# test6 = pd.read_csv(dir+'housingtenure_14.csv',encoding='windows-1252',skiprows={1})
-# test6['date'] = '2014'
-#
-# test7 = pd.read_csv(dir+'housingtenure_15.csv',encoding='windows-1252',skiprows={1})
-# test7['date'] = '2015'
-#
-# # df = pd.ordered_merge(test_result,test6)
-# # df['HD01_VD01'] = pd.to_numeric(df['HD01_VD01'])
-# # df['HD01_VD02'] = pd.to_numeric(df['HD01_VD02'])
-# # df['rate'] = df['HD01_VD02']/df['HD01_VD01']
