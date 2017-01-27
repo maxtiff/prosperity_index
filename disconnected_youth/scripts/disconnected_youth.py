@@ -54,7 +54,7 @@ def main():
         frame = frame[['date','disconnected_youth']]
         frame.set_index('date', inplace=True)
         frame.columns = [series_id]
-    frame.to_csv('output\\' + series_id, sep='\t')
+        frame.to_csv('output\\' + series_id, sep='\t')
 
 if __name__='__main__':
     main()
