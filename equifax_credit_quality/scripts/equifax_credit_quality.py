@@ -25,7 +25,7 @@ def main():
     df.drop(['qtr'],axis=1,inplace=True)
 
     # Get pct of subprime creditors
-    df['pct_below660'] = df['num_below660']/df['num_total']
+    df['pct_below660'] = (df['num_below660']/df['num_total'])*100
     df.reset_index(inplace=True)
     df.drop(['index'], axis=1, inplace=True)
 
@@ -43,6 +43,38 @@ def main():
     # Remove unnecessary, non-county series
     df = pd.merge(df, counties, on='fips')
 
+    ### Metadata
+    md_names = ['series_id', 'title', 'season', 'frequency', 'units','keywords',\
+                'notes', 'period_description', 'growth_rates',\
+                'obs_vsd_use_release_date', 'valid_start_date', 'release_id']
+    fsr_names = ['fred_release_id', 'fred_series_id', 'official',\
+                 'valid_start_date']
+    cat_names = ['series_id', 'cat_id']
+
+    geo_md = pd.DataFrame(columns=md_names)
+    fred_md = pd.DataFrame(columns=md_names)
+    fsr_geo = pd.DataFrame(columns=fsr_names)
+    fsr = pd.DataFrame(columns=fsr_names)
+    fred_cat = pd.DataFrame(columns=cat_names)
+
+    season = 'Not Seasonally Adjusted'
+    freq = 'Quarterly'
+    units = 'Percent'
+    keywords = ''
+    notes = 'Percentage of population sample with a credit score below 660. '\
+            'Counties with fewer than 20 people in the sample are not reported for privacy reasons.'
+    period = ''
+    g_rate = 'TRUE'
+    obs_vsd = 'TRUE'
+    vsd = '2017-01-27'
+    r_id = '409'
+
+    non_geo_fips = '002020|002110|002220|002230|002275|006705|008014|015003|042101'
+
+    non_geo_cats = {'002020': '27406', '002110': '27412', '002220': '27422', \
+                    '002230': '33516', '002275': '33518', '006075': '27559', \
+                    '008014': '32077', '015003': '27889', '042101': '29664'}
+
     for l in pd.unique(df.fips.ravel()):
         series_id = 'EQFXSUBPRIME' + l
         frame = df[df['fips'] == l]
@@ -54,8 +86,45 @@ def main():
         output.columns = [series_id]
         output.to_csv('output\\' + series_id, sep='\t')
 
-if __name__ == '__main__':
-    __main__()
+        # Create metadata files
+        title = 'Equifax Subprime Credit Population for ' + \
+                pd.unique(df[df['fips'] == l]['county'])[0]
 
+        if bool(re.search(non_geo_fips, l)):
+            row = pd.DataFrame(
+                data=[[series_id, title, season, freq, units, keywords,\
+                       notes, period, g_rate, obs_vsd, vsd, r_id]],\
+                columns=md_names)
+            fred_md = fred_md.append(row)
+
+            row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],\
+                               columns=fsr_names)
+            fsr = fsr.append(row)
+
+            cat_id = non_geo_cats[l]
+            row = pd.DataFrame(data=[[series_id, cat_id]], columns=cat_names)
+            fred_cat = fred_cat.append(row)
+
+        else:
+            row = pd.DataFrame(
+                data=[[series_id, title, season, freq, units, keywords,\
+                       notes, period, g_rate, obs_vsd, vsd, r_id]],\
+                columns=md_names)
+            geo_md = geo_md.append(row)
+
+            row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],\
+                               columns=fsr_names)
+            fsr_geo = fsr_geo.append(row)
+
+            # Write metadata files
+    geo_md.to_csv('fred_series_geo.txt', sep='\t', index=False)
+    fsr_geo.to_csv('fred_series_release_geo.txt', sep='\t', index=False)
+
+    fred_md.to_csv('fred_series.txt', sep='\t', index=False)
+    fsr.to_csv('fred_series_release.txt', sep='\t', index=False)
+    fred_cat.to_csv('fred_series_in_category.txt', sep='\t', index=False)
+
+if __name__ == '__main__':
+    main()
 
 
