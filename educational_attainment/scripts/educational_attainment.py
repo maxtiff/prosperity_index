@@ -140,8 +140,8 @@ def main():
                     row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],columns=fsr_names)
                     fsr_geo = fsr_geo.append(row)
 
-            output.columns = [series_id]
-            output.to_csv('output\\' + series_id, sep='\t')
+                output.columns = [series_id]
+                output.to_csv('output\\' + series_id, sep='\t')
 
             # Write metadata files
     geo_md.to_csv('fred_series_geo.txt', sep='\t', index=False)
