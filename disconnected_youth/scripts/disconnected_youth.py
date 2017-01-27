@@ -92,7 +92,9 @@ def main():
                 pd.unique(df[df['GEO.id2'] == l]['GEO.display-label'])[0]
 
         if bool(re.search(non_geo_fips, l)):
-            row=pd.DataFrame(data=[[series_id, title, season,freq, units,keywords,notes, period, g_rate, obs_vsd, vsd, r_id]],columns=md_names)
+            row=pd.DataFrame(data=[[series_id, title, season,freq, units,keywords,\
+                                    notes, period, g_rate, obs_vsd, vsd, r_id]],\
+                             columns=md_names)
             fred_md = fred_md.append(row)
 
             row = pd.DataFrame(data=[[r_id,series_id,'TRUE',vsd]],columns=fsr_names)
@@ -103,7 +105,9 @@ def main():
             fred_cat = fred_cat.append(row)
 
         else:
-            row = pd.DataFrame(data=[[series_id, title, season,freq, units,keywords,notes, period, g_rate, obs_vsd, vsd, r_id]],columns=md_names)
+            row = pd.DataFrame(data=[[series_id, title, season,freq, units,keywords,\
+                                      notes, period, g_rate, obs_vsd, vsd, r_id]],\
+                               columns=md_names)
             geo_md = geo_md.append(row)
 
             row = pd.DataFrame(data=[[r_id, series_id,'TRUE', vsd]],columns=fsr_names)
