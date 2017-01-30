@@ -17,12 +17,14 @@ def multi_ordered_merge(lst_dfs):
     return ft.reduce(reduce_func, lst_dfs)
 
 def main():
-    keep_09 = ['GEO.id2','GEO.display-label','HC01_EST_VC11','HC01_EST_VC12','HC01_EST_VC13']
-    keep = ['GEO.id2','GEO.display-label','HC01_EST_VC12','HC01_EST_VC13',\
+    keep_09 = ['GEO.id2','HC01_EST_VC11','HC01_EST_VC12','HC01_EST_VC13']
+    keep = ['GEO.id2','HC01_EST_VC12','HC01_EST_VC13',\
                'HC01_EST_VC14']
-    keep_15=['GEO.id2','GEO.display-label','HC02_EST_VC13','HC02_EST_VC14',\
+    keep_15=['GEO.id2','HC02_EST_VC13','HC02_EST_VC14',\
                'HC02_EST_VC15']
-    names = ['fips','county','assc','bach','grad']
+    names = ['fips','assc','bach','grad']
+
+    counties = pd.read_table('..\\national_county.txt', dtype=str, sep=';')
 
     data_dir = os.getcwd()+'\\data\\'
 
@@ -45,6 +47,8 @@ def main():
 
     df = multi_ordered_merge(dfs)
 
+    df = pd.merge(df, counties, on='fips')
+
     df = df.sort_values(['fips','date'])
     df.fips = df.fips.astype(str)
 
@@ -61,6 +65,7 @@ def main():
     fsr_geo = pd.DataFrame(columns=fsr_names)
     fsr = pd.DataFrame(columns=fsr_names)
     fred_cat = pd.DataFrame(columns=cat_names)
+    titles =pd.DataFrame()
 
     season = 'Not Seasonally Adjusted'
     freq = '5-years'
@@ -123,7 +128,7 @@ def main():
                 # Create metadata files
                 if bool(re.search(non_geo_fips, series)):
                     row = pd.DataFrame(
-                        data=[[series_id, title, season, freq, units, keywords,notes,\
+                        data=[[series_id, title, season, freq, units, keywords,notes, \
                                period, g_rate, obs_vsd, vsd, r_id]],columns=md_names)
                     fred_md = fred_md.append(row)
 
@@ -132,12 +137,11 @@ def main():
                     fsr = fsr.append(row)
 
                     cat_id = non_geo_cats[series]
-                    row = pd.DataFrame(data=[[series_id, cat_id]],columns=cat_names)
+                    row = pd.DataFrame(data=[[series_id, cat_id]], columns=cat_names)
                     fred_cat = fred_cat.append(row)
-
                 else:
-                    row = pd.DataFrame(data=[[series_id, title, season, freq, units,\
-                                              keywords,notes, period, g_rate, obs_vsd,\
+                    row = pd.DataFrame(data=[[series_id, title, season, freq, units, \
+                                              keywords,notes, period, g_rate, obs_vsd, \
                                               vsd, r_id]],columns=md_names)
                     geo_md = geo_md.append(row)
 
@@ -147,13 +151,16 @@ def main():
                 output.columns = [series_id]
                 output.to_csv('output\\' + series_id, sep='\t')
 
-            # Write metadata files
+                title = pd.DataFrame(data=[[title]])
+                titles=titles.append(title)
+    # Write metadata files
     geo_md.to_csv('fred_series_geo.txt', sep='\t', index=False)
     fsr_geo.to_csv('fred_series_release_geo.txt', sep='\t', index=False)
 
     fred_md.to_csv('fred_series.txt', sep='\t', index=False)
     fsr.to_csv('fred_series_release.txt', sep='\t', index=False)
     fred_cat.to_csv('fred_series_in_category.txt', sep='\t',index=False)
+    titles.to_csv('titles.txt',index=False,sep='\t',header=False)
 
         #     # Create metadata files
         #     if bool(re.search(non_geo_fips, series)):
