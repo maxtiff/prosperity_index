@@ -1,6 +1,8 @@
 import pandas as pd, os, sys, functools as ft, pycurl as pyc, datetime as dt, re
 pd.options.mode.chained_assignment = None  # default='warn'
 
+# os.chdir(os.getcwd())
+
 def main():
     names=['date','fips_state','fips_county','region_code','division_code','county_name','1_unit_bldgs','1_unit_units',
            '1_unit_value','2_unit_bldgs','2_unit_units','2_unit_value','34_unit_bldgs','34_unit_units','34_unit_value',
@@ -37,13 +39,10 @@ def main():
     df.drop(df.filter(regex=('value|rep|units')),axis=1,inplace=True)
     # df = df.sort_values(['fips','date'])
 
-    levels = df['fips'].unique()
-
-    # dates = ['2009','2010','2011','2012','2013','2014']
     ptn = '9\d99'
 
-    for series in levels:
-        fips = '0'+series
+    for series in pd.unique(df.fips.ravel()):
+        fips = '0' + series
 
         frame = df[df['fips'] == series]
         frame.reset_index(inplace=True)
@@ -52,7 +51,9 @@ def main():
         # frame.reset_index(inplace=True)
         for i, d in enumerate(frame['date']):
             if bool(re.search(ptn, d)):
-                frame['date'][i] = re.sub(ptn, '19' + re.search(ptn, d).group()[0:2], d)
+                frame['date'][i] = re.sub(ptn,
+                                          '19' + re.search(ptn, d).group()[0:2],
+                                          d)
         frame = frame.sort_values(['date'])
         frame['total_bldgs'] = frame.sum(axis=1)
         frame = frame[['date', 'total_bldgs']]
@@ -62,7 +63,96 @@ def main():
         frame.columns = [series_id]
         frame.to_csv('output\\' + series_id, sep='\t')
 
-if __name__='__main__':
+    # md_names = ['series_id', 'title', 'season', 'frequency', 'units', \
+    #             'keywords', 'notes', 'period_description', 'growth_rates', \
+    #             'obs_vsd_use_release_date', 'valid_start_date', 'release_id']
+    # fsr_names = ['fred_release_id', 'fred_series_id', 'official',\
+    #              'valid_start_date']
+    # cat_names = ['series_id', 'cat_id']
+    #
+    # geo_md = pd.DataFrame(columns=md_names)
+    # fred_md = pd.DataFrame(columns=md_names)
+    # fsr_geo = pd.DataFrame(columns=fsr_names)
+    # fsr = pd.DataFrame(columns=fsr_names)
+    # fred_cat = pd.DataFrame(columns=cat_names)
+    # titles = pd.DataFrame()
+    #
+    # season = 'Not Seasonally Adjusted'
+    # freq = 'Annual'
+    # units = 'Units'
+    # keywords = ''
+    # notes = ''
+    # period = ''
+    # g_rate = 'TRUE'
+    # obs_vsd = 'TRUE'
+    # vsd = '2017-01-27'
+    # r_id = '148'
+    #
+    # non_geo_fips = '002020|002110|002220|002230|002275|006075|008014|015003|042101'
+    #
+    # non_geo_cats = {'002020': '27406', '002110': '27412', '002220': '27422', \
+    #                 '002230': '33516', '002275': '33518', '006075': '27559', \
+    #                 '008014': '32077', '015003': '27889', '042101': '29664'}
+    #
+    # ptn = '9\d99'
+    #
+    # for series in pd.unique(df.fips.ravel()):
+    #     fips = '0'+series
+    #
+    #     frame = df[df['fips'] == series]
+    #     frame.reset_index(inplace=True)
+    #     # frame = frame.sort_values(['date'])
+    #     frame.drop(['index'], axis=1, inplace=True)
+    #     # frame.reset_index(inplace=True)
+    #     for i, d in enumerate(frame['date']):
+    #         if bool(re.search(ptn, d)):
+    #             frame['date'][i] = re.sub(ptn, '19' + re.search(ptn, d).group()[0:2], d)
+    #     frame = frame.sort_values(['date'])
+    #     frame['total_bldgs'] = frame.sum(axis=1)
+    #     frame = frame[['date', 'total_bldgs']]
+    #     # frame['date'] = dates
+    #     frame.set_index('date', inplace=True)
+    #     series_id = 'BPPRIV' + fips
+    #     frame.columns = [series_id]
+    #     frame.to_csv('output\\' + series_id, sep='\t')
+    #
+    #     title = 'New Private Housing Units Authorized by Building Permits for ' + \
+    #             pd.unique(df[df['fips'] == series]['county_name'])[0]
+    #     if bool(re.search(non_geo_fips, series)):
+    #         row = pd.DataFrame(
+    #             data=[[series_id, title, season, freq, units, keywords, notes, \
+    #                    period, g_rate, obs_vsd, vsd, r_id]], columns=md_names)
+    #         fred_md = fred_md.append(row)
+    #
+    #         row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],
+    #                            columns=fsr_names)
+    #         fsr = fsr.append(row)
+    #
+    #         cat_id = non_geo_cats[series]
+    #         row = pd.DataFrame(data=[[series_id, cat_id]], columns=cat_names)
+    #         fred_cat = fred_cat.append(row)
+    #     else:
+    #         row = pd.DataFrame(data=[[series_id, title, season, freq, units, \
+    #                                   keywords, notes, period, g_rate, obs_vsd, \
+    #                                   vsd, r_id]], columns=md_names)
+    #         geo_md = geo_md.append(row)
+    #
+    #         row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],
+    #                            columns=fsr_names)
+    #         fsr_geo = fsr_geo.append(row)
+    #
+    #     title = pd.DataFrame(data=[[title]])
+    #     titles = titles.append(title)
+    #
+    # geo_md.to_csv('fred_series_geo.txt', sep='\t', index=False)
+    # fsr_geo.to_csv('fred_series_release_geo.txt', sep='\t', index=False)
+    #
+    # fred_md.to_csv('fred_series.txt', sep='\t', index=False)
+    # fsr.to_csv('fred_series_release.txt', sep='\t', index=False)
+    # fred_cat.to_csv('fred_series_in_category.txt', sep='\t', index=False)
+    # titles.to_csv('title.txt', sep='\t', index=False, header=False)
+
+if __name__=='__main__':
     main()
 
 # def open_loc(file_loc,file_url):
