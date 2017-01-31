@@ -1,11 +1,11 @@
 import pandas as pd, os, sys, functools as ft, pycurl as pyc, datetime as dt, re, numpy as np
 pd.options.mode.chained_assignment = None  # default='warn'
 
-os.chdir(os.getcwd()+'\\head_of_household')
+# os.chdir(os.getcwd()+'\\..\\head_of_household')
 
 def single_parent(file,keep,names,date):
     df = pd.read_csv(file,encoding='windows-1252', \
-                     skiprows={1, 2})
+                     skiprows={1})
     df = df.filter(keep, axis=1)
     df['GEO.id2'] = df['GEO.id2'].apply(lambda x: "%06d" % (x,))
     df.columns = [names]
@@ -25,15 +25,14 @@ def main():
     names = ['fips', 'total', 'male', 'female']
     counties = pd.read_table('..\\national_county.txt', dtype=str, sep=';')
 
-
     data_dir = os.getcwd() + '\\data\\'
 
     single_09 = single_parent(data_dir+'head_of_household_09.csv',keep,names,'2009')
     single_10 = single_parent(data_dir+'head_of_household_10.csv',keep_10,names,'2010')
     single_11 = single_parent(data_dir+'head_of_household_11.csv',keep_10,names,'2011')
-    single_12 = single_parent(data_dir+'head_of_household_12.csv', keep_10,names,'2012')
-    single_13 = single_parent(data_dir+'head_of_household_13.csv', keep_13,names,'2013')
-    single_14 = single_parent(data_dir+'head_of_household_14.csv', keep_13,names,'2014')
+    single_12 = single_parent(data_dir+'head_of_household_12.csv',keep_10,names,'2012')
+    single_13 = single_parent(data_dir+'head_of_household_13.csv',keep_13,names,'2013')
+    single_14 = single_parent(data_dir+'head_of_household_14.csv',keep_13,names,'2014')
     single_15 = single_parent(data_dir+'head_of_household_15.csv',keep_13,names,'2015')
 
     dfs = [single_09,single_10,single_11,single_12,single_13,single_14,single_15]
@@ -95,8 +94,7 @@ def main():
         title = 'Single-parent Households with Children as a Percentage of Households with Children in ' + \
                 pd.unique(df[df['fips'] == series]['county'])[0]
 
-        title = pd.DataFrame(data=[[title]])
-        titles = titles.append(title)
+
 
         if bool(re.search(non_geo_fips, series)):
             row = pd.DataFrame(
@@ -123,6 +121,9 @@ def main():
             row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]], \
                                columns=fsr_names)
             fsr_geo = fsr_geo.append(row)
+
+        title = pd.DataFrame(data=[[title]])
+        titles = titles.append(title)
 
     geo_md.to_csv('fred_series_geo.txt', sep='\t', index=False)
     fsr_geo.to_csv('fred_series_release_geo.txt', sep='\t', index=False)
