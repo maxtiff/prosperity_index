@@ -318,7 +318,7 @@ Equifax Subprime Credit Population for Windham County, CT
 Equifax Subprime Credit Population for Kent County, DE
 Equifax Subprime Credit Population for New Castle County, DE
 Equifax Subprime Credit Population for Sussex County, DE
-Equifax Subprime Credit Population for District of Columbia, DC
+Equifax Subprime Credit Population for District of Columbia
 Equifax Subprime Credit Population for Alachua County, FL
 Equifax Subprime Credit Population for Baker County, FL
 Equifax Subprime Credit Population for Bay County, FL
