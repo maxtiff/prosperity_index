@@ -1,0 +1,1 @@
+fred_release_id	fred_series_id	official	valid_start_date

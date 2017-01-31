@@ -1,0 +1,1 @@
+series_id	title	season	frequency	units	keywords	notes	period_description	growth_rates	obs_vsd_use_release_date	valid_start_date	release_id
