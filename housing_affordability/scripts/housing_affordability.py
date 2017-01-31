@@ -24,7 +24,7 @@ def burden(file,filter,names,date):
     df['date'] = date
 
     # return the frame
-    return df.filter(['fips','burdened','date','county'],axis=1)
+    return df.filter(['fips','burdened','date'],axis=1)
 
 def multi_ordered_merge(lst_dfs):
     reduce_func = lambda left,right: pd.ordered_merge(left, right)
@@ -33,22 +33,25 @@ def multi_ordered_merge(lst_dfs):
 
 def main():
 
-    keep_10_12 = ['GEO.id2','GEO.display-label','HC01_VC155','HC01_VC164',\
+    keep_10_12 = ['GEO.id2','HC01_VC155','HC01_VC164',\
                 'HC01_VC191','HC01_VC159','HC01_VC160','HC01_VC170',\
                 'HC01_VC171','HC01_VC196','HC01_VC197']
 
-    keep_13_14 = ['GEO.id2','GEO.display-label','HC01_VC157','HC01_VC167',\
+    keep_13_14 = ['GEO.id2','HC01_VC157','HC01_VC167',\
                 'HC01_VC196','HC01_VC161','HC01_VC162','HC01_VC173',\
                 'HC01_VC174','HC01_VC201','HC01_VC202']
 
-    keep_15 = ['GEO.id2','GEO.display-label','HC01_VC159','HC01_VC169', \
+    keep_15 = ['GEO.id2','HC01_VC159','HC01_VC169', \
                'HC01_VC198','HC01_VC163','HC01_VC164','HC01_VC175',
                'HC01_VC176','HC01_VC203','HC01_VC204']
 
-    names = ['fips','county','mortgages','non_mortgages','rent','mort_30_34',\
+    names = ['fips','mortgages','non_mortgages','rent','mort_30_34',\
              'mort_35','no_mort_30_34','no_mort_35','rent_30_34','rent_35']
 
+    counties = pd.read_table('..\\national_county.txt', dtype=str, sep=';')
+
     data_dir = os.getcwd()+'\\data\\'
+
 
     burden_10 = burden(data_dir+'housing_affordability_10.csv',keep_10_12,\
                        names,'2010')
@@ -66,6 +69,9 @@ def main():
     dfs = [burden_10, burden_11,burden_12,burden_13,burden_14,burden_15]
 
     df = multi_ordered_merge(dfs)
+
+    df = pd.merge(df, counties, on='fips')
+
     df = df.sort_values(['fips', 'date'])
 
     for l in pd.unique(df['fips'].ravel()):
