@@ -74,13 +74,10 @@ def main():
 
     df = df.sort_values(['fips', 'date'])
 
-    for l in pd.unique(df['fips'].ravel()):
-        series = l
+    for series in pd.unique(df['fips'].ravel()):
         frame = df[df['fips'] == series]
         series_id = 'DP04ACS' + series
         frame.reset_index(inplace=True)
-        # frame = frame.sort_values(['date'])
-        # frame.drop(['index'], axis=1, inplace=True)
         frame = frame[['date','burdened']]
         frame.set_index('date', inplace=True)
         frame.columns = [series_id]
