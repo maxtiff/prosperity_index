@@ -45,8 +45,7 @@ def main():
 
     df['singles'] = ((df['male'] + df['female'])/df['total'])*100
 
-    for l in pd.unique(df['fips'].ravel()):
-        series = l
+    for series in pd.unique(df['fips'].ravel()):
         frame = df[df['fips'] == series]
         series_id = 'S1101SPHOUSE' + series
         frame.reset_index(inplace=True)
