@@ -10,60 +10,107 @@ def main():
            '2_unit_bldgs_rep','2_unit_units_rep','2_unit_value_rep','34_unit_bldgs_rep','34_unit_units_rep',
            '34_unit_value_rep','5_unit_bldgs_rep','5_unit_units_rep','5_unit_value_rep']
 
-    # states = pd.read_table('..\\state_fips.txt',dtype=str)
     states = pd.read_table('..\\state_fips.txt',dtype=str)
 
     df = pd.DataFrame(columns=names)
 
     for f in os.listdir(os.getcwd()+'\\data\\'):
         if bool(re.search('co\d+a', f)):
-            # permits = pd.read_table(os.getcwd() + '\\data\\'+f,sep='\,',engine='python',header=None,skiprows=[0,1],names=names)
-            permits = pd.read_table(os.getcwd() + '\\data\\' + f, sep=',', converters={'fips_county':str,'fips_state':str}, header=None, skiprows=[0, 1],
-                                    names=names)
-            # for i, d in enumerate(permits['date']):
-            #     if bool(re.search(ptn, permits['date'][i])):
-            #         permits['date'][i] = re.sub(ptn, '19' + re.search(ptn, permits['date'][i]).group()[0:2], permits['date'][i])
+            permits = pd.read_table(os.getcwd() + '\\data\\' + f, sep=',',\
+                                    converters={'fips_county':str,'fips_state':str},\
+                                    header=None, skiprows=[0, 1],names=names)
             df = df.append(permits)
-    #
-    # df.fips_county= df.fips_county.astype(int).astype(str)
-    # df.fips_state = df.fips_state.astype(int).astype(str)
+
+    # Clean some fields
     df.fips_state = df.fips_state.str.strip()
     df.fips_county = df.fips_county.str.strip()
+    df.date = df.date.astype(int).astype(str)
 
     df = pd.merge(df, states, left_on='fips_state', right_on='fips')
     df['county_name'] = df['county_name'].str.strip()
     df['county_name'] = df['county_name'] + ', ' + df['state']
-    df.date = df.date.astype(int).astype(str)
+
     df['fips'] = df['fips_state'] + df['fips_county']
+    df.fips = df.fips.astype(int)
+    df['fips'] = df['fips'].apply(lambda x: "%06d" % (x,))
+
     df.drop(['region_code', 'division_code','state','fips_county','fips_state'], axis=1, inplace=True)
     df.drop(df.filter(regex=('value|rep|units')),axis=1,inplace=True)
-    # df = df.sort_values(['fips','date'])
 
+    # Regex pattern to reformat dates before year 2000
     ptn = '9\d99'
 
     for series in pd.unique(df.fips.ravel()):
-        fips = '0' + series
-
         frame = df[df['fips'] == series]
         frame.reset_index(inplace=True)
-        # frame = frame.sort_values(['date'])
-        frame.drop(['index'], axis=1, inplace=True)
-        # frame.reset_index(inplace=True)
+
         for i, d in enumerate(frame['date']):
             if bool(re.search(ptn, d)):
-                frame['date'][i] = re.sub(ptn,
-                                          '19' + re.search(ptn, d).group()[0:2],
-                                          d)
+                frame['date'][i] = re.sub(ptn,'19' + re.search(ptn, d).group()[0:2],d)
+
         frame = frame.sort_values(['date'])
         frame['total_bldgs'] = frame.sum(axis=1)
         frame = frame[['date', 'total_bldgs']]
-        # frame['date'] = dates
         frame.set_index('date', inplace=True)
-        series_id = 'BPPRIV' + fips
+        series_id = 'BPPRIV' + series
         frame.columns = [series_id]
         frame.to_csv('output\\' + series_id, sep='\t')
 
-    # md_names = ['series_id', 'title', 'season', 'frequency', 'units', \
+if __name__=='__main__':
+    main()
+
+# def open_loc(file_loc,file_url):
+#     with open(file_loc, 'wb') as f:
+#         c = pyc.Curl()
+#         c.setopt(c.URL, file_url)
+#         c.setopt(c.WRITEDATA, f)
+#         c.perform()
+#         c.close()
+#
+#
+#
+# data_dir = os.getcwd()+'\\data\\'
+# base_url = 'http://www2.census.gov/econ/bps/County/'
+# county = 'co'
+# short_year = dt.datetime.today().strftime('%y')
+# long_year = dt.datetime.today().year
+# type = ['c','a']
+# ext = 'txt'
+#
+# # Get data
+# for y in range(int(short_year)):
+#     if y >= 10:
+#         year = (str(y))
+#     else:
+#         year = ('0' + str(y))
+#     for m in range(1, 13):
+#         if m >= 10:
+#             month = (str(m))
+#         else:
+#             month = ('0'+str(m))
+#         filename = county + year + month + type[0] + '.' + ext
+#         full_url = base_url + filename
+#
+#         with open(data_dir + filename, 'wb') as f:
+#             c = pyc.Curl()
+#             c.setopt(c.URL, full_url)
+#             c.setopt(c.WRITEDATA, f)
+#             c.perform()
+#             c.close()
+#
+# for l in range(1990,long_year-1):
+#     year = str(l)
+#     filename = county + year + type[1] + '.' + ext
+#     full_url = base_url + filename
+#
+#     with open(data_dir + filename, 'wb') as f:
+#         c = pyc.Curl()
+#         c.setopt(c.URL, full_url)
+#         c.setopt(c.WRITEDATA, f)
+#         c.perform()
+#         c.close()
+
+# md_names = ['series_id', 'title', 'season', 'frequency', 'units', \
     #             'keywords', 'notes', 'period_description', 'growth_rates', \
     #             'obs_vsd_use_release_date', 'valid_start_date', 'release_id']
     # fsr_names = ['fred_release_id', 'fred_series_id', 'official',\
@@ -151,57 +198,3 @@ def main():
     # fsr.to_csv('fred_series_release.txt', sep='\t', index=False)
     # fred_cat.to_csv('fred_series_in_category.txt', sep='\t', index=False)
     # titles.to_csv('title.txt', sep='\t', index=False, header=False)
-
-if __name__=='__main__':
-    main()
-
-# def open_loc(file_loc,file_url):
-#     with open(file_loc, 'wb') as f:
-#         c = pyc.Curl()
-#         c.setopt(c.URL, file_url)
-#         c.setopt(c.WRITEDATA, f)
-#         c.perform()
-#         c.close()
-#
-#
-#
-# data_dir = os.getcwd()+'\\data\\'
-# base_url = 'http://www2.census.gov/econ/bps/County/'
-# county = 'co'
-# short_year = dt.datetime.today().strftime('%y')
-# long_year = dt.datetime.today().year
-# type = ['c','a']
-# ext = 'txt'
-#
-# # Get data
-# for y in range(int(short_year)):
-#     if y >= 10:
-#         year = (str(y))
-#     else:
-#         year = ('0' + str(y))
-#     for m in range(1, 13):
-#         if m >= 10:
-#             month = (str(m))
-#         else:
-#             month = ('0'+str(m))
-#         filename = county + year + month + type[0] + '.' + ext
-#         full_url = base_url + filename
-#
-#         with open(data_dir + filename, 'wb') as f:
-#             c = pyc.Curl()
-#             c.setopt(c.URL, full_url)
-#             c.setopt(c.WRITEDATA, f)
-#             c.perform()
-#             c.close()
-#
-# for l in range(1990,long_year-1):
-#     year = str(l)
-#     filename = county + year + type[1] + '.' + ext
-#     full_url = base_url + filename
-#
-#     with open(data_dir + filename, 'wb') as f:
-#         c = pyc.Curl()
-#         c.setopt(c.URL, full_url)
-#         c.setopt(c.WRITEDATA, f)
-#         c.perform()
-#         c.close()
