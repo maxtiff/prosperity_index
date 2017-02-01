@@ -68,13 +68,11 @@ BPPRIV001133	New Private Housing Units Authorized by Building Permits for Winsto
 BPPRIV001007	New Private Housing Units Authorized by Building Permits for Bibb County, AL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002013	New Private Housing Units Authorized by Building Permits for Aleutians East Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002016	New Private Housing Units Authorized by Building Permits for Aleutians West Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002020	New Private Housing Units Authorized by Building Permits for Anchorage Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002050	New Private Housing Units Authorized by Building Permits for Bethel Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002060	New Private Housing Units Authorized by Building Permits for Bristol Bay Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002070	New Private Housing Units Authorized by Building Permits for Dillingham Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002090	New Private Housing Units Authorized by Building Permits for Fairbanks North Star Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002100	New Private Housing Units Authorized by Building Permits for Haines Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002110	New Private Housing Units Authorized by Building Permits for Juneau Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002122	New Private Housing Units Authorized by Building Permits for Kenai Peninsula Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002130	New Private Housing Units Authorized by Building Permits for Ketchikan Gateway Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002150	New Private Housing Units Authorized by Building Permits for Kodiak Island Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -83,7 +81,6 @@ BPPRIV002180	New Private Housing Units Authorized by Building Permits for Nome C
 BPPRIV002185	New Private Housing Units Authorized by Building Permits for North Slope Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002188	New Private Housing Units Authorized by Building Permits for Northwest Arctic Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002201	New Private Housing Units Authorized by Building Permits for Prince of Wales-Outer Ketchikan Census A, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002220	New Private Housing Units Authorized by Building Permits for Sitka Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002231	New Private Housing Units Authorized by Building Permits for Skagway-Yakutat-Angoon Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002261	New Private Housing Units Authorized by Building Permits for Valdez-Cordova Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002270	New Private Housing Units Authorized by Building Permits for Wade Hampton Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -96,8 +93,6 @@ BPPRIV002290	New Private Housing Units Authorized by Building Permits for Yukon-
 BPPRIV002105	New Private Housing Units Authorized by Building Permits for Hoonah-Angoon Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002195	New Private Housing Units Authorized by Building Permits for Petersburg Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002198	New Private Housing Units Authorized by Building Permits for Prince of Wales-Hyder Census A, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002230	New Private Housing Units Authorized by Building Permits for Skagway Municipality, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002275	New Private Housing Units Authorized by Building Permits for Wrangell City and Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV004001	New Private Housing Units Authorized by Building Permits for Apache County, AZ	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV004003	New Private Housing Units Authorized by Building Permits for Cochise County, AZ	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV004005	New Private Housing Units Authorized by Building Permits for Coconino County, AZ	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -223,7 +218,6 @@ BPPRIV006067	New Private Housing Units Authorized by Building Permits for Sacram
 BPPRIV006069	New Private Housing Units Authorized by Building Permits for San Benito County, CA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV006071	New Private Housing Units Authorized by Building Permits for San Bernardino County, CA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV006073	New Private Housing Units Authorized by Building Permits for San Diego County, CA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV006075	New Private Housing Units Authorized by Building Permits for San Francisco County, CA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV006077	New Private Housing Units Authorized by Building Permits for San Joaquin County, CA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV006079	New Private Housing Units Authorized by Building Permits for San Luis Obispo County, CA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV006081	New Private Housing Units Authorized by Building Permits for San Mateo County, CA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -306,7 +300,6 @@ BPPRIV008121	New Private Housing Units Authorized by Building Permits for Washin
 BPPRIV008123	New Private Housing Units Authorized by Building Permits for Weld County, CO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV008125	New Private Housing Units Authorized by Building Permits for Yuma County, CO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV008033	New Private Housing Units Authorized by Building Permits for Dolores County, CO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV008014	New Private Housing Units Authorized by Building Permits for Broomfield County, CO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV008023	New Private Housing Units Authorized by Building Permits for Costilla County, CO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV009001	New Private Housing Units Authorized by Building Permits for Fairfield County, CT	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV009003	New Private Housing Units Authorized by Building Permits for Hartford County, CT	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -548,7 +541,6 @@ BPPRIV013265	New Private Housing Units Authorized by Building Permits for Taliaf
 BPPRIV013183	New Private Housing Units Authorized by Building Permits for Long County, GA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV013307	New Private Housing Units Authorized by Building Permits for Webster County, GA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV015001	New Private Housing Units Authorized by Building Permits for Hawaii County, HI	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV015003	New Private Housing Units Authorized by Building Permits for Honolulu County, HI	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV015007	New Private Housing Units Authorized by Building Permits for Kauai County, HI	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV015009	New Private Housing Units Authorized by Building Permits for Maui County, HI	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV016001	New Private Housing Units Authorized by Building Permits for Ada County, ID	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -2265,7 +2257,6 @@ BPPRIV042093	New Private Housing Units Authorized by Building Permits for Montou
 BPPRIV042095	New Private Housing Units Authorized by Building Permits for Northampton County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042097	New Private Housing Units Authorized by Building Permits for Northumberland County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042099	New Private Housing Units Authorized by Building Permits for Perry County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV042101	New Private Housing Units Authorized by Building Permits for Philadelphia County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042103	New Private Housing Units Authorized by Building Permits for Pike County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042105	New Private Housing Units Authorized by Building Permits for Potter County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042107	New Private Housing Units Authorized by Building Permits for Schuylkill County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
