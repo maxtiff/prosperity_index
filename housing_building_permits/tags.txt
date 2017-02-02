@@ -79,19 +79,10 @@ BPPRIV002170	buildings	housing	permits	private	prosperity scorecard
 BPPRIV002180	buildings	housing	permits	private	prosperity scorecard
 BPPRIV002185	buildings	housing	permits	private	prosperity scorecard
 BPPRIV002188	buildings	housing	permits	private	prosperity scorecard
-BPPRIV002201	buildings	housing	permits	private	prosperity scorecard
-BPPRIV002231	buildings	housing	permits	private	prosperity scorecard
 BPPRIV002261	buildings	housing	permits	private	prosperity scorecard
 BPPRIV002270	buildings	housing	permits	private	prosperity scorecard
-BPPRIV002280	buildings	housing	permits	private	prosperity scorecard
-BPPRIV002999	buildings	housing	permits	private	prosperity scorecard
-BPPRIV002000	buildings	housing	permits	private	prosperity scorecard
-BPPRIV002282	buildings	housing	permits	private	prosperity scorecard
-BPPRIV002232	buildings	housing	permits	private	prosperity scorecard
 BPPRIV002290	buildings	housing	permits	private	prosperity scorecard
 BPPRIV002105	buildings	housing	permits	private	prosperity scorecard
-BPPRIV002195	buildings	housing	permits	private	prosperity scorecard
-BPPRIV002198	buildings	housing	permits	private	prosperity scorecard
 BPPRIV004001	buildings	housing	permits	private	prosperity scorecard
 BPPRIV004003	buildings	housing	permits	private	prosperity scorecard
 BPPRIV004005	buildings	housing	permits	private	prosperity scorecard
@@ -311,7 +302,6 @@ BPPRIV009015	buildings	housing	permits	private	prosperity scorecard
 BPPRIV010001	buildings	housing	permits	private	prosperity scorecard
 BPPRIV010003	buildings	housing	permits	private	prosperity scorecard
 BPPRIV010005	buildings	housing	permits	private	prosperity scorecard
-BPPRIV011001	buildings	housing	permits	private	prosperity scorecard
 BPPRIV012001	buildings	housing	permits	private	prosperity scorecard
 BPPRIV012003	buildings	housing	permits	private	prosperity scorecard
 BPPRIV012005	buildings	housing	permits	private	prosperity scorecard
@@ -324,7 +314,6 @@ BPPRIV012017	buildings	housing	permits	private	prosperity scorecard
 BPPRIV012019	buildings	housing	permits	private	prosperity scorecard
 BPPRIV012021	buildings	housing	permits	private	prosperity scorecard
 BPPRIV012023	buildings	housing	permits	private	prosperity scorecard
-BPPRIV012025	buildings	housing	permits	private	prosperity scorecard
 BPPRIV012027	buildings	housing	permits	private	prosperity scorecard
 BPPRIV012029	buildings	housing	permits	private	prosperity scorecard
 BPPRIV012031	buildings	housing	permits	private	prosperity scorecard
@@ -1162,7 +1151,6 @@ BPPRIV023025	buildings	housing	permits	private	prosperity scorecard
 BPPRIV023027	buildings	housing	permits	private	prosperity scorecard
 BPPRIV023029	buildings	housing	permits	private	prosperity scorecard
 BPPRIV023031	buildings	housing	permits	private	prosperity scorecard
-BPPRIV023000	buildings	housing	permits	private	prosperity scorecard
 BPPRIV024001	buildings	housing	permits	private	prosperity scorecard
 BPPRIV024003	buildings	housing	permits	private	prosperity scorecard
 BPPRIV024005	buildings	housing	permits	private	prosperity scorecard
@@ -1284,8 +1272,6 @@ BPPRIV026159	buildings	housing	permits	private	prosperity scorecard
 BPPRIV026161	buildings	housing	permits	private	prosperity scorecard
 BPPRIV026163	buildings	housing	permits	private	prosperity scorecard
 BPPRIV026165	buildings	housing	permits	private	prosperity scorecard
-BPPRIV026999	buildings	housing	permits	private	prosperity scorecard
-BPPRIV026000	buildings	housing	permits	private	prosperity scorecard
 BPPRIV027001	buildings	housing	permits	private	prosperity scorecard
 BPPRIV027003	buildings	housing	permits	private	prosperity scorecard
 BPPRIV027005	buildings	housing	permits	private	prosperity scorecard
@@ -1625,7 +1611,6 @@ BPPRIV030105	buildings	housing	permits	private	prosperity scorecard
 BPPRIV030107	buildings	housing	permits	private	prosperity scorecard
 BPPRIV030109	buildings	housing	permits	private	prosperity scorecard
 BPPRIV030111	buildings	housing	permits	private	prosperity scorecard
-BPPRIV030000	buildings	housing	permits	private	prosperity scorecard
 BPPRIV031001	buildings	housing	permits	private	prosperity scorecard
 BPPRIV031003	buildings	housing	permits	private	prosperity scorecard
 BPPRIV031011	buildings	housing	permits	private	prosperity scorecard
@@ -1784,8 +1769,6 @@ BPPRIV035053	buildings	housing	permits	private	prosperity scorecard
 BPPRIV035055	buildings	housing	permits	private	prosperity scorecard
 BPPRIV035057	buildings	housing	permits	private	prosperity scorecard
 BPPRIV035061	buildings	housing	permits	private	prosperity scorecard
-BPPRIV035099	buildings	housing	permits	private	prosperity scorecard
-BPPRIV035000	buildings	housing	permits	private	prosperity scorecard
 BPPRIV035006	buildings	housing	permits	private	prosperity scorecard
 BPPRIV035017	buildings	housing	permits	private	prosperity scorecard
 BPPRIV035047	buildings	housing	permits	private	prosperity scorecard
@@ -2033,7 +2016,6 @@ BPPRIV039051	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039053	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039055	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039057	buildings	housing	permits	private	prosperity scorecard
-BPPRIV039059	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039061	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039063	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039065	buildings	housing	permits	private	prosperity scorecard
@@ -2068,7 +2050,6 @@ BPPRIV039121	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039123	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039125	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039127	buildings	housing	permits	private	prosperity scorecard
-BPPRIV039129	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039131	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039133	buildings	housing	permits	private	prosperity scorecard
 BPPRIV039135	buildings	housing	permits	private	prosperity scorecard
@@ -2205,7 +2186,6 @@ BPPRIV041065	buildings	housing	permits	private	prosperity scorecard
 BPPRIV041067	buildings	housing	permits	private	prosperity scorecard
 BPPRIV041069	buildings	housing	permits	private	prosperity scorecard
 BPPRIV041071	buildings	housing	permits	private	prosperity scorecard
-BPPRIV041000	buildings	housing	permits	private	prosperity scorecard
 BPPRIV042001	buildings	housing	permits	private	prosperity scorecard
 BPPRIV042003	buildings	housing	permits	private	prosperity scorecard
 BPPRIV042005	buildings	housing	permits	private	prosperity scorecard
@@ -2247,7 +2227,6 @@ BPPRIV042075	buildings	housing	permits	private	prosperity scorecard
 BPPRIV042077	buildings	housing	permits	private	prosperity scorecard
 BPPRIV042079	buildings	housing	permits	private	prosperity scorecard
 BPPRIV042081	buildings	housing	permits	private	prosperity scorecard
-BPPRIV042083	buildings	housing	permits	private	prosperity scorecard
 BPPRIV042085	buildings	housing	permits	private	prosperity scorecard
 BPPRIV042087	buildings	housing	permits	private	prosperity scorecard
 BPPRIV042089	buildings	housing	permits	private	prosperity scorecard
@@ -2857,8 +2836,6 @@ BPPRIV051520	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051530	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051540	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051550	buildings	housing	permits	private	prosperity scorecard
-BPPRIV051560	buildings	housing	permits	private	prosperity scorecard
-BPPRIV051570	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051580	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051590	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051595	buildings	housing	permits	private	prosperity scorecard
@@ -2876,7 +2853,6 @@ BPPRIV051683	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051685	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051690	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051700	buildings	housing	permits	private	prosperity scorecard
-BPPRIV051710	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051720	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051730	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051735	buildings	housing	permits	private	prosperity scorecard
@@ -2885,10 +2861,8 @@ BPPRIV051750	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051760	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051770	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051775	buildings	housing	permits	private	prosperity scorecard
-BPPRIV051780	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051790	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051800	buildings	housing	permits	private	prosperity scorecard
-BPPRIV051810	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051820	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051830	buildings	housing	permits	private	prosperity scorecard
 BPPRIV051840	buildings	housing	permits	private	prosperity scorecard

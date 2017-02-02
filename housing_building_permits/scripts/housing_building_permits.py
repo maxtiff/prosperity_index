@@ -11,6 +11,7 @@ def main():
            '34_unit_value_rep','5_unit_bldgs_rep','5_unit_units_rep','5_unit_value_rep']
 
     states = pd.read_table('..\\state_fips.txt',dtype=str)
+    counties = pd.read_table('..\\national_county.txt', dtype=str, sep=';')
 
     df = pd.DataFrame(columns=names)
 
@@ -27,15 +28,49 @@ def main():
     df.date = df.date.astype(int).astype(str)
 
     df = pd.merge(df, states, left_on='fips_state', right_on='fips')
-    df['county_name'] = df['county_name'].str.strip()
-    df['county_name'] = df['county_name'] + ', ' + df['state']
+    # df['county_name'] = df['county_name'].str.strip()
+    # df['county_name'] = df['county_name'] + ', ' + df['state']
 
     df['fips'] = df['fips_state'] + df['fips_county']
     df.fips = df.fips.astype(int)
     df['fips'] = df['fips'].apply(lambda x: "%06d" % (x,))
 
-    df.drop(['region_code', 'division_code','state','fips_county','fips_state'], axis=1, inplace=True)
+
+    df.drop(['region_code', 'division_code','state','fips_county','fips_state','county_name'], axis=1, inplace=True)
     df.drop(df.filter(regex=('value|rep|units')),axis=1,inplace=True)
+
+    df = pd.merge(df, counties, on='fips')
+
+    md_names = ['series_id', 'title', 'season', 'frequency', 'units', \
+                'keywords', 'notes', 'period_description', 'growth_rates', \
+                'obs_vsd_use_release_date', 'valid_start_date', 'release_id']
+    fsr_names = ['fred_release_id', 'fred_series_id', 'official',\
+                 'valid_start_date']
+    cat_names = ['series_id', 'cat_id']
+
+    geo_md = pd.DataFrame(columns=md_names)
+    fred_md = pd.DataFrame(columns=md_names)
+    fsr_geo = pd.DataFrame(columns=fsr_names)
+    fsr = pd.DataFrame(columns=fsr_names)
+    fred_cat = pd.DataFrame(columns=cat_names)
+    titles = pd.DataFrame()
+
+    season = 'Not Seasonally Adjusted'
+    freq = 'Annual'
+    units = 'Units'
+    keywords = ''
+    notes = ''
+    period = ''
+    g_rate = 'TRUE'
+    obs_vsd = 'TRUE'
+    vsd = '2017-01-27'
+    r_id = '148'
+
+    non_geo_fips = '002020|002110|002220|002230|002275|006075|008014|015003|042101'
+
+    non_geo_cats = {'002020': '27406', '002110': '27412', '002220': '27422', \
+                    '002230': '33516', '002275': '33518', '006075': '27559', \
+                    '008014': '32077', '015003': '27889', '042101': '29664'}
 
     # Regex pattern to reformat dates before year 2000
     ptn = '9\d99'
@@ -55,6 +90,43 @@ def main():
         series_id = 'BPPRIV' + series
         frame.columns = [series_id]
         frame.to_csv('output\\' + series_id, sep='\t')
+
+        title = 'New Private Housing Units Authorized by Building Permits for ' + \
+                pd.unique(df[df['fips'] == series]['county'])[0]
+
+        if bool(re.search(non_geo_fips, series)):
+            row = pd.DataFrame(
+                data=[[series_id, title, season, freq, units, keywords, notes, \
+                       period, g_rate, obs_vsd, vsd, r_id]], columns=md_names)
+            fred_md = fred_md.append(row)
+
+            row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],
+                               columns=fsr_names)
+            fsr = fsr.append(row)
+
+            cat_id = non_geo_cats[series]
+            row = pd.DataFrame(data=[[series_id, cat_id]], columns=cat_names)
+            fred_cat = fred_cat.append(row)
+        else:
+            row = pd.DataFrame(data=[[series_id, title, season, freq, units, \
+                                      keywords, notes, period, g_rate, obs_vsd, \
+                                      vsd, r_id]], columns=md_names)
+            geo_md = geo_md.append(row)
+
+            row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],
+                               columns=fsr_names)
+            fsr_geo = fsr_geo.append(row)
+
+        title = pd.DataFrame(data=[[title]])
+        titles = titles.append(title)
+
+    geo_md.to_csv('fred_series_geo.txt', sep='\t', index=False)
+    fsr_geo.to_csv('fred_series_release_geo.txt', sep='\t', index=False)
+
+    fred_md.to_csv('fred_series.txt', sep='\t', index=False)
+    fsr.to_csv('fred_series_release.txt', sep='\t', index=False)
+    fred_cat.to_csv('fred_series_in_category.txt', sep='\t', index=False)
+    titles.to_csv('title.txt', sep='\t', index=False, header=False)
 
 if __name__=='__main__':
     main()

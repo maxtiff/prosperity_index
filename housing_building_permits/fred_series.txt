@@ -1,7 +1,7 @@
 series_id	title	season	frequency	units	keywords	notes	period_description	growth_rates	obs_vsd_use_release_date	valid_start_date	release_id
-BPPRIV002020	New Private Housing Units Authorized by Building Permits for Anchorage Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002110	New Private Housing Units Authorized by Building Permits for Juneau Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002220	New Private Housing Units Authorized by Building Permits for Sitka Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV002020	New Private Housing Units Authorized by Building Permits for Anchorage Borough/municipality, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV002110	New Private Housing Units Authorized by Building Permits for Juneau City and Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV002220	New Private Housing Units Authorized by Building Permits for Sitka City and Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002230	New Private Housing Units Authorized by Building Permits for Skagway Municipality, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002275	New Private Housing Units Authorized by Building Permits for Wrangell City and Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV006075	New Private Housing Units Authorized by Building Permits for San Francisco County, CA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148

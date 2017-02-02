@@ -80,19 +80,10 @@ BPPRIV002170,buildings
 BPPRIV002180,buildings
 BPPRIV002185,buildings
 BPPRIV002188,buildings
-BPPRIV002201,buildings
-BPPRIV002231,buildings
 BPPRIV002261,buildings
 BPPRIV002270,buildings
-BPPRIV002280,buildings
-BPPRIV002999,buildings
-BPPRIV002000,buildings
-BPPRIV002282,buildings
-BPPRIV002232,buildings
 BPPRIV002290,buildings
 BPPRIV002105,buildings
-BPPRIV002195,buildings
-BPPRIV002198,buildings
 BPPRIV004001,buildings
 BPPRIV004003,buildings
 BPPRIV004005,buildings
@@ -312,7 +303,6 @@ BPPRIV009015,buildings
 BPPRIV010001,buildings
 BPPRIV010003,buildings
 BPPRIV010005,buildings
-BPPRIV011001,buildings
 BPPRIV012001,buildings
 BPPRIV012003,buildings
 BPPRIV012005,buildings
@@ -325,7 +315,6 @@ BPPRIV012017,buildings
 BPPRIV012019,buildings
 BPPRIV012021,buildings
 BPPRIV012023,buildings
-BPPRIV012025,buildings
 BPPRIV012027,buildings
 BPPRIV012029,buildings
 BPPRIV012031,buildings
@@ -1163,7 +1152,6 @@ BPPRIV023025,buildings
 BPPRIV023027,buildings
 BPPRIV023029,buildings
 BPPRIV023031,buildings
-BPPRIV023000,buildings
 BPPRIV024001,buildings
 BPPRIV024003,buildings
 BPPRIV024005,buildings
@@ -1285,8 +1273,6 @@ BPPRIV026159,buildings
 BPPRIV026161,buildings
 BPPRIV026163,buildings
 BPPRIV026165,buildings
-BPPRIV026999,buildings
-BPPRIV026000,buildings
 BPPRIV027001,buildings
 BPPRIV027003,buildings
 BPPRIV027005,buildings
@@ -1626,7 +1612,6 @@ BPPRIV030105,buildings
 BPPRIV030107,buildings
 BPPRIV030109,buildings
 BPPRIV030111,buildings
-BPPRIV030000,buildings
 BPPRIV031001,buildings
 BPPRIV031003,buildings
 BPPRIV031011,buildings
@@ -1785,8 +1770,6 @@ BPPRIV035053,buildings
 BPPRIV035055,buildings
 BPPRIV035057,buildings
 BPPRIV035061,buildings
-BPPRIV035099,buildings
-BPPRIV035000,buildings
 BPPRIV035006,buildings
 BPPRIV035017,buildings
 BPPRIV035047,buildings
@@ -2034,7 +2017,6 @@ BPPRIV039051,buildings
 BPPRIV039053,buildings
 BPPRIV039055,buildings
 BPPRIV039057,buildings
-BPPRIV039059,buildings
 BPPRIV039061,buildings
 BPPRIV039063,buildings
 BPPRIV039065,buildings
@@ -2069,7 +2051,6 @@ BPPRIV039121,buildings
 BPPRIV039123,buildings
 BPPRIV039125,buildings
 BPPRIV039127,buildings
-BPPRIV039129,buildings
 BPPRIV039131,buildings
 BPPRIV039133,buildings
 BPPRIV039135,buildings
@@ -2206,7 +2187,6 @@ BPPRIV041065,buildings
 BPPRIV041067,buildings
 BPPRIV041069,buildings
 BPPRIV041071,buildings
-BPPRIV041000,buildings
 BPPRIV042001,buildings
 BPPRIV042003,buildings
 BPPRIV042005,buildings
@@ -2248,7 +2228,6 @@ BPPRIV042075,buildings
 BPPRIV042077,buildings
 BPPRIV042079,buildings
 BPPRIV042081,buildings
-BPPRIV042083,buildings
 BPPRIV042085,buildings
 BPPRIV042087,buildings
 BPPRIV042089,buildings
@@ -2858,8 +2837,6 @@ BPPRIV051520,buildings
 BPPRIV051530,buildings
 BPPRIV051540,buildings
 BPPRIV051550,buildings
-BPPRIV051560,buildings
-BPPRIV051570,buildings
 BPPRIV051580,buildings
 BPPRIV051590,buildings
 BPPRIV051595,buildings
@@ -2877,7 +2854,6 @@ BPPRIV051683,buildings
 BPPRIV051685,buildings
 BPPRIV051690,buildings
 BPPRIV051700,buildings
-BPPRIV051710,buildings
 BPPRIV051720,buildings
 BPPRIV051730,buildings
 BPPRIV051735,buildings
@@ -2886,10 +2862,8 @@ BPPRIV051750,buildings
 BPPRIV051760,buildings
 BPPRIV051770,buildings
 BPPRIV051775,buildings
-BPPRIV051780,buildings
 BPPRIV051790,buildings
 BPPRIV051800,buildings
-BPPRIV051810,buildings
 BPPRIV051820,buildings
 BPPRIV051830,buildings
 BPPRIV051840,buildings
@@ -3171,19 +3145,10 @@ BPPRIV002170,housing
 BPPRIV002180,housing
 BPPRIV002185,housing
 BPPRIV002188,housing
-BPPRIV002201,housing
-BPPRIV002231,housing
 BPPRIV002261,housing
 BPPRIV002270,housing
-BPPRIV002280,housing
-BPPRIV002999,housing
-BPPRIV002000,housing
-BPPRIV002282,housing
-BPPRIV002232,housing
 BPPRIV002290,housing
 BPPRIV002105,housing
-BPPRIV002195,housing
-BPPRIV002198,housing
 BPPRIV004001,housing
 BPPRIV004003,housing
 BPPRIV004005,housing
@@ -3403,7 +3368,6 @@ BPPRIV009015,housing
 BPPRIV010001,housing
 BPPRIV010003,housing
 BPPRIV010005,housing
-BPPRIV011001,housing
 BPPRIV012001,housing
 BPPRIV012003,housing
 BPPRIV012005,housing
@@ -3416,7 +3380,6 @@ BPPRIV012017,housing
 BPPRIV012019,housing
 BPPRIV012021,housing
 BPPRIV012023,housing
-BPPRIV012025,housing
 BPPRIV012027,housing
 BPPRIV012029,housing
 BPPRIV012031,housing
@@ -4254,7 +4217,6 @@ BPPRIV023025,housing
 BPPRIV023027,housing
 BPPRIV023029,housing
 BPPRIV023031,housing
-BPPRIV023000,housing
 BPPRIV024001,housing
 BPPRIV024003,housing
 BPPRIV024005,housing
@@ -4376,8 +4338,6 @@ BPPRIV026159,housing
 BPPRIV026161,housing
 BPPRIV026163,housing
 BPPRIV026165,housing
-BPPRIV026999,housing
-BPPRIV026000,housing
 BPPRIV027001,housing
 BPPRIV027003,housing
 BPPRIV027005,housing
@@ -4717,7 +4677,6 @@ BPPRIV030105,housing
 BPPRIV030107,housing
 BPPRIV030109,housing
 BPPRIV030111,housing
-BPPRIV030000,housing
 BPPRIV031001,housing
 BPPRIV031003,housing
 BPPRIV031011,housing
@@ -4876,8 +4835,6 @@ BPPRIV035053,housing
 BPPRIV035055,housing
 BPPRIV035057,housing
 BPPRIV035061,housing
-BPPRIV035099,housing
-BPPRIV035000,housing
 BPPRIV035006,housing
 BPPRIV035017,housing
 BPPRIV035047,housing
@@ -5125,7 +5082,6 @@ BPPRIV039051,housing
 BPPRIV039053,housing
 BPPRIV039055,housing
 BPPRIV039057,housing
-BPPRIV039059,housing
 BPPRIV039061,housing
 BPPRIV039063,housing
 BPPRIV039065,housing
@@ -5160,7 +5116,6 @@ BPPRIV039121,housing
 BPPRIV039123,housing
 BPPRIV039125,housing
 BPPRIV039127,housing
-BPPRIV039129,housing
 BPPRIV039131,housing
 BPPRIV039133,housing
 BPPRIV039135,housing
@@ -5297,7 +5252,6 @@ BPPRIV041065,housing
 BPPRIV041067,housing
 BPPRIV041069,housing
 BPPRIV041071,housing
-BPPRIV041000,housing
 BPPRIV042001,housing
 BPPRIV042003,housing
 BPPRIV042005,housing
@@ -5339,7 +5293,6 @@ BPPRIV042075,housing
 BPPRIV042077,housing
 BPPRIV042079,housing
 BPPRIV042081,housing
-BPPRIV042083,housing
 BPPRIV042085,housing
 BPPRIV042087,housing
 BPPRIV042089,housing
@@ -5949,8 +5902,6 @@ BPPRIV051520,housing
 BPPRIV051530,housing
 BPPRIV051540,housing
 BPPRIV051550,housing
-BPPRIV051560,housing
-BPPRIV051570,housing
 BPPRIV051580,housing
 BPPRIV051590,housing
 BPPRIV051595,housing
@@ -5968,7 +5919,6 @@ BPPRIV051683,housing
 BPPRIV051685,housing
 BPPRIV051690,housing
 BPPRIV051700,housing
-BPPRIV051710,housing
 BPPRIV051720,housing
 BPPRIV051730,housing
 BPPRIV051735,housing
@@ -5977,10 +5927,8 @@ BPPRIV051750,housing
 BPPRIV051760,housing
 BPPRIV051770,housing
 BPPRIV051775,housing
-BPPRIV051780,housing
 BPPRIV051790,housing
 BPPRIV051800,housing
-BPPRIV051810,housing
 BPPRIV051820,housing
 BPPRIV051830,housing
 BPPRIV051840,housing
@@ -6262,19 +6210,10 @@ BPPRIV002170,permits
 BPPRIV002180,permits
 BPPRIV002185,permits
 BPPRIV002188,permits
-BPPRIV002201,permits
-BPPRIV002231,permits
 BPPRIV002261,permits
 BPPRIV002270,permits
-BPPRIV002280,permits
-BPPRIV002999,permits
-BPPRIV002000,permits
-BPPRIV002282,permits
-BPPRIV002232,permits
 BPPRIV002290,permits
 BPPRIV002105,permits
-BPPRIV002195,permits
-BPPRIV002198,permits
 BPPRIV004001,permits
 BPPRIV004003,permits
 BPPRIV004005,permits
@@ -6494,7 +6433,6 @@ BPPRIV009015,permits
 BPPRIV010001,permits
 BPPRIV010003,permits
 BPPRIV010005,permits
-BPPRIV011001,permits
 BPPRIV012001,permits
 BPPRIV012003,permits
 BPPRIV012005,permits
@@ -6507,7 +6445,6 @@ BPPRIV012017,permits
 BPPRIV012019,permits
 BPPRIV012021,permits
 BPPRIV012023,permits
-BPPRIV012025,permits
 BPPRIV012027,permits
 BPPRIV012029,permits
 BPPRIV012031,permits
@@ -7345,7 +7282,6 @@ BPPRIV023025,permits
 BPPRIV023027,permits
 BPPRIV023029,permits
 BPPRIV023031,permits
-BPPRIV023000,permits
 BPPRIV024001,permits
 BPPRIV024003,permits
 BPPRIV024005,permits
@@ -7467,8 +7403,6 @@ BPPRIV026159,permits
 BPPRIV026161,permits
 BPPRIV026163,permits
 BPPRIV026165,permits
-BPPRIV026999,permits
-BPPRIV026000,permits
 BPPRIV027001,permits
 BPPRIV027003,permits
 BPPRIV027005,permits
@@ -7808,7 +7742,6 @@ BPPRIV030105,permits
 BPPRIV030107,permits
 BPPRIV030109,permits
 BPPRIV030111,permits
-BPPRIV030000,permits
 BPPRIV031001,permits
 BPPRIV031003,permits
 BPPRIV031011,permits
@@ -7967,8 +7900,6 @@ BPPRIV035053,permits
 BPPRIV035055,permits
 BPPRIV035057,permits
 BPPRIV035061,permits
-BPPRIV035099,permits
-BPPRIV035000,permits
 BPPRIV035006,permits
 BPPRIV035017,permits
 BPPRIV035047,permits
@@ -8216,7 +8147,6 @@ BPPRIV039051,permits
 BPPRIV039053,permits
 BPPRIV039055,permits
 BPPRIV039057,permits
-BPPRIV039059,permits
 BPPRIV039061,permits
 BPPRIV039063,permits
 BPPRIV039065,permits
@@ -8251,7 +8181,6 @@ BPPRIV039121,permits
 BPPRIV039123,permits
 BPPRIV039125,permits
 BPPRIV039127,permits
-BPPRIV039129,permits
 BPPRIV039131,permits
 BPPRIV039133,permits
 BPPRIV039135,permits
@@ -8388,7 +8317,6 @@ BPPRIV041065,permits
 BPPRIV041067,permits
 BPPRIV041069,permits
 BPPRIV041071,permits
-BPPRIV041000,permits
 BPPRIV042001,permits
 BPPRIV042003,permits
 BPPRIV042005,permits
@@ -8430,7 +8358,6 @@ BPPRIV042075,permits
 BPPRIV042077,permits
 BPPRIV042079,permits
 BPPRIV042081,permits
-BPPRIV042083,permits
 BPPRIV042085,permits
 BPPRIV042087,permits
 BPPRIV042089,permits
@@ -9040,8 +8967,6 @@ BPPRIV051520,permits
 BPPRIV051530,permits
 BPPRIV051540,permits
 BPPRIV051550,permits
-BPPRIV051560,permits
-BPPRIV051570,permits
 BPPRIV051580,permits
 BPPRIV051590,permits
 BPPRIV051595,permits
@@ -9059,7 +8984,6 @@ BPPRIV051683,permits
 BPPRIV051685,permits
 BPPRIV051690,permits
 BPPRIV051700,permits
-BPPRIV051710,permits
 BPPRIV051720,permits
 BPPRIV051730,permits
 BPPRIV051735,permits
@@ -9068,10 +8992,8 @@ BPPRIV051750,permits
 BPPRIV051760,permits
 BPPRIV051770,permits
 BPPRIV051775,permits
-BPPRIV051780,permits
 BPPRIV051790,permits
 BPPRIV051800,permits
-BPPRIV051810,permits
 BPPRIV051820,permits
 BPPRIV051830,permits
 BPPRIV051840,permits
@@ -9353,19 +9275,10 @@ BPPRIV002170,private
 BPPRIV002180,private
 BPPRIV002185,private
 BPPRIV002188,private
-BPPRIV002201,private
-BPPRIV002231,private
 BPPRIV002261,private
 BPPRIV002270,private
-BPPRIV002280,private
-BPPRIV002999,private
-BPPRIV002000,private
-BPPRIV002282,private
-BPPRIV002232,private
 BPPRIV002290,private
 BPPRIV002105,private
-BPPRIV002195,private
-BPPRIV002198,private
 BPPRIV004001,private
 BPPRIV004003,private
 BPPRIV004005,private
@@ -9585,7 +9498,6 @@ BPPRIV009015,private
 BPPRIV010001,private
 BPPRIV010003,private
 BPPRIV010005,private
-BPPRIV011001,private
 BPPRIV012001,private
 BPPRIV012003,private
 BPPRIV012005,private
@@ -9598,7 +9510,6 @@ BPPRIV012017,private
 BPPRIV012019,private
 BPPRIV012021,private
 BPPRIV012023,private
-BPPRIV012025,private
 BPPRIV012027,private
 BPPRIV012029,private
 BPPRIV012031,private
@@ -10436,7 +10347,6 @@ BPPRIV023025,private
 BPPRIV023027,private
 BPPRIV023029,private
 BPPRIV023031,private
-BPPRIV023000,private
 BPPRIV024001,private
 BPPRIV024003,private
 BPPRIV024005,private
@@ -10558,8 +10468,6 @@ BPPRIV026159,private
 BPPRIV026161,private
 BPPRIV026163,private
 BPPRIV026165,private
-BPPRIV026999,private
-BPPRIV026000,private
 BPPRIV027001,private
 BPPRIV027003,private
 BPPRIV027005,private
@@ -10899,7 +10807,6 @@ BPPRIV030105,private
 BPPRIV030107,private
 BPPRIV030109,private
 BPPRIV030111,private
-BPPRIV030000,private
 BPPRIV031001,private
 BPPRIV031003,private
 BPPRIV031011,private
@@ -11058,8 +10965,6 @@ BPPRIV035053,private
 BPPRIV035055,private
 BPPRIV035057,private
 BPPRIV035061,private
-BPPRIV035099,private
-BPPRIV035000,private
 BPPRIV035006,private
 BPPRIV035017,private
 BPPRIV035047,private
@@ -11307,7 +11212,6 @@ BPPRIV039051,private
 BPPRIV039053,private
 BPPRIV039055,private
 BPPRIV039057,private
-BPPRIV039059,private
 BPPRIV039061,private
 BPPRIV039063,private
 BPPRIV039065,private
@@ -11342,7 +11246,6 @@ BPPRIV039121,private
 BPPRIV039123,private
 BPPRIV039125,private
 BPPRIV039127,private
-BPPRIV039129,private
 BPPRIV039131,private
 BPPRIV039133,private
 BPPRIV039135,private
@@ -11479,7 +11382,6 @@ BPPRIV041065,private
 BPPRIV041067,private
 BPPRIV041069,private
 BPPRIV041071,private
-BPPRIV041000,private
 BPPRIV042001,private
 BPPRIV042003,private
 BPPRIV042005,private
@@ -11521,7 +11423,6 @@ BPPRIV042075,private
 BPPRIV042077,private
 BPPRIV042079,private
 BPPRIV042081,private
-BPPRIV042083,private
 BPPRIV042085,private
 BPPRIV042087,private
 BPPRIV042089,private
@@ -12131,8 +12032,6 @@ BPPRIV051520,private
 BPPRIV051530,private
 BPPRIV051540,private
 BPPRIV051550,private
-BPPRIV051560,private
-BPPRIV051570,private
 BPPRIV051580,private
 BPPRIV051590,private
 BPPRIV051595,private
@@ -12150,7 +12049,6 @@ BPPRIV051683,private
 BPPRIV051685,private
 BPPRIV051690,private
 BPPRIV051700,private
-BPPRIV051710,private
 BPPRIV051720,private
 BPPRIV051730,private
 BPPRIV051735,private
@@ -12159,10 +12057,8 @@ BPPRIV051750,private
 BPPRIV051760,private
 BPPRIV051770,private
 BPPRIV051775,private
-BPPRIV051780,private
 BPPRIV051790,private
 BPPRIV051800,private
-BPPRIV051810,private
 BPPRIV051820,private
 BPPRIV051830,private
 BPPRIV051840,private
@@ -12444,19 +12340,10 @@ BPPRIV002170,prosperity scorecard
 BPPRIV002180,prosperity scorecard
 BPPRIV002185,prosperity scorecard
 BPPRIV002188,prosperity scorecard
-BPPRIV002201,prosperity scorecard
-BPPRIV002231,prosperity scorecard
 BPPRIV002261,prosperity scorecard
 BPPRIV002270,prosperity scorecard
-BPPRIV002280,prosperity scorecard
-BPPRIV002999,prosperity scorecard
-BPPRIV002000,prosperity scorecard
-BPPRIV002282,prosperity scorecard
-BPPRIV002232,prosperity scorecard
 BPPRIV002290,prosperity scorecard
 BPPRIV002105,prosperity scorecard
-BPPRIV002195,prosperity scorecard
-BPPRIV002198,prosperity scorecard
 BPPRIV004001,prosperity scorecard
 BPPRIV004003,prosperity scorecard
 BPPRIV004005,prosperity scorecard
@@ -12676,7 +12563,6 @@ BPPRIV009015,prosperity scorecard
 BPPRIV010001,prosperity scorecard
 BPPRIV010003,prosperity scorecard
 BPPRIV010005,prosperity scorecard
-BPPRIV011001,prosperity scorecard
 BPPRIV012001,prosperity scorecard
 BPPRIV012003,prosperity scorecard
 BPPRIV012005,prosperity scorecard
@@ -12689,7 +12575,6 @@ BPPRIV012017,prosperity scorecard
 BPPRIV012019,prosperity scorecard
 BPPRIV012021,prosperity scorecard
 BPPRIV012023,prosperity scorecard
-BPPRIV012025,prosperity scorecard
 BPPRIV012027,prosperity scorecard
 BPPRIV012029,prosperity scorecard
 BPPRIV012031,prosperity scorecard
@@ -13527,7 +13412,6 @@ BPPRIV023025,prosperity scorecard
 BPPRIV023027,prosperity scorecard
 BPPRIV023029,prosperity scorecard
 BPPRIV023031,prosperity scorecard
-BPPRIV023000,prosperity scorecard
 BPPRIV024001,prosperity scorecard
 BPPRIV024003,prosperity scorecard
 BPPRIV024005,prosperity scorecard
@@ -13649,8 +13533,6 @@ BPPRIV026159,prosperity scorecard
 BPPRIV026161,prosperity scorecard
 BPPRIV026163,prosperity scorecard
 BPPRIV026165,prosperity scorecard
-BPPRIV026999,prosperity scorecard
-BPPRIV026000,prosperity scorecard
 BPPRIV027001,prosperity scorecard
 BPPRIV027003,prosperity scorecard
 BPPRIV027005,prosperity scorecard
@@ -13990,7 +13872,6 @@ BPPRIV030105,prosperity scorecard
 BPPRIV030107,prosperity scorecard
 BPPRIV030109,prosperity scorecard
 BPPRIV030111,prosperity scorecard
-BPPRIV030000,prosperity scorecard
 BPPRIV031001,prosperity scorecard
 BPPRIV031003,prosperity scorecard
 BPPRIV031011,prosperity scorecard
@@ -14149,8 +14030,6 @@ BPPRIV035053,prosperity scorecard
 BPPRIV035055,prosperity scorecard
 BPPRIV035057,prosperity scorecard
 BPPRIV035061,prosperity scorecard
-BPPRIV035099,prosperity scorecard
-BPPRIV035000,prosperity scorecard
 BPPRIV035006,prosperity scorecard
 BPPRIV035017,prosperity scorecard
 BPPRIV035047,prosperity scorecard
@@ -14398,7 +14277,6 @@ BPPRIV039051,prosperity scorecard
 BPPRIV039053,prosperity scorecard
 BPPRIV039055,prosperity scorecard
 BPPRIV039057,prosperity scorecard
-BPPRIV039059,prosperity scorecard
 BPPRIV039061,prosperity scorecard
 BPPRIV039063,prosperity scorecard
 BPPRIV039065,prosperity scorecard
@@ -14433,7 +14311,6 @@ BPPRIV039121,prosperity scorecard
 BPPRIV039123,prosperity scorecard
 BPPRIV039125,prosperity scorecard
 BPPRIV039127,prosperity scorecard
-BPPRIV039129,prosperity scorecard
 BPPRIV039131,prosperity scorecard
 BPPRIV039133,prosperity scorecard
 BPPRIV039135,prosperity scorecard
@@ -14570,7 +14447,6 @@ BPPRIV041065,prosperity scorecard
 BPPRIV041067,prosperity scorecard
 BPPRIV041069,prosperity scorecard
 BPPRIV041071,prosperity scorecard
-BPPRIV041000,prosperity scorecard
 BPPRIV042001,prosperity scorecard
 BPPRIV042003,prosperity scorecard
 BPPRIV042005,prosperity scorecard
@@ -14612,7 +14488,6 @@ BPPRIV042075,prosperity scorecard
 BPPRIV042077,prosperity scorecard
 BPPRIV042079,prosperity scorecard
 BPPRIV042081,prosperity scorecard
-BPPRIV042083,prosperity scorecard
 BPPRIV042085,prosperity scorecard
 BPPRIV042087,prosperity scorecard
 BPPRIV042089,prosperity scorecard
@@ -15222,8 +15097,6 @@ BPPRIV051520,prosperity scorecard
 BPPRIV051530,prosperity scorecard
 BPPRIV051540,prosperity scorecard
 BPPRIV051550,prosperity scorecard
-BPPRIV051560,prosperity scorecard
-BPPRIV051570,prosperity scorecard
 BPPRIV051580,prosperity scorecard
 BPPRIV051590,prosperity scorecard
 BPPRIV051595,prosperity scorecard
@@ -15241,7 +15114,6 @@ BPPRIV051683,prosperity scorecard
 BPPRIV051685,prosperity scorecard
 BPPRIV051690,prosperity scorecard
 BPPRIV051700,prosperity scorecard
-BPPRIV051710,prosperity scorecard
 BPPRIV051720,prosperity scorecard
 BPPRIV051730,prosperity scorecard
 BPPRIV051735,prosperity scorecard
@@ -15250,10 +15122,8 @@ BPPRIV051750,prosperity scorecard
 BPPRIV051760,prosperity scorecard
 BPPRIV051770,prosperity scorecard
 BPPRIV051775,prosperity scorecard
-BPPRIV051780,prosperity scorecard
 BPPRIV051790,prosperity scorecard
 BPPRIV051800,prosperity scorecard
-BPPRIV051810,prosperity scorecard
 BPPRIV051820,prosperity scorecard
 BPPRIV051830,prosperity scorecard
 BPPRIV051840,prosperity scorecard

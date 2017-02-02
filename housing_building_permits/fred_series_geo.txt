@@ -80,19 +80,13 @@ BPPRIV002170	New Private Housing Units Authorized by Building Permits for Matanu
 BPPRIV002180	New Private Housing Units Authorized by Building Permits for Nome Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002185	New Private Housing Units Authorized by Building Permits for North Slope Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002188	New Private Housing Units Authorized by Building Permits for Northwest Arctic Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002201	New Private Housing Units Authorized by Building Permits for Prince of Wales-Outer Ketchikan Census A, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002231	New Private Housing Units Authorized by Building Permits for Skagway-Yakutat-Angoon Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002261	New Private Housing Units Authorized by Building Permits for Valdez-Cordova Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002270	New Private Housing Units Authorized by Building Permits for Wade Hampton Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002280	New Private Housing Units Authorized by Building Permits for Wrangell-Petersburg Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002999	New Private Housing Units Authorized by Building Permits for Balance of State, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002000	New Private Housing Units Authorized by Building Permits for Alaska Balance of State, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002282	New Private Housing Units Authorized by Building Permits for Yakutat Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002232	New Private Housing Units Authorized by Building Permits for Skgway-Hoonah-Agoon Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV002282	New Private Housing Units Authorized by Building Permits for Yakutat City and Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002290	New Private Housing Units Authorized by Building Permits for Yukon-Koyukuk Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV002105	New Private Housing Units Authorized by Building Permits for Hoonah-Angoon Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002195	New Private Housing Units Authorized by Building Permits for Petersburg Borough, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV002198	New Private Housing Units Authorized by Building Permits for Prince of Wales-Hyder Census A, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV002195	New Private Housing Units Authorized by Building Permits for Petersburg Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV002198	New Private Housing Units Authorized by Building Permits for Prince of Wales-Hyder Census Area, AK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV004001	New Private Housing Units Authorized by Building Permits for Apache County, AZ	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV004003	New Private Housing Units Authorized by Building Permits for Cochise County, AZ	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV004005	New Private Housing Units Authorized by Building Permits for Coconino County, AZ	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -312,7 +306,7 @@ BPPRIV009015	New Private Housing Units Authorized by Building Permits for Windha
 BPPRIV010001	New Private Housing Units Authorized by Building Permits for Kent County, DE	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV010003	New Private Housing Units Authorized by Building Permits for New Castle County, DE	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV010005	New Private Housing Units Authorized by Building Permits for Sussex County, DE	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV011001	New Private Housing Units Authorized by Building Permits for Washington DC, DC	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV011001	New Private Housing Units Authorized by Building Permits for District of Columbia, DC	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV012001	New Private Housing Units Authorized by Building Permits for Alachua County, FL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV012003	New Private Housing Units Authorized by Building Permits for Baker County, FL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV012005	New Private Housing Units Authorized by Building Permits for Bay County, FL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -325,7 +319,6 @@ BPPRIV012017	New Private Housing Units Authorized by Building Permits for Citrus
 BPPRIV012019	New Private Housing Units Authorized by Building Permits for Clay County, FL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV012021	New Private Housing Units Authorized by Building Permits for Collier County, FL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV012023	New Private Housing Units Authorized by Building Permits for Columbia County, FL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV012025	New Private Housing Units Authorized by Building Permits for Dade County, FL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV012027	New Private Housing Units Authorized by Building Permits for DeSoto County, FL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV012029	New Private Housing Units Authorized by Building Permits for Dixie County, FL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV012031	New Private Housing Units Authorized by Building Permits for Duval County, FL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -631,7 +624,7 @@ BPPRIV017091	New Private Housing Units Authorized by Building Permits for Kankak
 BPPRIV017093	New Private Housing Units Authorized by Building Permits for Kendall County, IL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV017095	New Private Housing Units Authorized by Building Permits for Knox County, IL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV017097	New Private Housing Units Authorized by Building Permits for Lake County, IL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV017099	New Private Housing Units Authorized by Building Permits for La Salle County, IL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV017099	New Private Housing Units Authorized by Building Permits for LaSalle County, IL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV017101	New Private Housing Units Authorized by Building Permits for Lawrence County, IL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV017103	New Private Housing Units Authorized by Building Permits for Lee County, IL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV017105	New Private Housing Units Authorized by Building Permits for Livingston County, IL	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -704,7 +697,7 @@ BPPRIV018025	New Private Housing Units Authorized by Building Permits for Crawfo
 BPPRIV018027	New Private Housing Units Authorized by Building Permits for Daviess County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV018029	New Private Housing Units Authorized by Building Permits for Dearborn County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV018031	New Private Housing Units Authorized by Building Permits for Decatur County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV018033	New Private Housing Units Authorized by Building Permits for De Kalb County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV018033	New Private Housing Units Authorized by Building Permits for DeKalb County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV018035	New Private Housing Units Authorized by Building Permits for Delaware County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV018037	New Private Housing Units Authorized by Building Permits for Dubois County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV018039	New Private Housing Units Authorized by Building Permits for Elkhart County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -731,9 +724,9 @@ BPPRIV018079	New Private Housing Units Authorized by Building Permits for Jennin
 BPPRIV018081	New Private Housing Units Authorized by Building Permits for Johnson County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV018083	New Private Housing Units Authorized by Building Permits for Knox County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV018085	New Private Housing Units Authorized by Building Permits for Kosciusko County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV018087	New Private Housing Units Authorized by Building Permits for Lagrange County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV018087	New Private Housing Units Authorized by Building Permits for LaGrange County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV018089	New Private Housing Units Authorized by Building Permits for Lake County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV018091	New Private Housing Units Authorized by Building Permits for La Porte County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV018091	New Private Housing Units Authorized by Building Permits for LaPorte County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV018093	New Private Housing Units Authorized by Building Permits for Lawrence County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV018095	New Private Housing Units Authorized by Building Permits for Madison County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV018097	New Private Housing Units Authorized by Building Permits for Marion County, IN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -1163,7 +1156,6 @@ BPPRIV023025	New Private Housing Units Authorized by Building Permits for Somers
 BPPRIV023027	New Private Housing Units Authorized by Building Permits for Waldo County, ME	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV023029	New Private Housing Units Authorized by Building Permits for Washington County, ME	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV023031	New Private Housing Units Authorized by Building Permits for York County, ME	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV023000	New Private Housing Units Authorized by Building Permits for Maine Balance of State, ME	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV024001	New Private Housing Units Authorized by Building Permits for Allegany County, MD	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV024003	New Private Housing Units Authorized by Building Permits for Anne Arundel County, MD	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV024005	New Private Housing Units Authorized by Building Permits for Baltimore County, MD	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -1187,7 +1179,7 @@ BPPRIV024041	New Private Housing Units Authorized by Building Permits for Talbot
 BPPRIV024043	New Private Housing Units Authorized by Building Permits for Washington County, MD	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV024045	New Private Housing Units Authorized by Building Permits for Wicomico County, MD	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV024047	New Private Housing Units Authorized by Building Permits for Worcester County, MD	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV024510	New Private Housing Units Authorized by Building Permits for Baltimore City, MD	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV024510	New Private Housing Units Authorized by Building Permits for Baltimore city, MD	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV025001	New Private Housing Units Authorized by Building Permits for Barnstable County, MA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV025003	New Private Housing Units Authorized by Building Permits for Berkshire County, MA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV025005	New Private Housing Units Authorized by Building Permits for Bristol County, MA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -1285,8 +1277,6 @@ BPPRIV026159	New Private Housing Units Authorized by Building Permits for Van Bu
 BPPRIV026161	New Private Housing Units Authorized by Building Permits for Washtenaw County, MI	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV026163	New Private Housing Units Authorized by Building Permits for Wayne County, MI	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV026165	New Private Housing Units Authorized by Building Permits for Wexford County, MI	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV026999	New Private Housing Units Authorized by Building Permits for Balance of State, MI	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV026000	New Private Housing Units Authorized by Building Permits for Michigan Balance of State, MI	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV027001	New Private Housing Units Authorized by Building Permits for Aitkin County, MN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV027003	New Private Housing Units Authorized by Building Permits for Anoka County, MN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV027005	New Private Housing Units Authorized by Building Permits for Becker County, MN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -1323,7 +1313,7 @@ BPPRIV027065	New Private Housing Units Authorized by Building Permits for Kanabe
 BPPRIV027067	New Private Housing Units Authorized by Building Permits for Kandiyohi County, MN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV027069	New Private Housing Units Authorized by Building Permits for Kittson County, MN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV027071	New Private Housing Units Authorized by Building Permits for Koochiching County, MN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV027073	New Private Housing Units Authorized by Building Permits for Lac Qui Parle County, MN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV027073	New Private Housing Units Authorized by Building Permits for Lac qui Parle County, MN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV027075	New Private Housing Units Authorized by Building Permits for Lake County, MN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV027077	New Private Housing Units Authorized by Building Permits for Lake of the Woods County, MN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV027079	New Private Housing Units Authorized by Building Permits for Le Sueur County, MN	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -1482,7 +1472,7 @@ BPPRIV029051	New Private Housing Units Authorized by Building Permits for Cole C
 BPPRIV029053	New Private Housing Units Authorized by Building Permits for Cooper County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV029055	New Private Housing Units Authorized by Building Permits for Crawford County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV029057	New Private Housing Units Authorized by Building Permits for Dade County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV029063	New Private Housing Units Authorized by Building Permits for DeKalb  County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV029063	New Private Housing Units Authorized by Building Permits for DeKalb County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV029065	New Private Housing Units Authorized by Building Permits for Dent County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV029067	New Private Housing Units Authorized by Building Permits for Douglas County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV029069	New Private Housing Units Authorized by Building Permits for Dunklin County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -1554,7 +1544,7 @@ BPPRIV029219	New Private Housing Units Authorized by Building Permits for Warren
 BPPRIV029221	New Private Housing Units Authorized by Building Permits for Washington County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV029225	New Private Housing Units Authorized by Building Permits for Webster County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV029229	New Private Housing Units Authorized by Building Permits for Wright County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV029510	New Private Housing Units Authorized by Building Permits for St. Louis City, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV029510	New Private Housing Units Authorized by Building Permits for St. Louis city, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV029033	New Private Housing Units Authorized by Building Permits for Carroll County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV029041	New Private Housing Units Authorized by Building Permits for Chariton County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV029085	New Private Housing Units Authorized by Building Permits for Hickory County, MO	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -1626,7 +1616,6 @@ BPPRIV030105	New Private Housing Units Authorized by Building Permits for Valley
 BPPRIV030107	New Private Housing Units Authorized by Building Permits for Wheatland County, MT	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV030109	New Private Housing Units Authorized by Building Permits for Wibaux County, MT	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV030111	New Private Housing Units Authorized by Building Permits for Yellowstone County, MT	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV030000	New Private Housing Units Authorized by Building Permits for Montana Balance of State, MT	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV031001	New Private Housing Units Authorized by Building Permits for Adams County, NE	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV031003	New Private Housing Units Authorized by Building Permits for Antelope County, NE	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV031011	New Private Housing Units Authorized by Building Permits for Boone County, NE	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -1785,8 +1774,6 @@ BPPRIV035053	New Private Housing Units Authorized by Building Permits for Socorr
 BPPRIV035055	New Private Housing Units Authorized by Building Permits for Taos County, NM	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV035057	New Private Housing Units Authorized by Building Permits for Torrance County, NM	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV035061	New Private Housing Units Authorized by Building Permits for Valencia County, NM	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV035099	New Private Housing Units Authorized by Building Permits for Balance of State, NM	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV035000	New Private Housing Units Authorized by Building Permits for New Mexico Balance of State, NM	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV035006	New Private Housing Units Authorized by Building Permits for Cibola County, NM	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV035017	New Private Housing Units Authorized by Building Permits for Grant County, NM	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV035047	New Private Housing Units Authorized by Building Permits for San Miguel County, NM	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -2034,7 +2021,7 @@ BPPRIV039051	New Private Housing Units Authorized by Building Permits for Fulton
 BPPRIV039053	New Private Housing Units Authorized by Building Permits for Gallia County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV039055	New Private Housing Units Authorized by Building Permits for Geauga County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV039057	New Private Housing Units Authorized by Building Permits for Greene County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV039059	New Private Housing Units Authorized by Building Permits for Guersney County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV039059	New Private Housing Units Authorized by Building Permits for Guernsey County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV039061	New Private Housing Units Authorized by Building Permits for Hamilton County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV039063	New Private Housing Units Authorized by Building Permits for Hancock County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV039065	New Private Housing Units Authorized by Building Permits for Hardin County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -2069,7 +2056,7 @@ BPPRIV039121	New Private Housing Units Authorized by Building Permits for Noble 
 BPPRIV039123	New Private Housing Units Authorized by Building Permits for Ottawa County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV039125	New Private Housing Units Authorized by Building Permits for Paulding County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV039127	New Private Housing Units Authorized by Building Permits for Perry County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV039129	New Private Housing Units Authorized by Building Permits for Pickaway Count, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV039129	New Private Housing Units Authorized by Building Permits for Pickaway County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV039131	New Private Housing Units Authorized by Building Permits for Pike County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV039133	New Private Housing Units Authorized by Building Permits for Portage County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV039135	New Private Housing Units Authorized by Building Permits for Preble County, OH	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -2162,7 +2149,7 @@ BPPRIV040139	New Private Housing Units Authorized by Building Permits for Texas 
 BPPRIV040141	New Private Housing Units Authorized by Building Permits for Tillman County, OK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV040143	New Private Housing Units Authorized by Building Permits for Tulsa County, OK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV040145	New Private Housing Units Authorized by Building Permits for Wagoner County, OK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV040147	New Private Housing Units Authorized by Building Permits for Washington  County, OK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV040147	New Private Housing Units Authorized by Building Permits for Washington County, OK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV040149	New Private Housing Units Authorized by Building Permits for Washita County, OK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV040151	New Private Housing Units Authorized by Building Permits for Woods County, OK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV040153	New Private Housing Units Authorized by Building Permits for Woodward County, OK	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -2206,7 +2193,6 @@ BPPRIV041065	New Private Housing Units Authorized by Building Permits for Wasco 
 BPPRIV041067	New Private Housing Units Authorized by Building Permits for Washington County, OR	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV041069	New Private Housing Units Authorized by Building Permits for Wheeler County, OR	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV041071	New Private Housing Units Authorized by Building Permits for Yamhill County, OR	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV041000	New Private Housing Units Authorized by Building Permits for Oregon Balance of State, OR	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042001	New Private Housing Units Authorized by Building Permits for Adams County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042003	New Private Housing Units Authorized by Building Permits for Allegheny County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042005	New Private Housing Units Authorized by Building Permits for Armstrong County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -2248,7 +2234,7 @@ BPPRIV042075	New Private Housing Units Authorized by Building Permits for Lebano
 BPPRIV042077	New Private Housing Units Authorized by Building Permits for Lehigh County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042079	New Private Housing Units Authorized by Building Permits for Luzerne County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042081	New Private Housing Units Authorized by Building Permits for Lycoming County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV042083	New Private Housing Units Authorized by Building Permits for Mc Kean County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV042083	New Private Housing Units Authorized by Building Permits for McKean County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042085	New Private Housing Units Authorized by Building Permits for Mercer County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042087	New Private Housing Units Authorized by Building Permits for Mifflin County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV042089	New Private Housing Units Authorized by Building Permits for Monroe County, PA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
@@ -2852,47 +2838,45 @@ BPPRIV051193	New Private Housing Units Authorized by Building Permits for Westmo
 BPPRIV051195	New Private Housing Units Authorized by Building Permits for Wise County, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV051197	New Private Housing Units Authorized by Building Permits for Wythe County, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV051199	New Private Housing Units Authorized by Building Permits for York County, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051510	New Private Housing Units Authorized by Building Permits for Alexandria City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051515	New Private Housing Units Authorized by Building Permits for Bedford City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051520	New Private Housing Units Authorized by Building Permits for Bedford City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051530	New Private Housing Units Authorized by Building Permits for Buena Vista City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051540	New Private Housing Units Authorized by Building Permits for Charlottesville City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051550	New Private Housing Units Authorized by Building Permits for Chesapeake City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051560	New Private Housing Units Authorized by Building Permits for Clifton Forge City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051570	New Private Housing Units Authorized by Building Permits for Colonial Heights, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051580	New Private Housing Units Authorized by Building Permits for Covington City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051590	New Private Housing Units Authorized by Building Permits for Danville City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051595	New Private Housing Units Authorized by Building Permits for Emporia City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051600	New Private Housing Units Authorized by Building Permits for Fairfax City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051610	New Private Housing Units Authorized by Building Permits for Falls Church City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051620	New Private Housing Units Authorized by Building Permits for Franklin City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051630	New Private Housing Units Authorized by Building Permits for Fredericksburg City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051640	New Private Housing Units Authorized by Building Permits for Galax City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051650	New Private Housing Units Authorized by Building Permits for Hampton City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051660	New Private Housing Units Authorized by Building Permits for Harrisonburg City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051670	New Private Housing Units Authorized by Building Permits for Hopewell City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051678	New Private Housing Units Authorized by Building Permits for Lexington City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051680	New Private Housing Units Authorized by Building Permits for Lynchburg City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051683	New Private Housing Units Authorized by Building Permits for Manassas City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051685	New Private Housing Units Authorized by Building Permits for Manassas Park City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051690	New Private Housing Units Authorized by Building Permits for Martinsville City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051700	New Private Housing Units Authorized by Building Permits for Newport News City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051710	New Private Housing Units Authorized by Building Permits for Norkfolk City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051720	New Private Housing Units Authorized by Building Permits for Norton City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051730	New Private Housing Units Authorized by Building Permits for Petersburg City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051735	New Private Housing Units Authorized by Building Permits for Poquoson City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051740	New Private Housing Units Authorized by Building Permits for Portsmouth City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051750	New Private Housing Units Authorized by Building Permits for Radford City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051760	New Private Housing Units Authorized by Building Permits for Richmond City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051770	New Private Housing Units Authorized by Building Permits for Roanoke City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051775	New Private Housing Units Authorized by Building Permits for Salem City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051780	New Private Housing Units Authorized by Building Permits for South Boston City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051790	New Private Housing Units Authorized by Building Permits for Staunton City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051800	New Private Housing Units Authorized by Building Permits for Suffolk City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051810	New Private Housing Units Authorized by Building Permits for Virginia Beach, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051820	New Private Housing Units Authorized by Building Permits for Waynesboro City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051830	New Private Housing Units Authorized by Building Permits for Williamsburg City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
-BPPRIV051840	New Private Housing Units Authorized by Building Permits for Winchester City, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051510	New Private Housing Units Authorized by Building Permits for Alexandria city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051515	New Private Housing Units Authorized by Building Permits for Bedford city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051520	New Private Housing Units Authorized by Building Permits for Bristol city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051530	New Private Housing Units Authorized by Building Permits for Buena Vista city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051540	New Private Housing Units Authorized by Building Permits for Charlottesville city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051550	New Private Housing Units Authorized by Building Permits for Chesapeake city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051570	New Private Housing Units Authorized by Building Permits for Colonial Heights city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051580	New Private Housing Units Authorized by Building Permits for Covington city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051590	New Private Housing Units Authorized by Building Permits for Danville city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051595	New Private Housing Units Authorized by Building Permits for Emporia city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051600	New Private Housing Units Authorized by Building Permits for Fairfax city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051610	New Private Housing Units Authorized by Building Permits for Falls Church city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051620	New Private Housing Units Authorized by Building Permits for Franklin city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051630	New Private Housing Units Authorized by Building Permits for Fredericksburg city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051640	New Private Housing Units Authorized by Building Permits for Galax city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051650	New Private Housing Units Authorized by Building Permits for Hampton city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051660	New Private Housing Units Authorized by Building Permits for Harrisonburg city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051670	New Private Housing Units Authorized by Building Permits for Hopewell city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051678	New Private Housing Units Authorized by Building Permits for Lexington city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051680	New Private Housing Units Authorized by Building Permits for Lynchburg city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051683	New Private Housing Units Authorized by Building Permits for Manassas city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051685	New Private Housing Units Authorized by Building Permits for Manassas Park city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051690	New Private Housing Units Authorized by Building Permits for Martinsville city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051700	New Private Housing Units Authorized by Building Permits for Newport News city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051710	New Private Housing Units Authorized by Building Permits for Norfolk city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051720	New Private Housing Units Authorized by Building Permits for Norton city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051730	New Private Housing Units Authorized by Building Permits for Petersburg city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051735	New Private Housing Units Authorized by Building Permits for Poquoson city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051740	New Private Housing Units Authorized by Building Permits for Portsmouth city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051750	New Private Housing Units Authorized by Building Permits for Radford city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051760	New Private Housing Units Authorized by Building Permits for Richmond city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051770	New Private Housing Units Authorized by Building Permits for Roanoke city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051775	New Private Housing Units Authorized by Building Permits for Salem city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051790	New Private Housing Units Authorized by Building Permits for Staunton city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051800	New Private Housing Units Authorized by Building Permits for Suffolk city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051810	New Private Housing Units Authorized by Building Permits for Virginia Beach city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051820	New Private Housing Units Authorized by Building Permits for Waynesboro city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051830	New Private Housing Units Authorized by Building Permits for Williamsburg city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
+BPPRIV051840	New Private Housing Units Authorized by Building Permits for Winchester city, VA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV053001	New Private Housing Units Authorized by Building Permits for Adams County, WA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV053003	New Private Housing Units Authorized by Building Permits for Asotin County, WA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148
 BPPRIV053005	New Private Housing Units Authorized by Building Permits for Benton County, WA	Not Seasonally Adjusted	Annual	Units				TRUE	TRUE	2017-01-27	148

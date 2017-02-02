@@ -67,13 +67,13 @@ New Private Housing Units Authorized by Building Permits for Winston County, AL
 New Private Housing Units Authorized by Building Permits for Bibb County, AL
 New Private Housing Units Authorized by Building Permits for Aleutians East Borough, AK
 New Private Housing Units Authorized by Building Permits for Aleutians West Census Area, AK
-New Private Housing Units Authorized by Building Permits for Anchorage Borough, AK
+New Private Housing Units Authorized by Building Permits for Anchorage Borough/municipality, AK
 New Private Housing Units Authorized by Building Permits for Bethel Census Area, AK
 New Private Housing Units Authorized by Building Permits for Bristol Bay Borough, AK
 New Private Housing Units Authorized by Building Permits for Dillingham Census Area, AK
 New Private Housing Units Authorized by Building Permits for Fairbanks North Star Borough, AK
 New Private Housing Units Authorized by Building Permits for Haines Borough, AK
-New Private Housing Units Authorized by Building Permits for Juneau Borough, AK
+New Private Housing Units Authorized by Building Permits for Juneau City and Borough, AK
 New Private Housing Units Authorized by Building Permits for Kenai Peninsula Borough, AK
 New Private Housing Units Authorized by Building Permits for Ketchikan Gateway Borough, AK
 New Private Housing Units Authorized by Building Permits for Kodiak Island Borough, AK
@@ -81,20 +81,14 @@ New Private Housing Units Authorized by Building Permits for Matanuska-Susitna B
 New Private Housing Units Authorized by Building Permits for Nome Census Area, AK
 New Private Housing Units Authorized by Building Permits for North Slope Borough, AK
 New Private Housing Units Authorized by Building Permits for Northwest Arctic Borough, AK
-New Private Housing Units Authorized by Building Permits for Prince of Wales-Outer Ketchikan Census A, AK
-New Private Housing Units Authorized by Building Permits for Sitka Borough, AK
-New Private Housing Units Authorized by Building Permits for Skagway-Yakutat-Angoon Census Area, AK
+New Private Housing Units Authorized by Building Permits for Sitka City and Borough, AK
 New Private Housing Units Authorized by Building Permits for Valdez-Cordova Census Area, AK
 New Private Housing Units Authorized by Building Permits for Wade Hampton Census Area, AK
-New Private Housing Units Authorized by Building Permits for Wrangell-Petersburg Census Area, AK
-New Private Housing Units Authorized by Building Permits for Balance of State, AK
-New Private Housing Units Authorized by Building Permits for Alaska Balance of State, AK
-New Private Housing Units Authorized by Building Permits for Yakutat Borough, AK
-New Private Housing Units Authorized by Building Permits for Skgway-Hoonah-Agoon Census Area, AK
+New Private Housing Units Authorized by Building Permits for Yakutat City and Borough, AK
 New Private Housing Units Authorized by Building Permits for Yukon-Koyukuk Census Area, AK
 New Private Housing Units Authorized by Building Permits for Hoonah-Angoon Census Area, AK
-New Private Housing Units Authorized by Building Permits for Petersburg Borough, AK
-New Private Housing Units Authorized by Building Permits for Prince of Wales-Hyder Census A, AK
+New Private Housing Units Authorized by Building Permits for Petersburg Census Area, AK
+New Private Housing Units Authorized by Building Permits for Prince of Wales-Hyder Census Area, AK
 New Private Housing Units Authorized by Building Permits for Skagway Municipality, AK
 New Private Housing Units Authorized by Building Permits for Wrangell City and Borough, AK
 New Private Housing Units Authorized by Building Permits for Apache County, AZ
@@ -318,7 +312,7 @@ New Private Housing Units Authorized by Building Permits for Windham County, CT
 New Private Housing Units Authorized by Building Permits for Kent County, DE
 New Private Housing Units Authorized by Building Permits for New Castle County, DE
 New Private Housing Units Authorized by Building Permits for Sussex County, DE
-New Private Housing Units Authorized by Building Permits for Washington DC, DC
+New Private Housing Units Authorized by Building Permits for District of Columbia, DC
 New Private Housing Units Authorized by Building Permits for Alachua County, FL
 New Private Housing Units Authorized by Building Permits for Baker County, FL
 New Private Housing Units Authorized by Building Permits for Bay County, FL
@@ -331,7 +325,6 @@ New Private Housing Units Authorized by Building Permits for Citrus County, FL
 New Private Housing Units Authorized by Building Permits for Clay County, FL
 New Private Housing Units Authorized by Building Permits for Collier County, FL
 New Private Housing Units Authorized by Building Permits for Columbia County, FL
-New Private Housing Units Authorized by Building Permits for Dade County, FL
 New Private Housing Units Authorized by Building Permits for DeSoto County, FL
 New Private Housing Units Authorized by Building Permits for Dixie County, FL
 New Private Housing Units Authorized by Building Permits for Duval County, FL
@@ -638,7 +631,7 @@ New Private Housing Units Authorized by Building Permits for Kankakee County, IL
 New Private Housing Units Authorized by Building Permits for Kendall County, IL
 New Private Housing Units Authorized by Building Permits for Knox County, IL
 New Private Housing Units Authorized by Building Permits for Lake County, IL
-New Private Housing Units Authorized by Building Permits for La Salle County, IL
+New Private Housing Units Authorized by Building Permits for LaSalle County, IL
 New Private Housing Units Authorized by Building Permits for Lawrence County, IL
 New Private Housing Units Authorized by Building Permits for Lee County, IL
 New Private Housing Units Authorized by Building Permits for Livingston County, IL
@@ -711,7 +704,7 @@ New Private Housing Units Authorized by Building Permits for Crawford County, IN
 New Private Housing Units Authorized by Building Permits for Daviess County, IN
 New Private Housing Units Authorized by Building Permits for Dearborn County, IN
 New Private Housing Units Authorized by Building Permits for Decatur County, IN
-New Private Housing Units Authorized by Building Permits for De Kalb County, IN
+New Private Housing Units Authorized by Building Permits for DeKalb County, IN
 New Private Housing Units Authorized by Building Permits for Delaware County, IN
 New Private Housing Units Authorized by Building Permits for Dubois County, IN
 New Private Housing Units Authorized by Building Permits for Elkhart County, IN
@@ -738,9 +731,9 @@ New Private Housing Units Authorized by Building Permits for Jennings County, IN
 New Private Housing Units Authorized by Building Permits for Johnson County, IN
 New Private Housing Units Authorized by Building Permits for Knox County, IN
 New Private Housing Units Authorized by Building Permits for Kosciusko County, IN
-New Private Housing Units Authorized by Building Permits for Lagrange County, IN
+New Private Housing Units Authorized by Building Permits for LaGrange County, IN
 New Private Housing Units Authorized by Building Permits for Lake County, IN
-New Private Housing Units Authorized by Building Permits for La Porte County, IN
+New Private Housing Units Authorized by Building Permits for LaPorte County, IN
 New Private Housing Units Authorized by Building Permits for Lawrence County, IN
 New Private Housing Units Authorized by Building Permits for Madison County, IN
 New Private Housing Units Authorized by Building Permits for Marion County, IN
@@ -1170,7 +1163,6 @@ New Private Housing Units Authorized by Building Permits for Somerset County, ME
 New Private Housing Units Authorized by Building Permits for Waldo County, ME
 New Private Housing Units Authorized by Building Permits for Washington County, ME
 New Private Housing Units Authorized by Building Permits for York County, ME
-New Private Housing Units Authorized by Building Permits for Maine Balance of State, ME
 New Private Housing Units Authorized by Building Permits for Allegany County, MD
 New Private Housing Units Authorized by Building Permits for Anne Arundel County, MD
 New Private Housing Units Authorized by Building Permits for Baltimore County, MD
@@ -1194,7 +1186,7 @@ New Private Housing Units Authorized by Building Permits for Talbot County, MD
 New Private Housing Units Authorized by Building Permits for Washington County, MD
 New Private Housing Units Authorized by Building Permits for Wicomico County, MD
 New Private Housing Units Authorized by Building Permits for Worcester County, MD
-New Private Housing Units Authorized by Building Permits for Baltimore City, MD
+New Private Housing Units Authorized by Building Permits for Baltimore city, MD
 New Private Housing Units Authorized by Building Permits for Barnstable County, MA
 New Private Housing Units Authorized by Building Permits for Berkshire County, MA
 New Private Housing Units Authorized by Building Permits for Bristol County, MA
@@ -1292,8 +1284,6 @@ New Private Housing Units Authorized by Building Permits for Van Buren County, M
 New Private Housing Units Authorized by Building Permits for Washtenaw County, MI
 New Private Housing Units Authorized by Building Permits for Wayne County, MI
 New Private Housing Units Authorized by Building Permits for Wexford County, MI
-New Private Housing Units Authorized by Building Permits for Balance of State, MI
-New Private Housing Units Authorized by Building Permits for Michigan Balance of State, MI
 New Private Housing Units Authorized by Building Permits for Aitkin County, MN
 New Private Housing Units Authorized by Building Permits for Anoka County, MN
 New Private Housing Units Authorized by Building Permits for Becker County, MN
@@ -1330,7 +1320,7 @@ New Private Housing Units Authorized by Building Permits for Kanabec County, MN
 New Private Housing Units Authorized by Building Permits for Kandiyohi County, MN
 New Private Housing Units Authorized by Building Permits for Kittson County, MN
 New Private Housing Units Authorized by Building Permits for Koochiching County, MN
-New Private Housing Units Authorized by Building Permits for Lac Qui Parle County, MN
+New Private Housing Units Authorized by Building Permits for Lac qui Parle County, MN
 New Private Housing Units Authorized by Building Permits for Lake County, MN
 New Private Housing Units Authorized by Building Permits for Lake of the Woods County, MN
 New Private Housing Units Authorized by Building Permits for Le Sueur County, MN
@@ -1489,7 +1479,7 @@ New Private Housing Units Authorized by Building Permits for Cole County, MO
 New Private Housing Units Authorized by Building Permits for Cooper County, MO
 New Private Housing Units Authorized by Building Permits for Crawford County, MO
 New Private Housing Units Authorized by Building Permits for Dade County, MO
-New Private Housing Units Authorized by Building Permits for DeKalb  County, MO
+New Private Housing Units Authorized by Building Permits for DeKalb County, MO
 New Private Housing Units Authorized by Building Permits for Dent County, MO
 New Private Housing Units Authorized by Building Permits for Douglas County, MO
 New Private Housing Units Authorized by Building Permits for Dunklin County, MO
@@ -1561,7 +1551,7 @@ New Private Housing Units Authorized by Building Permits for Warren County, MO
 New Private Housing Units Authorized by Building Permits for Washington County, MO
 New Private Housing Units Authorized by Building Permits for Webster County, MO
 New Private Housing Units Authorized by Building Permits for Wright County, MO
-New Private Housing Units Authorized by Building Permits for St. Louis City, MO
+New Private Housing Units Authorized by Building Permits for St. Louis city, MO
 New Private Housing Units Authorized by Building Permits for Carroll County, MO
 New Private Housing Units Authorized by Building Permits for Chariton County, MO
 New Private Housing Units Authorized by Building Permits for Hickory County, MO
@@ -1633,7 +1623,6 @@ New Private Housing Units Authorized by Building Permits for Valley County, MT
 New Private Housing Units Authorized by Building Permits for Wheatland County, MT
 New Private Housing Units Authorized by Building Permits for Wibaux County, MT
 New Private Housing Units Authorized by Building Permits for Yellowstone County, MT
-New Private Housing Units Authorized by Building Permits for Montana Balance of State, MT
 New Private Housing Units Authorized by Building Permits for Adams County, NE
 New Private Housing Units Authorized by Building Permits for Antelope County, NE
 New Private Housing Units Authorized by Building Permits for Boone County, NE
@@ -1792,8 +1781,6 @@ New Private Housing Units Authorized by Building Permits for Socorro County, NM
 New Private Housing Units Authorized by Building Permits for Taos County, NM
 New Private Housing Units Authorized by Building Permits for Torrance County, NM
 New Private Housing Units Authorized by Building Permits for Valencia County, NM
-New Private Housing Units Authorized by Building Permits for Balance of State, NM
-New Private Housing Units Authorized by Building Permits for New Mexico Balance of State, NM
 New Private Housing Units Authorized by Building Permits for Cibola County, NM
 New Private Housing Units Authorized by Building Permits for Grant County, NM
 New Private Housing Units Authorized by Building Permits for San Miguel County, NM
@@ -2041,7 +2028,7 @@ New Private Housing Units Authorized by Building Permits for Fulton County, OH
 New Private Housing Units Authorized by Building Permits for Gallia County, OH
 New Private Housing Units Authorized by Building Permits for Geauga County, OH
 New Private Housing Units Authorized by Building Permits for Greene County, OH
-New Private Housing Units Authorized by Building Permits for Guersney County, OH
+New Private Housing Units Authorized by Building Permits for Guernsey County, OH
 New Private Housing Units Authorized by Building Permits for Hamilton County, OH
 New Private Housing Units Authorized by Building Permits for Hancock County, OH
 New Private Housing Units Authorized by Building Permits for Hardin County, OH
@@ -2076,7 +2063,7 @@ New Private Housing Units Authorized by Building Permits for Noble County, OH
 New Private Housing Units Authorized by Building Permits for Ottawa County, OH
 New Private Housing Units Authorized by Building Permits for Paulding County, OH
 New Private Housing Units Authorized by Building Permits for Perry County, OH
-New Private Housing Units Authorized by Building Permits for Pickaway Count, OH
+New Private Housing Units Authorized by Building Permits for Pickaway County, OH
 New Private Housing Units Authorized by Building Permits for Pike County, OH
 New Private Housing Units Authorized by Building Permits for Portage County, OH
 New Private Housing Units Authorized by Building Permits for Preble County, OH
@@ -2169,7 +2156,7 @@ New Private Housing Units Authorized by Building Permits for Texas County, OK
 New Private Housing Units Authorized by Building Permits for Tillman County, OK
 New Private Housing Units Authorized by Building Permits for Tulsa County, OK
 New Private Housing Units Authorized by Building Permits for Wagoner County, OK
-New Private Housing Units Authorized by Building Permits for Washington  County, OK
+New Private Housing Units Authorized by Building Permits for Washington County, OK
 New Private Housing Units Authorized by Building Permits for Washita County, OK
 New Private Housing Units Authorized by Building Permits for Woods County, OK
 New Private Housing Units Authorized by Building Permits for Woodward County, OK
@@ -2213,7 +2200,6 @@ New Private Housing Units Authorized by Building Permits for Wasco County, OR
 New Private Housing Units Authorized by Building Permits for Washington County, OR
 New Private Housing Units Authorized by Building Permits for Wheeler County, OR
 New Private Housing Units Authorized by Building Permits for Yamhill County, OR
-New Private Housing Units Authorized by Building Permits for Oregon Balance of State, OR
 New Private Housing Units Authorized by Building Permits for Adams County, PA
 New Private Housing Units Authorized by Building Permits for Allegheny County, PA
 New Private Housing Units Authorized by Building Permits for Armstrong County, PA
@@ -2255,7 +2241,7 @@ New Private Housing Units Authorized by Building Permits for Lebanon County, PA
 New Private Housing Units Authorized by Building Permits for Lehigh County, PA
 New Private Housing Units Authorized by Building Permits for Luzerne County, PA
 New Private Housing Units Authorized by Building Permits for Lycoming County, PA
-New Private Housing Units Authorized by Building Permits for Mc Kean County, PA
+New Private Housing Units Authorized by Building Permits for McKean County, PA
 New Private Housing Units Authorized by Building Permits for Mercer County, PA
 New Private Housing Units Authorized by Building Permits for Mifflin County, PA
 New Private Housing Units Authorized by Building Permits for Monroe County, PA
@@ -2860,47 +2846,45 @@ New Private Housing Units Authorized by Building Permits for Westmoreland County
 New Private Housing Units Authorized by Building Permits for Wise County, VA
 New Private Housing Units Authorized by Building Permits for Wythe County, VA
 New Private Housing Units Authorized by Building Permits for York County, VA
-New Private Housing Units Authorized by Building Permits for Alexandria City, VA
-New Private Housing Units Authorized by Building Permits for Bedford City, VA
-New Private Housing Units Authorized by Building Permits for Bedford City, VA
-New Private Housing Units Authorized by Building Permits for Buena Vista City, VA
-New Private Housing Units Authorized by Building Permits for Charlottesville City, VA
-New Private Housing Units Authorized by Building Permits for Chesapeake City, VA
-New Private Housing Units Authorized by Building Permits for Clifton Forge City, VA
-New Private Housing Units Authorized by Building Permits for Colonial Heights, VA
-New Private Housing Units Authorized by Building Permits for Covington City, VA
-New Private Housing Units Authorized by Building Permits for Danville City, VA
-New Private Housing Units Authorized by Building Permits for Emporia City, VA
-New Private Housing Units Authorized by Building Permits for Fairfax City, VA
-New Private Housing Units Authorized by Building Permits for Falls Church City, VA
-New Private Housing Units Authorized by Building Permits for Franklin City, VA
-New Private Housing Units Authorized by Building Permits for Fredericksburg City, VA
-New Private Housing Units Authorized by Building Permits for Galax City, VA
-New Private Housing Units Authorized by Building Permits for Hampton City, VA
-New Private Housing Units Authorized by Building Permits for Harrisonburg City, VA
-New Private Housing Units Authorized by Building Permits for Hopewell City, VA
-New Private Housing Units Authorized by Building Permits for Lexington City, VA
-New Private Housing Units Authorized by Building Permits for Lynchburg City, VA
-New Private Housing Units Authorized by Building Permits for Manassas City, VA
-New Private Housing Units Authorized by Building Permits for Manassas Park City, VA
-New Private Housing Units Authorized by Building Permits for Martinsville City, VA
-New Private Housing Units Authorized by Building Permits for Newport News City, VA
-New Private Housing Units Authorized by Building Permits for Norkfolk City, VA
-New Private Housing Units Authorized by Building Permits for Norton City, VA
-New Private Housing Units Authorized by Building Permits for Petersburg City, VA
-New Private Housing Units Authorized by Building Permits for Poquoson City, VA
-New Private Housing Units Authorized by Building Permits for Portsmouth City, VA
-New Private Housing Units Authorized by Building Permits for Radford City, VA
-New Private Housing Units Authorized by Building Permits for Richmond City, VA
-New Private Housing Units Authorized by Building Permits for Roanoke City, VA
-New Private Housing Units Authorized by Building Permits for Salem City, VA
-New Private Housing Units Authorized by Building Permits for South Boston City, VA
-New Private Housing Units Authorized by Building Permits for Staunton City, VA
-New Private Housing Units Authorized by Building Permits for Suffolk City, VA
-New Private Housing Units Authorized by Building Permits for Virginia Beach, VA
-New Private Housing Units Authorized by Building Permits for Waynesboro City, VA
-New Private Housing Units Authorized by Building Permits for Williamsburg City, VA
-New Private Housing Units Authorized by Building Permits for Winchester City, VA
+New Private Housing Units Authorized by Building Permits for Alexandria city, VA
+New Private Housing Units Authorized by Building Permits for Bedford city, VA
+New Private Housing Units Authorized by Building Permits for Bristol city, VA
+New Private Housing Units Authorized by Building Permits for Buena Vista city, VA
+New Private Housing Units Authorized by Building Permits for Charlottesville city, VA
+New Private Housing Units Authorized by Building Permits for Chesapeake city, VA
+New Private Housing Units Authorized by Building Permits for Colonial Heights city, VA
+New Private Housing Units Authorized by Building Permits for Covington city, VA
+New Private Housing Units Authorized by Building Permits for Danville city, VA
+New Private Housing Units Authorized by Building Permits for Emporia city, VA
+New Private Housing Units Authorized by Building Permits for Fairfax city, VA
+New Private Housing Units Authorized by Building Permits for Falls Church city, VA
+New Private Housing Units Authorized by Building Permits for Franklin city, VA
+New Private Housing Units Authorized by Building Permits for Fredericksburg city, VA
+New Private Housing Units Authorized by Building Permits for Galax city, VA
+New Private Housing Units Authorized by Building Permits for Hampton city, VA
+New Private Housing Units Authorized by Building Permits for Harrisonburg city, VA
+New Private Housing Units Authorized by Building Permits for Hopewell city, VA
+New Private Housing Units Authorized by Building Permits for Lexington city, VA
+New Private Housing Units Authorized by Building Permits for Lynchburg city, VA
+New Private Housing Units Authorized by Building Permits for Manassas city, VA
+New Private Housing Units Authorized by Building Permits for Manassas Park city, VA
+New Private Housing Units Authorized by Building Permits for Martinsville city, VA
+New Private Housing Units Authorized by Building Permits for Newport News city, VA
+New Private Housing Units Authorized by Building Permits for Norfolk city, VA
+New Private Housing Units Authorized by Building Permits for Norton city, VA
+New Private Housing Units Authorized by Building Permits for Petersburg city, VA
+New Private Housing Units Authorized by Building Permits for Poquoson city, VA
+New Private Housing Units Authorized by Building Permits for Portsmouth city, VA
+New Private Housing Units Authorized by Building Permits for Radford city, VA
+New Private Housing Units Authorized by Building Permits for Richmond city, VA
+New Private Housing Units Authorized by Building Permits for Roanoke city, VA
+New Private Housing Units Authorized by Building Permits for Salem city, VA
+New Private Housing Units Authorized by Building Permits for Staunton city, VA
+New Private Housing Units Authorized by Building Permits for Suffolk city, VA
+New Private Housing Units Authorized by Building Permits for Virginia Beach city, VA
+New Private Housing Units Authorized by Building Permits for Waynesboro city, VA
+New Private Housing Units Authorized by Building Permits for Williamsburg city, VA
+New Private Housing Units Authorized by Building Permits for Winchester city, VA
 New Private Housing Units Authorized by Building Permits for Adams County, WA
 New Private Housing Units Authorized by Building Permits for Asotin County, WA
 New Private Housing Units Authorized by Building Permits for Benton County, WA
