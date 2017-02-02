@@ -78,7 +78,6 @@ DP04ACS002105,prosperity scorecard
 DP04ACS002122,prosperity scorecard
 DP04ACS002130,prosperity scorecard
 DP04ACS002150,prosperity scorecard
-DP04ACS002158,prosperity scorecard
 DP04ACS002164,prosperity scorecard
 DP04ACS002170,prosperity scorecard
 DP04ACS002180,prosperity scorecard
@@ -2403,7 +2402,6 @@ DP04ACS046095,prosperity scorecard
 DP04ACS046097,prosperity scorecard
 DP04ACS046099,prosperity scorecard
 DP04ACS046101,prosperity scorecard
-DP04ACS046102,prosperity scorecard
 DP04ACS046103,prosperity scorecard
 DP04ACS046105,prosperity scorecard
 DP04ACS046107,prosperity scorecard
@@ -3223,7 +3221,6 @@ DP04ACS002105,burdened
 DP04ACS002122,burdened
 DP04ACS002130,burdened
 DP04ACS002150,burdened
-DP04ACS002158,burdened
 DP04ACS002164,burdened
 DP04ACS002170,burdened
 DP04ACS002180,burdened
@@ -5548,7 +5545,6 @@ DP04ACS046095,burdened
 DP04ACS046097,burdened
 DP04ACS046099,burdened
 DP04ACS046101,burdened
-DP04ACS046102,burdened
 DP04ACS046103,burdened
 DP04ACS046105,burdened
 DP04ACS046107,burdened
@@ -6368,7 +6364,6 @@ DP04ACS002105,households
 DP04ACS002122,households
 DP04ACS002130,households
 DP04ACS002150,households
-DP04ACS002158,households
 DP04ACS002164,households
 DP04ACS002170,households
 DP04ACS002180,households
@@ -8693,7 +8688,6 @@ DP04ACS046095,households
 DP04ACS046097,households
 DP04ACS046099,households
 DP04ACS046101,households
-DP04ACS046102,households
 DP04ACS046103,households
 DP04ACS046105,households
 DP04ACS046107,households
@@ -9513,7 +9507,6 @@ DP04ACS002105,acs
 DP04ACS002122,acs
 DP04ACS002130,acs
 DP04ACS002150,acs
-DP04ACS002158,acs
 DP04ACS002164,acs
 DP04ACS002170,acs
 DP04ACS002180,acs
@@ -11838,7 +11831,6 @@ DP04ACS046095,acs
 DP04ACS046097,acs
 DP04ACS046099,acs
 DP04ACS046101,acs
-DP04ACS046102,acs
 DP04ACS046103,acs
 DP04ACS046105,acs
 DP04ACS046107,acs
