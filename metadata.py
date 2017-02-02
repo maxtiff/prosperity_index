@@ -14,14 +14,14 @@ titles =pd.DataFrame()
 
 season = 'Not Seasonally Adjusted'
 freq = 'Annual'
-units = 'Units'
+units = 'Percent'
 keywords = ''
-notes = ''
+notes = 'This data represents the ratio of mean income for the highest '\'quintile (top 20 percent) of earners divided by the mean income of the '\ 'lowest quintile (bottom 20 percent) of earners in a particular county.'
 period = ''
 g_rate = 'TRUE'
 obs_vsd = 'TRUE'
 vsd = '2017-01-27'
-r_id = '148'
+r_id = '414'
 
 non_geo_fips = '002020|002110|002220|002230|002275|006075|008014|015003|042101'
 
@@ -29,18 +29,15 @@ non_geo_cats = {'002020': '27406', '002110': '27412', '002220': '27422', \
                 '002230': '33516', '002275': '33518', '006075': '27559', \
                 '008014': '32077', '015003': '27889', '042101': '29664'}
 
-title = 'New Private Housing Units Authorized by Building Permits for ' + \
+title = 'Income Inequality in ' + \
         pd.unique(df[df['fips'] == series]['county'])[0]
 
 # Create metadata files
 if bool(re.search(non_geo_fips, series)):
-    row = pd.DataFrame(
-        data=[[series_id, title, season, freq, units, keywords,notes, \
-               period, g_rate, obs_vsd, vsd, r_id]],columns=md_names)
+    row = pd.DataFrame(data=[[series_id, title, season, freq, units, keywords,notes,period, g_rate, obs_vsd, vsd, r_id]],columns=md_names)
     fred_md = fred_md.append(row)
 
-    row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],
-                       columns=fsr_names)
+    row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],columns=fsr_names)
     fsr = fsr.append(row)
 
     cat_id = non_geo_cats[series]
