@@ -87,11 +87,11 @@ def main():
     units = 'Minutes'
     keywords = ''
     notes = 'This series is calculated by dividing the aggregate travel time to '\
-            'work for all workers by the total number of workers 16-years old and older who commute. '\
-            'The data is comprised of estimates found in tables B08013 and B08012 '\
-            'of the American Community Survey, respectively.####The date of the data '\
-            'is the end of the 5-year period. For example, a value dated 2015 '\
-            'represents data from 2010 to 2015.'
+            'work for all workers by the total number of workers, 16-years old '\
+            'and older, who commute. The data is comprised of estimates found in '\
+            'tables B08013 and B08012 of the American Community Survey, respectively.'\
+            '####The date of the data is the end of the 5-year period. For '\
+            'example, a value dated 2015 represents data from 2010 to 2015.'
     period = ''
     g_rate = 'TRUE'
     obs_vsd = 'TRUE'
