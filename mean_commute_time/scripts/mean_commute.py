@@ -1,9 +1,6 @@
 import pandas as pd, os, sys, functools as ft, pycurl as pyc, datetime as dt, re, numpy as np
 pd.options.mode.chained_assignment = None  # default='warn'
 
-def clean(filter,names):
-
-
 def mean_commute(wf_file,workforce_filter,workforce_names,cm_file,\
                  commute_filter,commute_names,date):
 
@@ -17,7 +14,7 @@ def mean_commute(wf_file,workforce_filter,workforce_names,cm_file,\
     df_cm.columns = [commute_names]
     df_cm['fips'] = df_cm['fips'].apply(lambda x: "%06d" % (x,))
 
-    df = pd.merge(df_wf, df_cm,on=['fips', 'county'])
+    df = pd.merge(df_wf, df_cm,on=['fips'])
 
     df['avg_commute'] = df['commute_time'] / df['commuters']
 
@@ -32,13 +29,14 @@ def multi_ordered_merge(lst_dfs):
 
 
 def main():
-    wf_filter = ['GEO.id2', 'GEO.display-label', 'HD01_VD01']
-    wf_names = ['fips', 'county', 'commuters']
+    wf_filter = ['GEO.id2','HD01_VD01']
+    wf_names = ['fips', 'commuters']
 
-    cm_filter = ['GEO.id2', 'GEO.display-label', 'HD01_VD01']
-    cm_names= ['fips', 'county', 'commute_time']
+    cm_filter = ['GEO.id2', 'HD01_VD01']
+    cm_names= ['fips', 'commute_time']
 
     data_dir = os.getcwd() + '\\data\\'
+    counties = pd.read_table('..\\national_county.txt', dtype=str, sep=';')
 
     commute_09 = mean_commute(data_dir+'workforce_09.csv',wf_filter,wf_names,\
                               data_dir+'aggregate_commute_09.csv',cm_filter,\
@@ -58,10 +56,16 @@ def main():
     commute_14 = mean_commute(data_dir+'workforce_14.csv',wf_filter,wf_names,\
                               data_dir+'aggregate_commute_14.csv',cm_filter,\
                               cm_names,'2014')
+    commute_15 = mean_commute(data_dir+'workforce_15.csv',wf_filter,wf_names,\
+                              data_dir+'aggregate_commute_15.csv',cm_filter,\
+                              cm_names,'2015')
 
-    dfs = [commute_09,commute_10,commute_11,commute_12,commute_13,commute_14]
+    dfs = [commute_09,commute_10,commute_11,commute_12,commute_13,commute_14,commute_15]
 
     df = multi_ordered_merge(dfs)
+
+    df = pd.merge(df, counties, on='fips')
+
     df = df.sort_values(['fips','date'])
 
     for l in pd.unique(df.fips.ravel()):
@@ -69,8 +73,6 @@ def main():
         frame = df[df['fips'] == series]
         series_id = 'B080ACS' + series
         frame.reset_index(inplace=True)
-        # frame = frame.sort_values(['date'])
-        # frame.drop(['index'], axis=1, inplace=True)
         frame = frame[['date', 'avg_commute']]
         frame.set_index('date', inplace=True)
         frame.columns = [series_id]
