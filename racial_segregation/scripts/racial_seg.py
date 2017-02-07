@@ -1,9 +1,10 @@
+        frame = df[df['fips'] == series]
 import pandas as pd, os, sys, functools as ft, pycurl as pyc, datetime as dt, re, numpy as np,math
 pd.options.mode.chained_assignment = None  # default='warn'
 
 
 def diss_index(county_file,tract_file,date):
-    keep_tract = ['GEO.id2','HD01_VD01','HD01_VD03','HD01_VD04','HD01_VD06','HD01_VD12']
+    keep_header = ['GEO.id2','HD01_VD01','HD01_VD03','HD01_VD04','HD01_VD06','HD01_VD12']
     tract_names = ['fips','pop','white','black','asian','hispanic']
     county_names = ['fips','total','white_total','black_total','asian_total','hispanic_total']
     # keep_diss = ['blk_diss','asn_diss','esp_diss','nwt_diss']
@@ -12,7 +13,7 @@ def diss_index(county_file,tract_file,date):
     # Process census tracts
     df_tract = pd.read_csv(tract_file,encoding='windows-1252',skiprows={1},\
                            low_memory=False)
-    df_tract = df_tract.filter(keep_tract,axis=1)
+    df_tract = df_tract.filter(keep_header,axis=1)
     df_tract.columns = [tract_names]
     df_tract['fips']=df_tract['fips'].astype(str)
     df_tract['tract']=df_tract.fips.str.extract('(?P<tract>\d{5}$)')
@@ -22,7 +23,7 @@ def diss_index(county_file,tract_file,date):
     # Process counties
     df_county= pd.read_csv(county_file,encoding='windows-1252',skiprows={1},\
                            low_memory=False)
-    df_county= df_county.filter(keep_tract,axis=1)
+    df_county= df_county.filter(keep_header,axis=1)
     df_county.columns = [county_names]
     df_county['fips']=df_county['fips'].apply(lambda x:"%06d" % (x,))
 
@@ -51,7 +52,6 @@ def diss_index(county_file,tract_file,date):
     # df['esp_diss'] = .5*df['hispanic_white']
 
     # Clean up data frame
-    # df.fillna(0,axis=1,inplace=True)
     df = df.filter(keep_diss, axis=1)
     df['date']=date
     df.reset_index(level=0, inplace=True)
@@ -65,6 +65,7 @@ def multi_ordered_merge(lst_dfs):
 
 def main():
     data_dir = os.getcwd() + '\\data\\'
+    counties = pd.read_table('..\\national_county.txt', dtype=str, sep=';')
 
     df_09 = diss_index(data_dir + 'race_county_09.csv',data_dir + 'race_tract_09.csv','2009')
     df_10 = diss_index(data_dir + 'race_county_10.csv',data_dir + 'race_tract_10.csv','2010')
@@ -77,13 +78,13 @@ def main():
     dfs = [df_09,df_10,df_11,df_12,df_13,df_14,df_15]
 
     df = multi_ordered_merge(dfs)
+    df = pd.merge(df,counties,on='fips')
     df = df.sort_values(['fips','date'])
     df.fillna('.',axis=1,inplace=True)
 
-    for l in pd.unique(df['fips'].ravel()):
-        series = l
-        frame = df[df['fips'] == series]
+    for series in pd.unique(df['fips'].ravel()):
         series_id = 'RACEDISPARITY' + series
+        frame = df[df['fips'] == series]
         frame.reset_index(inplace=True)
         frame = frame[['date','nwt_diss']]
         frame.set_index('date', inplace=True)
