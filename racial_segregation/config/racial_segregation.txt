@@ -2,7 +2,7 @@ Racial Segregation
 __________________________________
 
 Dissimiliarity Index measures the percentage of a group's population in a county that would have to move Census tracts for each
-tract in the county to have the same percentage of that group as the whole county. Originally developed by Jah, Schmid and Schrag [1947]
+tract in the county to have the same percentage of that group as the whole county. Originally developed by Jahn, Schmid and Schrag [1947]
 
 More information on measures of segregation can be found at https://dash.harvard.edu/handle/1/2958220
 __________________________________________________________________________________________
