@@ -1,5 +1,11 @@
 Racial Segregation
-____________________________________________________________________________________________________________________________
+__________________________________
+
+Dissimiliarity Index measures the percentage of a group's population in a county that would have to move Census tracts for each
+tract in the county to have the same percentage of that group as the whole county. Originally developed by Jah, Schmid and Schrag [1947]
+
+More information on measures of segregation can be found at https://dash.harvard.edu/handle/1/2958220
+__________________________________________________________________________________________
 1. fip_id.xlsx
 
 the "Base" sheet of this dataset contains the names of the 3,143 census counties (from 2010) along with their respective ID. I use this file at the end to
@@ -14,7 +20,14 @@ Hispanic or Latino Origin by Race by county
 2009-2014 5-year ACS estimates, found in table B03002. 
 
 http://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_B03002&prodType=table
-(2014 table) 
+(2014 table)
+
+http://api.census.gov/data/2015/acs5?get=NAME,B03002_001E&for=county:*
+http://api.census.gov/data/2015/acs5?get=NAME,B03002_003E&for=county:*
+http://api.census.gov/data/2015/acs5?get=NAME,B03002_004E&for=county:*
+http://api.census.gov/data/2015/acs5?get=NAME,B03002_006E&for=county:*
+http://api.census.gov/data/2015/acs5?get=NAME,B03002_012E&for=county:*
+
 ___________________________________________________a_________________________________________________________________________
 2. race_tract_yy.csv
 
@@ -23,5 +36,11 @@ Hispanic or Latino Origin by Race by tract
 2009-2014 5-year ACS estimates, found in table B03002. 
 
 http://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_14_5YR_B03002&prodType=table
-(2014 table) 
+(2014 table)
+
+http://api.census.gov/data/2015/acs5?get=NAME,B03002_001E&for=tract:*&in=state:01&in=county:*
+http://api.census.gov/data/2015/acs5?get=NAME,B03002_003E&for=tract:*&in=state:01&in=county:*
+http://api.census.gov/data/2015/acs5?get=NAME,B03002_004E&for=tract:*&in=state:01&in=county:*
+http://api.census.gov/data/2015/acs5?get=NAME,B03002_006E&for=tract:*&in=state:01&in=county:*
+http://api.census.gov/data/2015/acs5?get=NAME,B03002_012E&for=tract:*&in=state:01&in=county:*
 ___________________________________________________a_________________________________________________________________________
