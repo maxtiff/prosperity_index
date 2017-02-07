@@ -1,0 +1,33 @@
+PHP Warning:  Module 'mcrypt' already loaded in Unknown on line 0
+Mean Commuting Time for Workers in Autauga County, AL;autauga county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Baldwin County, AL;baldwin county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Barbour County, AL;barbour county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Bibb County, AL;bibb county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Blount County, AL;blount county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Bullock County, AL;bullock county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Butler County, AL;butler county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Calhoun County, AL;calhoun county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Chambers County, AL;chambers county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Cherokee County, AL;cherokee county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Chilton County, AL;chilton county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Choctaw County, AL;choctaw county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Clarke County, AL;clarke county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Clay County, AL;clay county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Cleburne County, AL;cleburne county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Coffee County, AL;coffee county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Colbert County, AL;colbert county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Conecuh County, AL;conecuh county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Coosa County, AL;coosa county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Covington County, AL;covington county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Crenshaw County, AL;crenshaw county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Cullman County, AL;cullman county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Dale County, AL;dale county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Dallas County, AL;dallas county, al;workers;average;commuting time
+Mean Commuting Time for Workers in DeKalb County, AL;workers;average;county;al;commuting time;dekalb
+Mean Commuting Time for Workers in Elmore County, AL;elmore county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Escambia County, AL;escambia county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Etowah County, AL;etowah county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Fayette County, AL;fayette county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Franklin County, AL;franklin county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Geneva County, AL;geneva county, al;workers;average;commuting time
+Mean Commuting Time for Workers in Greene County, AL;greene county, al;workers;average;commuting time
