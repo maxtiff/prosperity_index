@@ -14,14 +14,14 @@ titles =pd.DataFrame()
 
 season = 'Not Seasonally Adjusted'
 freq = 'Annual'
-units = 'Percent'
+units = 'Rate'
 keywords = ''
-notes = 'This data represents the ratio of mean income for the highest '\'quintile (top 20 percent) of earners divided by the mean income of the '\ 'lowest quintile (bottom 20 percent) of earners in a particular county.'
+notes = 'The small business ownership is the number of firms which employ 1-500 people divided by the number of people in the labor force.'
 period = ''
 g_rate = 'TRUE'
 obs_vsd = 'TRUE'
-vsd = '2017-01-27'
-r_id = '414'
+vsd = '2017-02-07'
+r_id = '421'
 
 non_geo_fips = '002020|002110|002220|002230|002275|006075|008014|015003|042101'
 
@@ -29,7 +29,7 @@ non_geo_cats = {'002020': '27406', '002110': '27412', '002220': '27422', \
                 '002230': '33516', '002275': '33518', '006075': '27559', \
                 '008014': '32077', '015003': '27889', '042101': '29664'}
 
-title = 'Income Inequality in ' + \
+title = 'Small Business Ownership Rate for  ' + \
         pd.unique(df[df['fips'] == series]['county'])[0]
 
 # Create metadata files
