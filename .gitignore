@@ -8,3 +8,7 @@ small_business_ownership_patterns/data/*.txt
 *.stackdump
 *.do
 *.log
+logs/
+not_public/
+output_temp/
+problem_not_public/
