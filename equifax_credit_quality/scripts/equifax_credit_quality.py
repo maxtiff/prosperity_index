@@ -21,7 +21,7 @@ def main():
     df = df[df.num_total >= 20]
 
     # Clean dates
-    df['date'] = df['qtr'].dt.year.astype(str)+'.0'+df['qtr'].dt.quarter.astype(str)
+    df['date'] = df['qtr'].dt.year.astype(str)+'Q'+df['qtr'].dt.quarter.astype(str)
     df.drop(['qtr'],axis=1,inplace=True)
 
     # Get pct of subprime creditors
