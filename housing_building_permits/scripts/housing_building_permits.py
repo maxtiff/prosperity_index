@@ -47,6 +47,7 @@ def main():
     for series in pd.unique(df.fips.ravel()):
         frame = df[df['fips'] == series]
         frame.reset_index(inplace=True)
+        frame.drop(['index'],axis=1,inplace=True)
 
         for i, d in enumerate(frame['date']):
             if bool(re.search(ptn, d)):
