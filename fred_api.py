@@ -20,7 +20,7 @@ file_type='file_type=json'
 tag_param='tag_names='
 tags = ['prosperity%20scorecard']
 limit_param = 'limit=1'
-date_params=['date','start_date']
+date_params=['date=','start_date=']
 release_ids=['148','330','399','406','408','409','410','412','413','414','415','416','417','419','421']
 series_ids=[] # populate with get response from release calls
 
