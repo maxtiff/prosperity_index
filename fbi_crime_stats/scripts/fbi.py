@@ -25,7 +25,10 @@ def fbi_crime_stats(file, footer, date,states,counties):
    df['locale'] = df['County'] + ', ' + df['state']
 
 
-   df['locale'] = df['locale'].apply(lambda x: (process.extractOne(x, counties['county'], scorer=fuzz.token_set_ratio,score_cutoff=100) or [None])[0])
+   df['locale'] = df['locale'].apply(lambda x:\
+                                         (process.extractOne(x,counties['county'],\
+                                                             scorer=fuzz.token_set_ratio,\
+                                                             score_cutoff=100) or [None])[0])
 
    df = pd.merge(df, counties, left_on='locale', right_on='county')
 
