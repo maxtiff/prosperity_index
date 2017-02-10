@@ -1,20 +1,18 @@
-import pandas as pd, os, sys, functools as ft, pycurl as pyc, datetime as dt, re, difflib as dl
+import pandas as pd, os, sys, functools as ft#, pycurl as pyc, datetime as dt, re,
+from fuzzywuzzy import fuzz, process
 pd.options.mode.chained_assignment = None  # default='warn'.
 
 # os.chdir(os.getcwd()+'\\fbi_crime_stats')
 
 def fbi_crime_stats(file, footer, date,states,counties):
    keep = 'State|County|Violent|Property|date'
-   names = ['violent', 'property', 'date', 'county', 'fips', 'crime']
+   names = ['fips','violent','property','crime','date','county']
    df = pd.read_excel(file, skiprows={0, 1}, header=2, skip_footer=footer)
 
    df['State'].replace(to_replace='[^\x00-\x7F]\w+\sCounties|\s\-\s\w+\sCounties'\
-                                  '|\-\w+\sCounties|\d|\n|\s$',value='', \
-                       inplace=True, regex=True)
+                                  '|\-\w+\sCounties|\d|\n|\s$',value='',inplace=True, regex=True)
 
    df = df.fillna(method='ffill')
-
-   df['date'] = date
 
    df = df.filter(regex=keep, axis=1)
 
@@ -26,19 +24,27 @@ def fbi_crime_stats(file, footer, date,states,counties):
 
    df['locale'] = df['County'] + ', ' + df['state']
 
-   df.drop(['State', 'County', 'state', 'name'], axis=1, inplace=True)
 
-   df['locale'] = df['locale'].apply(lambda x: (dl.get_close_matches(x,counties['county'])[:1] or [None])[0])
+   df['locale'] = df['locale'].apply(lambda x: (process.extractOne(x, counties['county'], scorer=fuzz.token_set_ratio,score_cutoff=100) or [None])[0])
 
    df = pd.merge(df, counties, left_on='locale', right_on='county')
 
    df['crime'] = df.sum(axis=1)
 
-   df = df.filter(regex=('Violent|Property|date|fips_y|crime|locale'), axis=1)
+   df = df.groupby(df['fips_y']).sum()
+   df.reset_index(level=0, inplace=True)
+
+   df['date'] = date
+   df = pd.merge(df, counties, left_on='fips_y', right_on='fips')
+   df = df.filter(regex=('Violent|Property|date|fips_y|crime|county'), axis=1)
 
    df.columns = [names]
 
    return df
+
+   # Old matching function
+   # df['locale'] = df['locale'].apply(lambda x: (dl.get_close_matches(x,counties['county'])[:1] or [None])[0])
+
 
 def multi_ordered_merge(lst_dfs):
    reduce_func = lambda left,right: pd.ordered_merge(left, right)
@@ -69,6 +75,8 @@ def main():
    data_dir = os.getcwd() + '\\data\\'
 
    # Import data
+   # test = fbi_crime_stats(data_dir + 'test.xls',3,'2015',state_frame,counties)
+
    crime_15 = fbi_crime_stats(data_dir + 'crime_15.xls',8,'2015',state_frame,counties)
    crime_14 = fbi_crime_stats(data_dir + 'crime_14.xls',8,'2014',state_frame,counties)
    crime_13 = fbi_crime_stats(data_dir + 'crime_13.xls',7,'2013',state_frame,counties)
@@ -86,8 +94,33 @@ def main():
    df = multi_ordered_merge(dfs)
    df = df.sort_values(['fips','date'])
 
+   not_fred = ['FBITC001009','FBITC012073','FBITC019043','FBITC020067','FBITC022053',\
+               'FBITC029189','FBITC031047','FBITC048181','FBITC048203','FBITC048239',\
+               'FBITC048263','FBITC048289','FBITC048395','FBITC051019','FBITC051059',\
+               'FBITC051067','FBITC051159','FBITC051161']
+
+   md_names = ['series_id', 'title', 'season', 'frequency', 'units',\
+               'keywords', 'notes', 'period_description', 'growth_rates',\
+               'obs_vsd_use_release_date', 'valid_start_date', 'release_id']
+   fsr_names = ['fred_release_id', 'fred_series_id', 'official',\
+                'valid_start_date']
+
+   geo_md = pd.DataFrame(columns=md_names)
+   fsr_geo = pd.DataFrame(columns=fsr_names)
+
+   season = 'Not Seasonally Adjusted'
+   freq = 'Annual'
+   units = 'Known Incidents'
+   keywords = ''
+   notes = 'This series represents the combined violent and property crime statistics as reported by county law enforcement agencies.####FBI Uniform Crime Reporting: Crime in the United States, Table 10B.'
+   period = ''
+   g_rate = 'TRUE'
+   obs_vsd = 'TRUE'
+   vsd = '2017-01-27'
+   r_id = '410'
+
+
    for series in pd.unique(df.fips.ravel()):
-       fips = series
        frame = df[df['fips'] == series]
        frame.reset_index(inplace=True)
        frame.drop(['index'], axis=1, inplace=True)
@@ -96,13 +129,33 @@ def main():
            output.set_index('date', inplace=True)
            series_id = 'FBI'
            if c is 'violent':
-               series_id = series_id + 'VC' + fips
+               series_id = series_id + 'VC' + series
            elif c is 'property':
-               series_id = series_id + 'PC' + fips
+               series_id = series_id + 'PC' + series
            elif c is 'crime':
-               series_id = series_id + 'TC' + fips
+               series_id = series_id + 'TC' + series
                output.columns = [series_id]
                output.to_csv('output\\' + series_id, sep='\t')
+
+               if series_id in not_fred:
+                   title = 'Combined Violent and Property Crime Incidents Known to Law Enforcement in ' + \
+                           pd.unique(df[df['fips'] == series]['county'])[0]
+
+                   row = pd.DataFrame(data=[[series_id, title, season, freq, units, keywords,\
+                                             notes, period, g_rate, obs_vsd, vsd, r_id]],columns=md_names)
+                   geo_md = geo_md.append(row)
+
+                   row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],columns=fsr_names)
+                   fsr_geo = fsr_geo.append(row)
+
+   geo_md.to_csv('fred_series_geo_2.txt', sep='\t', index=False)
+   fsr_geo.to_csv('fred_series_release_geo_2.txt', sep='\t', index=False)
+
+
+if __name__ == '__main__':
+   main()
+
+
    # Metadata section
    # md_names = ['series_id', 'title', 'season', 'frequency', 'units',\
    #             'keywords', 'notes', 'period_description', 'growth_rates',\
@@ -192,5 +245,3 @@ def main():
    # titles.to_csv('title.txt',sep='\t',index=False,header=False)
 
 
-if __name__=='__main__':
-   main()
