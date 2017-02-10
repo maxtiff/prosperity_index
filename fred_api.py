@@ -8,6 +8,9 @@ def open_loc(file_loc,file_url):
 
 data_dir = os.getcwd()+'\\data\\'
 base_url = 'https://api.stlouisfed.org/'
+key_param = 'api_key='
+api_key = '7945c845bf4a1f2f7293f551db41d5df'
+
 county = 'co'
 short_year = dt.datetime.today().strftime('%y')
 long_year = dt.datetime.today().year
