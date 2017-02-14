@@ -1,4 +1,4 @@
-import functools as ft
+import functools as ft,pandas as pd
 
 def multi_ordered_merge(lst_dfs):
     reduce_func = lambda left,right: pd.ordered_merge(left, right)
