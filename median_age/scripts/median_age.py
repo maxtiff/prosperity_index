@@ -1,4 +1,4 @@
-import pandas as pd, os, multi_ordered_merge as merger, functools as ft, pycurl as pyc, datetime as dt, re, numpy as np,math
+import pandas as pd, os, multi_ordered_merge as merger, functools as ft
 pd.options.mode.chained_assignment = None  # default='warn'
 
 def median_age(file,column_name,date):
@@ -12,6 +12,11 @@ def median_age(file,column_name,date):
     df['date'] = date
 
     return df
+
+def multi_ordered_merge(lst_dfs):
+    reduce_func = lambda left,right: pd.ordered_merge(left, right)
+
+    return ft.reduce(reduce_func, lst_dfs)
 
 def main():
     data_dir = os.getcwd() + '\\data\\'
@@ -27,10 +32,19 @@ def main():
 
     dfs = [df_09,df_10,df_11,df_12,df_13,df_14,df_15]
 
-    df = merger.multi_ordered_merge(dfs)
+    df = multi_ordered_merge(dfs)
     df = pd.merge(df,counties,on='fips')
     df = df.sort_values(['fips','date'])
 
+    for series in pd.unique(df['fips'].ravel()):
+        frame = df[df['fips'] == series]
+        frame.reset_index(inplace=True)
+        frame.drop(['index'], axis=1, inplace=True)
+        series_id = 'S0101' + 'MEDIANAGE' + series
+        frame = frame[['date', 'median_age']]
+        frame.set_index('date', inplace=True)
+        frame.columns = [series_id]
+        frame.to_csv('output\\' + series_id, sep='\t')
 
 if __name__=='__main__':
     main()
