@@ -1,14 +1,12 @@
 import pandas as pd, os, multi_ordered_merge as merger, functools as ft, pycurl as pyc, datetime as dt, re, numpy as np,math
 pd.options.mode.chained_assignment = None  # default='warn'
 
-HC01_EST_VC33
-HC01_EST_VC35
-
 def median_age(file,column_name,date):
     keep_header = ['GEO.id2', column_name]
 
     df = pd.read_csv(file, encoding='windows-1252', skiprows={1}, \
                          low_memory=False)
+    df = df.filter(regex='GEO.id2|'+column_name,axis=1)
     df.rename(columns={'GEO.id2': 'fips',column_name:'median_age'},inplace=True)
     df['fips'] = df['fips'].apply(lambda x: "%06d" % (x,))
     df['date'] = date
@@ -30,5 +28,11 @@ def main():
     dfs = [df_09,df_10,df_11,df_12,df_13,df_14,df_15]
 
     df = merger.multi_ordered_merge(dfs)
+    df = pd.merge(df,counties,on='fips')
+    df = df.sort_values(['fips','date'])
+
+
+if __name__=='__main__':
+    main()
 
 
