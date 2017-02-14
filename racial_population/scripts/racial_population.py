@@ -7,7 +7,7 @@ def racial_pop(county_file,date):
     df = pd.read_csv(county_file, encoding='windows-1252', skiprows={1},\
                             low_memory=False)
     df = df.filter(keep_header, axis=1)
-    df df.rename(columns={'GEO.id2': 'fips'},inplace=True)
+    df.rename(columns={'GEO.id2': 'fips'},inplace=True)
     df['fips'] = df['fips'].apply(lambda x: "%06d" % (x,))
     df['date'] = date
 
