@@ -1,4 +1,4 @@
-import pandas as pd, os, sys, functools as ft, multi_ordered_merge as merger as pyc, datetime as dt, re, numpy as np,math
+import pandas as pd, os,multi_ordered_merge as merger
 pd.options.mode.chained_assignment = None  # default='warn'
 
 def racial_pop(county_file,date):
@@ -13,10 +13,10 @@ def racial_pop(county_file,date):
 
     return df
 
-# def multi_ordered_merge(lst_dfs):
-#     reduce_func = lambda left,right: pd.ordered_merge(left, right)
-#
-#     return ft.reduce(reduce_func, lst_dfs)
+def multi_ordered_merge(lst_dfs):
+    reduce_func = lambda left,right: pd.ordered_merge(left, right)
+
+    return ft.reduce(reduce_func, lst_dfs)
 
 def main():
     data_dir = os.getcwd() + '\\data\\'
@@ -32,7 +32,7 @@ def main():
 
     dfs = [df_09,df_10,df_11,df_12,df_13,df_14,df_15]
 
-    df = merger.multi_ordered_merge(dfs)
+    df = multi_ordered_merge(dfs)
     df = pd.merge(df,counties,on='fips')
     df = df.sort_values(['fips','date'])
     df.fillna('.',axis=1,inplace=True)
