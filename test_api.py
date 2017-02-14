@@ -55,7 +55,7 @@ url = base_url + fred_dir[0] + type_dir[0] + query_start[0]
 test_params = params
 r = req.get(url,params=params,timeout=None)
 
-id = list(r.json().values())[5][0]['id']
+id = list(r.json().values())[3][0]['id']
 
 
 # Get data
