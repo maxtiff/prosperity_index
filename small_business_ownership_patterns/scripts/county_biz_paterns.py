@@ -9,8 +9,10 @@ def multi_ordered_merge(lst_dfs):
 def small_biz_rate(biz_ptrns,lf,date):
 
     biz_keep = 'fips|n1_4|n5_9|n10_19|n20_49|n50_99|n100_249|n250_499'
-    biz_drop = 'fips|small_biz'
+    biz_drop = 'fips$|small_biz'
     biz_df = pd.read_table(biz_ptrns,sep=',',memory_map=True)
+
+    biz_df = biz_df[biz_df.naics == '------']
 
     biz_df['fipstate']=biz_df['fipstate'].astype(int)
     biz_df['fipstate']=biz_df['fipstate'].apply(lambda x:"%03d" % (x,))
@@ -22,10 +24,9 @@ def small_biz_rate(biz_ptrns,lf,date):
 
     biz_df['fips']=biz_df['fipstate']+biz_df['fipscty']
 
-    biz_df=biz_df.groupby(biz_df.fips).sum()
-    biz_df.reset_index(level=0, inplace=True)
     biz_df=biz_df.filter(regex=biz_keep,axis=1)
     biz_df['small_biz']=biz_df.sum(axis=1)
+    biz_df.reset_index(level=0, inplace=True)
     biz_df=biz_df.filter(regex=biz_drop,axis=1)
 
     lf_keep='GEO.id2|HC02_EST_VC01|HC01_EST_VC01'

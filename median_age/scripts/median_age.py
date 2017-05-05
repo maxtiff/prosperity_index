@@ -2,8 +2,6 @@ import pandas as pd, os, multi_ordered_merge as merger, functools as ft
 pd.options.mode.chained_assignment = None  # default='warn'
 
 def median_age(file,column_name,date):
-    keep_header = ['GEO.id2', column_name]
-
     df = pd.read_csv(file, encoding='windows-1252', skiprows={1}, \
                          low_memory=False)
     df = df.filter(regex='GEO.id2|'+column_name,axis=1)
@@ -37,10 +35,11 @@ def main():
     df = df.sort_values(['fips','date'])
 
     for series in pd.unique(df['fips'].ravel()):
+        series_id = 'S0101' + 'MEDIANAGE' + series
+
         frame = df[df['fips'] == series]
         frame.reset_index(inplace=True)
         frame.drop(['index'], axis=1, inplace=True)
-        series_id = 'S0101' + 'MEDIANAGE' + series
         frame = frame[['date', 'median_age']]
         frame.set_index('date', inplace=True)
         frame.columns = [series_id]

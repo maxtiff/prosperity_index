@@ -1,6 +1,14 @@
 import pandas as pd, os,multi_ordered_merge as merger
 pd.options.mode.chained_assignment = None  # default='warn'
 
+payload = {'get': ['NAME,B03002_003E'], 'for': 'county:*','key': 'abeed2f8242a2f5fc4f5b8c1ff0ad4a49dd1b76a'}
+
+def make_request(url,payload):
+
+    r = req.get(url,params=payload,stream=True)
+
+    return r.json()
+
 def racial_pop(county_file,date):
     keep_header = ['GEO.id2','HD01_VD03','HD01_VD04','HD01_VD05','HD01_VD06','HD01_VD12']
 
@@ -47,6 +55,7 @@ def main():
             output.set_index('date', inplace=True)
             output.columns = [series_id]
             output.to_csv('output\\' + series_id, sep='\t')
+
 
 if __name__=='__main__':
     main()
