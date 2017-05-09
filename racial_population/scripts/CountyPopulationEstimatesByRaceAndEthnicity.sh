@@ -11,7 +11,7 @@ missingMissingsDirectory="${sourcesRootDirectory}missing_missings/"
 configDirectory="${sourcesRootDirectory}config/"
 logsDirectory="${sourcesRootDirectory}logs/"
 apDirectory="/www/fred/data/UsBureauOfTheCensus/CountyPopulationEstimatesByRaceAndEthnicity/"
-releaseID=410
+releaseID=429
 
 echo "Cleaning up old files and creating required directories"
 php ${workflowRootDirectory}utilities/delete_release_files.php ${sourcesRootDirectory}
