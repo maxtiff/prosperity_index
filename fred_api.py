@@ -51,8 +51,13 @@ https://api.stlouisfed.org/geofred/series/data?
 
 
 '''
-payload = {'get': ['NAME,B03002_003E'], 'for': 'county:*','key': 'abeed2f8242a2f5fc4f5b8c1ff0ad4a49dd1b76a'}
-r = req.get('http://api.census.gov/data/2015/acs5',params=payload)
+
+demos = ['B03002_003E','B03002_004E','B03002_005E','B03002_006E','B03002_012E']
+payload = {'get': ['NAME','B03002_003E'], 'for': 'county:*','key': 'abeed2f8242a2f5fc4f5b8c1ff0ad4a49dd1b76a'}
+r = req.get('http://api.census.gov/data/2009/acs5',params=payload)
+
+
+
 
 # Get data
 release_url = base_url + fred_dir[0] + type_dir[0] + query_start[0] + release_param \
