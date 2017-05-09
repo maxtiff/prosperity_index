@@ -1,4 +1,4 @@
-import pandas as pd, requests as req, os
+import pandas as pd, requests as req, os, CountyPopulationEstimatesByRaceAndEthnicity_config.py as cf
 pd.options.mode.chained_assignment = None  # default='warn'
 
 def make_request(url,payload):
@@ -44,9 +44,14 @@ def output_series_files(df,demos,date):
 
     pass
 def main():
-    demos = ['B03002_003E','B03002_004E','B03002_005E','B03002_006E','B03002_012E']
-    date='2015'
-    api_key = 'abeed2f8242a2f5fc4f5b8c1ff0ad4a49dd1b76a'
+
+    demos = cf.DEMOGRPAHICS
+    date = cf.DATE
+    api_key = cf.API_KEY
+
+    # demos = ['B03002_003E','B03002_004E','B03002_005E','B03002_006E','B03002_012E']
+    # date='2015'
+    # api_key = 'abeed2f8242a2f5fc4f5b8c1ff0ad4a49dd1b76a'
     racial_population = build_df_from_api(demos,date,api_key)
     output_series_files(racial_population,demos,date)
 

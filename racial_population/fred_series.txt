@@ -1,0 +1,46 @@
+series_id	title	season	frequency	units	keywords	notes	period_description	growth_rates	obs_vsd_use_release_date	valid_start_date	release_id
+B03002003E002020	Population Estimate of Non-Hispanic White Persons in Anchorage Borough/municipality, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002004E002020	Population Estimate of Non-Hispanic Black or African-American Persons inAnchorage Borough/municipality, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002005E002020	Population Estimate of Non-Hispanic American Indian or Native Alaskan Persons Anchorage Borough/municipality, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002006E002020	Population Estimate of Non-Hispanic Asian Persons in Anchorage Borough/municipality, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002012E002020	Population Estimate of Hispanic or Latino Persons in Anchorage Borough/municipality, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002003E002110	Population Estimate of Non-Hispanic White Persons in Juneau City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002004E002110	Population Estimate of Non-Hispanic Black or African-American Persons inJuneau City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002005E002110	Population Estimate of Non-Hispanic American Indian or Native Alaskan Persons Juneau City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002006E002110	Population Estimate of Non-Hispanic Asian Persons in Juneau City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002012E002110	Population Estimate of Hispanic or Latino Persons in Juneau City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002003E002220	Population Estimate of Non-Hispanic White Persons in Sitka City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002004E002220	Population Estimate of Non-Hispanic Black or African-American Persons inSitka City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002005E002220	Population Estimate of Non-Hispanic American Indian or Native Alaskan Persons Sitka City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002006E002220	Population Estimate of Non-Hispanic Asian Persons in Sitka City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002012E002220	Population Estimate of Hispanic or Latino Persons in Sitka City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002003E002230	Population Estimate of Non-Hispanic White Persons in Skagway Municipality, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002004E002230	Population Estimate of Non-Hispanic Black or African-American Persons inSkagway Municipality, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002005E002230	Population Estimate of Non-Hispanic American Indian or Native Alaskan Persons Skagway Municipality, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002006E002230	Population Estimate of Non-Hispanic Asian Persons in Skagway Municipality, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002012E002230	Population Estimate of Hispanic or Latino Persons in Skagway Municipality, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002003E002275	Population Estimate of Non-Hispanic White Persons in Wrangell City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002004E002275	Population Estimate of Non-Hispanic Black or African-American Persons inWrangell City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002005E002275	Population Estimate of Non-Hispanic American Indian or Native Alaskan Persons Wrangell City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002006E002275	Population Estimate of Non-Hispanic Asian Persons in Wrangell City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002012E002275	Population Estimate of Hispanic or Latino Persons in Wrangell City and Borough, AK	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002003E006075	Population Estimate of Non-Hispanic White Persons in San Francisco County, CA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002004E006075	Population Estimate of Non-Hispanic Black or African-American Persons inSan Francisco County, CA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002005E006075	Population Estimate of Non-Hispanic American Indian or Native Alaskan Persons San Francisco County, CA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002006E006075	Population Estimate of Non-Hispanic Asian Persons in San Francisco County, CA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002012E006075	Population Estimate of Hispanic or Latino Persons in San Francisco County, CA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002003E008014	Population Estimate of Non-Hispanic White Persons in Broomfield County, CO	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002004E008014	Population Estimate of Non-Hispanic Black or African-American Persons inBroomfield County, CO	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002005E008014	Population Estimate of Non-Hispanic American Indian or Native Alaskan Persons Broomfield County, CO	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002006E008014	Population Estimate of Non-Hispanic Asian Persons in Broomfield County, CO	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002012E008014	Population Estimate of Hispanic or Latino Persons in Broomfield County, CO	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002003E015003	Population Estimate of Non-Hispanic White Persons in Honolulu County, HI	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002004E015003	Population Estimate of Non-Hispanic Black or African-American Persons inHonolulu County, HI	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002005E015003	Population Estimate of Non-Hispanic American Indian or Native Alaskan Persons Honolulu County, HI	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002006E015003	Population Estimate of Non-Hispanic Asian Persons in Honolulu County, HI	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002012E015003	Population Estimate of Hispanic or Latino Persons in Honolulu County, HI	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002003E042101	Population Estimate of Non-Hispanic White Persons in Philadelphia County, PA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002004E042101	Population Estimate of Non-Hispanic Black or African-American Persons inPhiladelphia County, PA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002005E042101	Population Estimate of Non-Hispanic American Indian or Native Alaskan Persons Philadelphia County, PA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002006E042101	Population Estimate of Non-Hispanic Asian Persons in Philadelphia County, PA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002012E042101	Population Estimate of Hispanic or Latino Persons in Philadelphia County, PA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
