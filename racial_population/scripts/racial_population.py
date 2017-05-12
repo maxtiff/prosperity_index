@@ -142,7 +142,7 @@ def main():
     fred_md.to_csv('fred_series.txt', sep='\t', index=False)
     fsr.to_csv('fred_series_release.txt', sep='\t', index=False)
     fred_cat.to_csv('fred_series_in_category.txt', sep='\t', index=False)
-    titles.to_csv('title.txt', sep='\t', index=False, header=False)
+    titles.to_csv('titles.txt', sep='\t', index=False, header=False)
 
 
 
