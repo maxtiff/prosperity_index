@@ -44,3 +44,8 @@ B03002004E042101	Population Estimate of Non-Hispanic Black or African-American P
 B03002005E042101	Population Estimate of Non-Hispanic American Indian or Native Alaskan Persons Philadelphia County, PA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
 B03002006E042101	Population Estimate of Non-Hispanic Asian Persons in Philadelphia County, PA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
 B03002012E042101	Population Estimate of Hispanic or Latino Persons in Philadelphia County, PA	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002003E011001	Population Estimate of Non-Hispanic White Persons in District of Columbia, DC	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002004E011001	Population Estimate of Non-Hispanic Black or African-American Persons in District of Columbia, DC	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002005E011001	Population Estimate of Non-Hispanic American Indian or Native Alaskan Persons in District of Columbia, DC	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002006E011001	Population Estimate of Non-Hispanic Asian Persons in District of Columbia, DC	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
+B03002012E011001	Population Estimate of Hispanic or Latino Persons in District of Columbia, DC	Not Seasonally Adjusted	Annual	Persons				TRUE	TRUE	2017-05-09	429
