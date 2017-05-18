@@ -35,7 +35,7 @@ def main():
     df = df.sort_values(['fips','date'])
 
     for series in pd.unique(df['fips'].ravel()):
-        series_id = 'S0101' + 'MEDIANAGE' + series
+        series_id = 'B01002001E' + series
 
         frame = df[df['fips'] == series]
         frame.reset_index(inplace=True)
