@@ -48,4 +48,16 @@ def main():
 if __name__=='__main__':
     main()
 
+import requests as req
+
+payload = {'UserID': '6DDDEFC4-F8B8-4009-812C-E2E51B083E96',\
+           'method': 'getdata', 'datasetname' : 'NIPA', 'TableID' : '1',\
+           'Frequency':'Q','Year':'ALL','ResultFormat':'JSON'}
+r = req.get(url='https://www.bea.gov/api/data/',params=payload)
+
+r.json()
+
+with open('data.txt', 'w') as outfile:
+    json.dump(r.json(),outfile,indent=4, sort_keys=True,\
+                      separators=(',', ':'), ensure_ascii=False)
 
