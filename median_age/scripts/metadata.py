@@ -64,7 +64,7 @@ def main():
 
     season = 'Not Seasonally Adjusted'
     freq = 'Annual'
-    units = 'Median Age'
+    units = 'Years of Age'
     keywords = ''
     notes = ''
     period = ''
@@ -73,11 +73,12 @@ def main():
     vsd = '2017-05-17'
     r_id = '430'
 
-    non_geo_fips = '002020|002110|002220|002230|002275|006075|008014|015003|042101'
+    non_geo_fips = '002020|002110|011001|002220|002230|002275|006075|008014|015003|042101'
 
     non_geo_cats = {'002020': '27406', '002110': '27412', '002220': '27422', \
                     '002230': '33516', '002275': '33518', '006075': '27559', \
-                    '008014': '32077', '015003': '27889', '042101': '29664'}
+                    '008014': '32077', '015003': '27889', '042101': '29664', \
+                    '011001': '33508'}
 
 
     for series in pd.unique(df['fips'].ravel()):
@@ -88,10 +89,13 @@ def main():
         title = 'Median Age of the Population in ' + \
                 pd.unique(df[df['fips'] == series]['county'])[0]
         # Create metadata files
+        row = pd.DataFrame(data=[[series_id, title, season, freq, units, \
+                                  keywords, notes, period, g_rate, obs_vsd, \
+                                  vsd, r_id]], columns=md_names)
         if bool(re.search(non_geo_fips, series)):
-            row = pd.DataFrame(data=[[series_id, title, season, freq, units, \
-                                      keywords,notes,period, g_rate, obs_vsd, \
-                                      vsd, r_id]],columns=md_names)
+            # row = pd.DataFrame(data=[[series_id, title, season, freq, units, \
+            #                           keywords,notes,period, g_rate, obs_vsd, \
+            #                           vsd, r_id]],columns=md_names)
             fred_md = fred_md.append(row)
 
             row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]], \
@@ -102,9 +106,9 @@ def main():
             row = pd.DataFrame(data=[[series_id, cat_id]], columns=cat_names)
             fred_cat = fred_cat.append(row)
         else:
-            row = pd.DataFrame(data=[[series_id, title, season, freq, units, \
-                                      keywords,notes, period, g_rate, obs_vsd, \
-                                      vsd, r_id]],columns=md_names)
+            # row = pd.DataFrame(data=[[series_id, title, season, freq, units, \
+            #                           keywords,notes, period, g_rate, obs_vsd, \
+            #                           vsd, r_id]],columns=md_names)
             geo_md = geo_md.append(row)
 
             row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],columns=fsr_names)
@@ -113,8 +117,8 @@ def main():
             # output.columns = [series_id]
             # output.to_csv('output\\' + series_id, sep='\t')
 
-            title = pd.DataFrame(data=[[title]])
-            titles=titles.append(title)
+        title = pd.DataFrame(data=[[title]])
+        titles=titles.append(title)
 
     geo_md.to_csv('fred_series_geo.txt', sep='\t', index=False)
     fsr_geo.to_csv('fred_series_release_geo.txt', sep='\t', index=False)
