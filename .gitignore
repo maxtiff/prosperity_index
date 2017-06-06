@@ -16,4 +16,4 @@ problems/
 data/
 download/
 *.exe
-
+__pycache__/

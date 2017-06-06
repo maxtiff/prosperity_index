@@ -61,7 +61,7 @@ r = req.get('http://api.census.gov/data/2009/acs5',params=payload)
 
 # Get data
 release_url = base_url + fred_dir[0] + type_dir[0] + query_start[0] + release_param \
-    + release_ids[0] + '&' + api_key_param + api_key + '&' + tag_param \
+    + '429' + '&' + api_key_param + api_key + '&' + tag_param \
     + tags[0] + '&' + file_type_param + '&' + limit_param
 
 r = req.get(release_url)
