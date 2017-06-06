@@ -19,13 +19,17 @@ inmeasure = 'voterate'
 svlocation = 'output'
 countyvotes = []
 
-#########################################
-# for 2014 back to 2010
+#########################
+# for 2014 back to 2010 #
+#########################
+
 for fileitem in votecounty.filelist:
     print(fileitem)
 
-    ########################
-    # Create Profile for Firefox
+    ##############################
+    # Create Profile for Firefox #
+    ##############################
+
     profile = webdriver.FirefoxProfile()
     profile.accept_untrusted_certs = True
     profile.set_preference('browser.download.folderList', 2)  # custom location
@@ -367,6 +371,6 @@ print("VOTES:" + len(countyvotes).__str__())
 writer = FedWriter(inmeasure, svlocation)
 print("writer created")
 for cv in countyvotes:
-    cv.calcparticipation()\
+    cv.calcparticipation()
     writer.add(cv.votedate, cv.participation, cv.fipscode)
 writer.output_msr_file()
