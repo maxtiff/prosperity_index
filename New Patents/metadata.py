@@ -18,7 +18,7 @@ def main():
     counties = pd.read_table('..\\national_county.txt', dtype=str, sep=';')
     fips = pd.read_table('list.txt', dtype=str)
 
-    df.fillna('.',axis=1,inplace=True)
+    df = pd.merge(counties, fips)
 
     md_names = ['series_id', 'title', 'season', 'frequency', 'units', \
                 'keywords', 'notes', 'period_description', 'growth_rates', \
@@ -57,17 +57,15 @@ def main():
         frame = df[df['fips'] == series]
         frame.reset_index(inplace=True)
         frame.drop(['index'], axis=1, inplace=True)
-        series_id = 'B01002001E' + series
-        title = 'Median Age of the Population in ' + \
+        series_id = 'USPTOISSUED' + series
+        title = 'New Patent Assignments in ' + \
                 pd.unique(df[df['fips'] == series]['county'])[0]
         # Create metadata files
         row = pd.DataFrame(data=[[series_id, title, season, freq, units, \
                                   keywords, notes, period, g_rate, obs_vsd, \
                                   vsd, r_id]], columns=md_names)
         if bool(re.search(non_geo_fips, series)):
-            # row = pd.DataFrame(data=[[series_id, title, season, freq, units, \
-            #                           keywords,notes,period, g_rate, obs_vsd, \
-            #                           vsd, r_id]],columns=md_names)
+
             fred_md = fred_md.append(row)
 
             row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]], \
@@ -78,16 +76,10 @@ def main():
             row = pd.DataFrame(data=[[series_id, cat_id]], columns=cat_names)
             fred_cat = fred_cat.append(row)
         else:
-            # row = pd.DataFrame(data=[[series_id, title, season, freq, units, \
-            #                           keywords,notes, period, g_rate, obs_vsd, \
-            #                           vsd, r_id]],columns=md_names)
             geo_md = geo_md.append(row)
 
             row = pd.DataFrame(data=[[r_id, series_id, 'TRUE', vsd]],columns=fsr_names)
             fsr_geo = fsr_geo.append(row)
-
-            # output.columns = [series_id]
-            # output.to_csv('output\\' + series_id, sep='\t')
 
         title = pd.DataFrame(data=[[title]])
         titles=titles.append(title)
@@ -99,9 +91,6 @@ def main():
     fsr.to_csv('fred_series_release.txt', sep='\t', index=False)
     fred_cat.to_csv('fred_series_in_category.txt', sep='\t', index=False)
     titles.to_csv('titles.txt', sep='\t', index=False, header=False)
-
-
-
 
 if __name__=='__main__':
     main()
