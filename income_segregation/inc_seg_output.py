@@ -7,24 +7,41 @@ def multi_ordered_merge(lst_dfs):
 
     return ft.reduce(reduce_func, lst_dfs)
 
-output_dir = os.path.join(os.getcwd(),'output')
-files = os.listdir(output_dir)
+def main():
 
-counties = pd.read_table('..\\national_county.txt', dtype=str, sep=';')
-states = pd.read_table('..\\state_fips.txt')
+    output_dir = os.path.join(os.getcwd(),'output')
+    files = os.listdir(output_dir)
 
-df = pd.DataFrame()
+    counties = pd.read_table('..\\national_county.txt', dtype=str, sep=';')
+    states = pd.read_table('..\\state_fips.txt')
 
-wf = pd.read_table(os.path.join(output_dir,files[0]),sep='\t',dtype='str')
-wf2 = pd.read_table(os.path.join(output_dir,files[1]),sep='\t',dtype='str')
+    df = pd.DataFrame()
 
-for st in states.state:
-    ptn = '\w{5}' + st + '\d{4}'
+    wf = pd.read_table(os.path.join(output_dir,files[0]),sep='\t',dtype='str')
+    wf2 = pd.read_table(os.path.join(output_dir,files[1]),sep='\t',dtype='str')
+
+    # for st in states.state:
+    #     ptn = '\w{5}' + st + '\d{4}'
+    #
+    #     regex = re.compile(ptn)
+    #
+    #     selected_files = list(filter(regex.search,files))
+    #
+    #     print(selected_files)
+
+if __name__ = '__main__':
+    main()
 
 
-    regex = re.compile(ptn)
+# Test section
+ptn = '\w{5}AL\d{4}'
+    
+regex = re.compile(ptn)
 
-    selected_files = list(filter(regex.search,files))
+selected_files = list(filter(regex.search,files))
 
-    (selected_files)
+print(selected_files)
 
+for i in selected_files:
+    df_lst = []
+    wf = pd.read_table(os.path.join(output_dir,i),sep='\t',dtype='str')
