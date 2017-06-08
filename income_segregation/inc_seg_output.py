@@ -21,9 +21,10 @@ wf2 = pd.read_table(os.path.join(output_dir,files[1]),sep='\t',dtype='str')
 for st in states.state:
     ptn = '\w{5}' + st + '\d{4}'
 
+
     regex = re.compile(ptn)
 
     selected_files = list(filter(regex.search,files))
 
-    multi_ordered_merge(selected_files)
+    (selected_files)
 
