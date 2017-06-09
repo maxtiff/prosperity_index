@@ -13,15 +13,15 @@ import xlrd
 ########################
 # Get arguments
 # inlocation = sys.argv[2]
-inlocation = 'download'
+inlocation = os.path.join(os.getcwd(),'download')
+svlocation = os.path.join(os.getcwd(),'output')
 # inmeasure = sys.argv[1]
 inmeasure = 'voterate'
-svlocation = 'output'
 countyvotes = []
 
-#########################
+########################
 # for 2014 back to 2010 #
-#########################
+########################
 
 for fileitem in votecounty.filelist:
     print(fileitem)
@@ -41,8 +41,9 @@ for fileitem in votecounty.filelist:
 
     #########################
     # Open Web driver
+
     driver = webdriver.Firefox(profile)
-    driver.get("https://www.eac.gov/research/election_administration_and_voting_survey.aspx")
+    driver.get("https://www.eac.gov/research-and-data/"+fileitem[4]+"-election-administration-voting-survey/")
     driver.find_element_by_xpath("//*[@*[contains(., '" + fileitem[0] + "')]]").click()
 
     ########################
@@ -112,78 +113,79 @@ for fileitem in votecounty.filelist:
 # 2008 code
 ########################
 # Create Profile for Firefox
-profile = webdriver.FirefoxProfile()
-profile.accept_untrusted_certs = True
-profile.set_preference('browser.download.folderList', 2)  # custom location
-profile.set_preference('browser.download.manager.', False)
-profile.set_preference('browser.download.dir', inlocation)
-profile.set_preference("browser.helperApps.neverAsk.saveToDisk",
-                       "application/zip;application/octet-stream;application/x-zip;application/x-zip-compressed")
-profile.set_preference("plugin.disable_full_page_plugin_for_types", "application/zip")
-
-#########################
-# Open Web driver
-driver = webdriver.Firefox(profile)
-driver.get("https://www.eac.gov/research/election_administration_and_voting_survey.aspx")
-driver.find_element_by_xpath("//*[@*[contains(., '2008 eavs dbf august 11 2010.zip')]]").click()
-
-########################
-# Wait for download
-time.sleep(60)
-driver.quit()
-
-#######################
-# Unzip File
-zipsuccess=0
-while zipsuccess == 0:
-    try:
-        zip_ref = zipfile.ZipFile(inlocation + "\\2008 eavs dbf august 11 2010.zip", 'r')
-        zip_ref.extractall(inlocation + "\\2008 eavs dbf august 11 2010", members=None, pwd=None)
-        zip_ref.close()
-        zipsuccess = 1
-    except:
-        zipsuccess = 0
-#######################
-# Remove Zipfile
-os.remove(inlocation + "\\2008 eavs dbf august 11 2010.zip")
+# profile = webdriver.FirefoxProfile()
+# profile.accept_untrusted_certs = True
+# profile.set_preference('browser.download.folderList', 2)  # custom location
+# profile.set_preference('browser.download.manager.', False)
+# profile.set_preference('browser.download.dir', inlocation)
+# profile.set_preference("browser.helperApps.neverAsk.saveToDisk",
+#                        "application/zip;application/octet-stream;application/x-zip;application/x-zip-compressed")
+# profile.set_preference("plugin.disable_full_page_plugin_for_types", "application/zip")
+#
+# #########################
+# # Open Web driver
+# driver = webdriver.Firefox(profile)
+# driver.get("https://www.eac.gov/research-and-data/2008-election-administration-voting-survey/")
+# driver.find_element_by_xpath("//*[@*[contains(., '2008 eavs dbf august 11 2010.zip')]]").click()
+#
+# ########################
+# # Wait for download
+# time.sleep(60)
+# driver.quit()
+#
+# #######################
+# # Unzip File
+# zipsuccess=0
+# while zipsuccess == 0:
+#     try:
+#         zip_ref = zipfile.ZipFile(inlocation + "\\2008 eavs dbf august 11 2010.zip", 'r')
+#         zip_ref.extractall(inlocation + "\\2008 eavs dbf august 11 2010", members=None, pwd=None)
+#         zip_ref.close()
+#         zipsuccess = 1
+#     except:
+#         zipsuccess = 0
+# #######################
+# # Remove Zipfile
+# os.remove(inlocation + "\\2008 eavs dbf august 11 2010.zip")
 
 #######################
 # Get Data from files
 
-table = dbf.Table(inlocation + "\\2008 eavs dbf august 11 2010\\County_DBF\\combined_sectionf.dbf")
-table.open()
-print("TABLE RECS-2008:" + len(table).__str__())
-for rec in table:
-    neednewrecord = True
-    testfips = str(rec[0])
-    testjuris = str(rec[1]),
-    testcount = str(rec[4])
-    if testcount == 'None':
-        testcount = '0'
-    if str(testfips[0:2]) == 'NH':
-        testfips = testfips.replace("NH", "33")
-    if str(testfips[0:9]) == "         ":
-        testfips = testfips.replace("         ", "5500")
-    if testfips[0:8] == "        ":
-        testfips = testfips.replace("        ", "5500")
-    if testfips in ['0           ', '72000       ', '78000       ', 'AS00001     ']:
-        continue
-    print(testfips.__str__() + "|" + testjuris.__str__() + "|" + testcount.__str__())
-    for cv in countyvotes:
-        if str(testfips[0:5]) == str(cv.fipscode) and str(cv.votedate[0:4]) == "2008":
-            countyvotes.remove(cv)
-            cv.addvotes(int(float(testcount)))
-            countyvotes.append(cv)
-            neednewrecord = False
-            continue
-    if neednewrecord:
-        votec = VoteCounty()
-        votec.setcountyname(testjuris)
-        votec.setfipscode(testfips[0:5])
-        votec.setdate(votecounty.getvotedate("2008"))
-        votec.addvotes(int(float(testcount)))
-        countyvotes.append(votec)
-table.close()
+# # table = dbf.Table(inlocation + "\\2008 eavs dbf august 11 2010\\County_DBF\\combined_sectionf.dbf")
+# table = dbf.Table(inlocation + "\\County_DBF\\combined_sectionf.dbf")
+# table.open()
+# print("TABLE RECS-2008:" + len(table).__str__())
+# for rec in table:
+#     neednewrecord = True
+#     testfips = str(rec[0])
+#     testjuris = str(rec[1]),
+#     testcount = str(rec[4])
+#     if testcount == 'None':
+#         testcount = '0'
+#     if str(testfips[0:2]) == 'NH':
+#         testfips = testfips.replace("NH", "33")
+#     if str(testfips[0:9]) == "         ":
+#         testfips = testfips.replace("         ", "5500")
+#     if testfips[0:8] == "        ":
+#         testfips = testfips.replace("        ", "5500")
+#     if testfips in ['0           ', '72000       ', '78000       ', 'AS00001     ']:
+#         continue
+#     print(testfips.__str__() + "|" + testjuris.__str__() + "|" + testcount.__str__())
+#     for cv in countyvotes:
+#         if str(testfips[0:5]) == str(cv.fipscode) and str(cv.votedate[0:4]) == "2008":
+#             countyvotes.remove(cv)
+#             cv.addvotes(int(float(testcount)))
+#             countyvotes.append(cv)
+#             neednewrecord = False
+#             continue
+#     if neednewrecord:
+#         votec = VoteCounty()
+#         votec.setcountyname(testjuris)
+#         votec.setfipscode(testfips[0:5])
+#         votec.setdate(votecounty.getvotedate("2008"))
+#         votec.addvotes(int(float(testcount)))
+#         countyvotes.append(votec)
+# table.close()
 
 #######################
 # Remove folder
@@ -207,7 +209,7 @@ print("set profile")
 #########################
 # Open Web driver
 driver = webdriver.Firefox(profile)
-driver.get("https://www.eac.gov/research/election_administration_and_voting_survey.aspx")
+driver.get("https://www.eac.gov/research-and-data/2006-election-administration-voting-survey/")
 print("page open")
 driver.find_element_by_xpath("//*[@*[contains(., '2006%20UOCAVA%20Survey%20All%20Data.zip')]]").click()
 print("link clicked")
@@ -296,7 +298,7 @@ print("set profile")
 #########################
 # Open Web driver
 driver = webdriver.Firefox(profile)
-driver.get("https://www.eac.gov/research/election_administration_and_voting_survey.aspx")
+driver.get("https://www.eac.gov/research-and-data/2004-election-administration-voting-survey/")
 print("page open")
 elems = driver.find_elements_by_xpath("//*[@*[contains(.,'State Data Tables 2004 UOCAVA Survey.zip')]]")
 for elem in elems:

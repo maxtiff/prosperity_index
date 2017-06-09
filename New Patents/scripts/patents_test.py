@@ -8,7 +8,7 @@ zipfips.fips = zipfips.fips.astype(int)
 zipfips['fips'] = zipfips['fips'].apply(lambda x: "%06d" % (x,))
 zipfips.fips = zipfips.fips.astype(str)
 
-csv_file = pd.read_csv(inlocation +"\\csv\\assignment.csv",date_parser='record_dt')
+csv_file = pd.read_csv(inlocation +"\\csv\\assignment.csv",parse_dates=['record_dt'])
 csv_file = csv_file.fillna('')
 csv_file['full_address'] = csv_file['caddress_2'] + ' '+ csv_file['caddress_3'] + ' '+ csv_file['caddress_4']
 csv_file.drop(['caddress_1','caddress_2','caddress_3','caddress_4','rf_id','cname','file_id','convey_text',\
@@ -35,8 +35,13 @@ for fips in pd.unique(frame['fips'].ravel()):
     series_id = 'USPTOISSUED' + fips
     df.reset_index(inplace=True)
     df.drop(['index'], axis=1, inplace=True)
-    print(df)
+    idx = pd.date_range(df['record_dt'].iloc[0], df['record_dt'].iloc[-1], freq='MS')
     output = df[['record_dt', 0]]
     output.set_index('record_dt', inplace=True)
-    output.columns = [series_id]
-    output.to_csv(os.path.join(svlocation, series_id), sep='\t')
+    output.index = pd.DatetimeIndex(output.index)
+    output = output.reindex(idx, fill_value='.')
+    output.index.name = 'Date'
+    output.reset_index(inplace=True)
+    output['Date'] = output['Date'].apply(lambda x: x.strftime('%Y.%m'))
+    output.columns = ['Date',series_id]
+    output.to_csv(os.path.join(svlocation, series_id), sep='\t',index=False)

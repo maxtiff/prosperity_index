@@ -62,6 +62,5 @@ for fips in pd.unique(deaths['County Code'].ravel()):
     df.drop(['index'], axis=1, inplace=True)
     print(df)
     output = df[['Year','Crude Rate']]
-    output.set_index('Year', inplace=True)
-    output.columns = [series_id]
-    output.to_csv(os.path.join(svlocation, series_id), sep='\t')
+    output.columns = ['Date',series_id]
+    output.to_csv(os.path.join(svlocation, series_id), sep='\t',index=False)
